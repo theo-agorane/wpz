@@ -18,8 +18,8 @@ class BlocksModal {
 		echo '<style>';
 
 		foreach ($blocks as $block) {
-			$url = BLOCKS_URL . '/blocks/' . $block . '/' . $block . '.jpg';
-			echo '.acf-fc-popup a[data-layout="'. $block .'"]:after { background-image: url('. $url .'); }';
+			$url = BLOCKS_URL . '/' . $block . '/' . $block . '.jpg';
+			echo '.acf-fc-popup a[data-layout="'. $block .'"]:after { background-image: url('. $url .') !important; }';
 		}
 
 		echo '</style>';

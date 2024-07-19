@@ -55,7 +55,7 @@ function wpz_acf_populate_colors($field) {
         $field['choices'] = [];
 
         for ($i=1; $i<=11; $i++) {
-            $field['choices'][$i] = '<div class="acf-wpz-gallery-display" style="background-image: url('.BLOCKS_URL.'/blocks/Gallery/displays/display_'.$i.'.svg)"></div>';
+            $field['choices'][$i] = '<div class="acf-wpz-gallery-display" style="background-image: url('.BLOCKS_URL.'/Gallery/displays/display_'.$i.'.svg)"></div>';
         }
     }
 

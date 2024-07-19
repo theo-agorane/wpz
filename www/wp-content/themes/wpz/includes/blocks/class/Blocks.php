@@ -3,8 +3,8 @@
 class Blocks {
 
 	private $blocks;
-	public static $blocks_dir = BLOCKS_DIR . '/blocks';
-	public static $acf_dir = BLOCKS_DIR . '/acf';
+	public static $blocks_dir = BLOCKS_DIR;
+	public static $acf_dir = BLOCKS_PLUGIN . '/acf';
 	private $admin;
 
 	public function __construct() {

@@ -173,7 +173,7 @@ body.acf-modal-open {
 /* Add Layout Modal
 ------------------------------------------------------------*/
 
-.acf-fc-popup {
+body:has(.acf-field[data-name="blocks"]) .acf-fc-popup {
 	z-index: 10001;
 	position: fixed !important;
 	top: 50px !important;
@@ -194,7 +194,7 @@ body.acf-modal-open {
 	overflow-y: auto;
 }
 
-.acf-fc-popup:before {
+body:has(.acf-field[data-name="blocks"]) .acf-fc-popup:before {
 	content: "Ajouter un Block";
 	top: 0 !important;
 	left: 0 !important;
@@ -211,7 +211,7 @@ body.acf-modal-open {
 	padding: 10px 30px;
 }
 
-.acf-fc-popup ul {
+body:has(.acf-field[data-name="blocks"]) .acf-fc-popup ul {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: stretch;
@@ -219,13 +219,13 @@ body.acf-modal-open {
 	margin: -15px;
 }
 
-.acf-fc-popup li {
+body:has(.acf-field[data-name="blocks"]) .acf-fc-popup li {
 	width: calc(33.33% - 30px);
 	margin: 15px;
 	border: none;
 }
 
-.acf-fc-popup a {
+body:has(.acf-field[data-name="blocks"]) .acf-fc-popup a {
 	display: block;
 	color: #444;
 	font-weight: 500;
@@ -241,7 +241,7 @@ body.acf-modal-open {
 	pointer-events: all;
 }
 
-.acf-fc-popup a:after {
+body:has(.acf-field[data-name="blocks"]) .acf-fc-popup a:after {
 	content: '';
 	padding-bottom: 60%;
 	display: block;
@@ -254,22 +254,24 @@ body.acf-modal-open {
 	width: calc(100% + 30px);
 }
 
-.acf-fc-popup a:hover {
+body:has(.acf-field[data-name="blocks"]) .acf-fc-popup a:hover {
 	background: #0C2222;
 	border-color: #0C2222;
+	color: #FFFFFF;
 }
-.acf-fc-popup a:hover:after {
+
+body:has(.acf-field[data-name="blocks"]) .acf-fc-popup a:hover:after {
 	border-color: #0C2222;
 }
 
 @media screen and (max-width: 920px) {
-	.acf-fc-popup li {
+	body:has(.acf-field[data-name="blocks"]) .acf-fc-popup li {
 		width: calc(50% - 30px);
 	}
 }
 
 @media screen and (max-width: 600px) {
-	.acf-fc-popup li {
+	body:has(.acf-field[data-name="blocks"]) .acf-fc-popup li {
 		width: calc(100% - 30px);
 	}
 }
