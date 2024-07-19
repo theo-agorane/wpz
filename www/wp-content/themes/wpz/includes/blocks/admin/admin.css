@@ -1,0 +1,72 @@
+.list-blocks {
+	width: 100%;
+}
+
+.list-blocks td {
+	border-bottom: solid 1px #EAECF0;
+	padding: 12px 0;
+}
+
+.list-blocks tr:first-child td {
+	padding-top: 0;
+}
+
+.list-blocks tr:last-child td {
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+.list-blocks .block-name {
+	width: 100%;
+	padding-right: 24px;
+	font-weight: 500;
+}
+
+.list-blocks .block-name em {
+	display: block;
+	font-weight: 300;
+	font-style: normal;
+}
+
+.blocks-create label {
+	font-weight: 500;
+	display: block;
+	margin-bottom: 4px;
+}
+
+.blocks-create em {
+	display: block;
+	margin-bottom: 12px;
+}
+
+.blocks-create input[type="text"] {
+	width: 100%;
+	display: block;
+	margin-bottom: 24px;
+}
+
+.blocks-notice {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-left-width: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    margin: 0 0 24px;
+    padding: 1px 12px;
+}
+
+.blocks-notice p {
+	margin: .5em 0;
+	padding: 2px;
+}
+
+.blocks-notice-error {
+	border-left-color: #d63638;
+}
+
+.blocks-notice-success {
+	border-left-color: #00a32a;
+}
+
+.acf_page_blocks .acf-admin-notice {
+	display: none !important;
+}

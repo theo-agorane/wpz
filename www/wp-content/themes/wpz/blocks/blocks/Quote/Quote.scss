@@ -1,0 +1,64 @@
+.Block_Quote {
+	position: relative;
+	z-index: 0;
+	background: color(black);
+	margin: 0 !important;
+
+	&--background {
+		@include block-full;
+		z-index: 0;
+		opacity: 0.5;
+
+		&-image {
+			@include block-full;
+
+			@media #{$sm} {
+				display: none;
+			}
+		}
+
+		&-image-mobile {
+			@include block-full;
+			display: none;
+
+			@media #{$sm} {
+				display: block;
+			}
+		}
+	}
+
+	&--wrapper {
+		background: none !important;
+		position: relative;
+		z-index: 1;
+	}
+
+	&--title {
+		text-align: center;
+
+		@media #{$sm} {
+			text-align: left;
+		}
+	}
+
+	&--description {
+		text-align: center;
+		margin-top: spacing();
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		@media #{$sm} {
+			text-align: left;
+		}
+	}
+
+	&--buttons {
+		justify-content: center;
+
+		@media #{$sm} {
+			justify-content: flex-start;
+		}
+	}
+}

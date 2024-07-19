@@ -1,0 +1,21 @@
+@import '../../../../../../node_modules/reset-css/sass/reset';
+@import '../../../../../../node_modules/swiper/swiper-bundle.css';
+
+@import 'mixins';
+@import 'variables';
+@import 'main';
+
+@import 'components/buttons';
+@import 'components/texts';
+@import 'components/forms';
+@import 'components/grid';
+@import 'components/blocks';
+@import 'components/slider-images';
+
+@import 'layout/footer';
+@import 'layout/header';
+
+@import 'pages/404';
+
+// Blocks
+@import '../../blocks/generated/blocks';

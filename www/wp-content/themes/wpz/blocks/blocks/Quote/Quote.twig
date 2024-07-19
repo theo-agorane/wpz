@@ -1,0 +1,43 @@
+<section class="Block Block_Quote">
+	<div class="Block_Quote--background" {% if this.data.image.opacity %}style="opacity: {{ (this.data.image.opacity / 100) }}"{% endif %}>
+		<figure class="Block_Quote--background-image">
+			{{ acf_img(this.data.image.desktop) }}
+		</figure>
+		<figure class="Block_Quote--background-image-mobile">
+			{% if this.data.image.mobile %}
+				{{ acf_img(this.data.image.mobile) }}
+			{% else %}
+				{{ acf_img(this.data.image.desktop) }}
+			{% endif %}
+		</figure>
+	</div>
+	<div class="Block_Quote--wrapper {{ this.class }}">
+		<div class="container-little">
+			{% if this.data.title.text %}
+				<{{ this.data.title.htag }} class="Block_Quote--title h2">
+					{{ this.data.title.text }}
+				</{{ this.data.title.htag }}>
+			{% endif %}
+			{% if this.data.wysiwyg_text %}
+				<div class="Block_Quote--description wysiwyg-text">
+					{{ this.data.wysiwyg_text }}
+				</div>
+			{% endif %}
+			{% if this.data.button_primary or this.data.button_secondary %}
+				<div class="Block--buttons Block_Quote--buttons">
+					{% if this.data.button_primary %}
+						<a {{ acf_link_attrs(this.data.button_primary, 'button __primary') }}>
+							{{ this.data.button_primary.title }}
+							{{ wpz_icon('arrow-forward-sharp') }}
+						</a>
+					{% endif %}
+					{% if this.data.button_secondary %}
+						<a {{ acf_link_attrs(this.data.button_secondary, 'button __secondary') }}>
+							{{ this.data.button_secondary.title }}
+						</a>
+					{% endif %}
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</section>

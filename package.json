@@ -1,0 +1,54 @@
+{
+  "name": "wpz",
+  "private": true,
+  "dependencies": {
+    "@babel/polyfill": "^7.11.5",
+    "@studio-freight/lenis": "^1.0.19",
+    "context-filter-polyfill": "^0.2.4",
+    "gsap": "^3.12.2",
+    "locomotive-scroll": "^4.1.4",
+    "reset-css": "^5.0.1",
+    "stackblur-canvas": "^2.5.0",
+    "swiper": "^8.0.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.2",
+    "@babel/preset-env": "^7.16.11",
+    "autoprefixer": "^10.4.13",
+    "babel-core": "^7.0.0-bridge.0",
+    "browser-sync": "^2.27.7",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "compress-images": "^2.0.4",
+    "css-loader": "^6.6.0",
+    "file-loader": "^6.2.0",
+    "gifsicle": "^5.2.1",
+    "mini-css-extract-plugin": "^2.5.3",
+    "node-sass": "^7.0.1",
+    "pngquant-bin": "^6.0.1",
+    "postcss-loader": "^7.0.2",
+    "sass-loader": "^12.5.0",
+    "sass-math": "^1.0.0",
+    "svg-symbols": "^1.0.5",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "scripts": {
+    "build": "webpack --mode production && node package-scripts.js && svg-symbols www/wp-content/themes/wpz/dist/icons > www/wp-content/themes/wpz/dist/all-icons.svg",
+    "dev": "webpack --mode development --watch"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "browserslist": [
+    "defaults",
+    "not ie < 11",
+    "last 2 versions",
+    "> 1%",
+    "iOS 7",
+    "last 3 iOS versions"
+  ]
+}

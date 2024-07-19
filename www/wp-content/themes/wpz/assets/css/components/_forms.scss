@@ -1,0 +1,116 @@
+.acfe-form {
+	.acf-fields {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		justify-content: flex-start;
+		margin: spacing(-0.5) spacing(-0.5);
+		width: calc(100% + #{spacing()});
+
+		& > .acf-field {
+			border: none;
+			padding: 0;
+			margin: spacing(0.5) spacing(0.5);
+			width: calc(100% - #{spacing()});
+			max-width: var(--wpz-container-little);
+
+			&-half {
+				width: calc(50% - #{spacing(1)});
+			}
+
+			@media #{$xs} {
+				width: calc(100% - #{spacing(1)}) !important;
+			}
+
+			.acf-label {
+				margin: 0 0 0.5rem;
+				font-size: 0.875rem;
+
+				label {
+					font-weight: fw(medium);
+					margin: 0;
+				}
+			}
+
+			.acf-required {
+				color: var(--block-title-color);
+			}
+
+			input[type=text],
+			input[type=password],
+			input[type=date],
+			input[type=datetime],
+			input[type=datetime-local],
+			input[type=email],
+			input[type=month],
+			input[type=number],
+			input[type=search],
+			input[type=tel],
+			input[type=time],
+			input[type=url],
+			input[type=week],
+			textarea,
+			select {
+				font-family: font();
+				font-size: 1;
+				background: color(white);
+				border: solid 1px color(shadow);
+				border-radius: 5px;
+				outline: none !important;
+				padding: 0.625rem 0.75rem;
+				line-height: 1.25;
+				min-height: 2.5rem;
+			}
+
+			ul.acf-radio-list,
+			ul.acf-checkbox-list {
+				border: none;
+				padding: 0;
+
+				li {
+					font-size: 0.875rem;
+					line-height: 1.1;
+				}
+
+				label {
+					padding: 0.125rem 0;
+
+					a {
+						font-weight: fw(medium);
+						border-bottom: solid 1px transparent;
+
+						&:hover {
+							border-color: currentColor;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.acf-form-submit {
+		margin-top: 1.5rem;
+
+		.button {
+			min-width: calc(50% - #{spacing()});
+			width: 100%;
+
+			@media #{$xs} {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.acf-notice {
+	padding: 0.25rem 0.75rem;
+
+	p {
+		font-size: 0.75rem;
+		line-height: 1.25;
+	}
+
+	.acf-notice-dismiss {
+		display: none;
+	}
+}

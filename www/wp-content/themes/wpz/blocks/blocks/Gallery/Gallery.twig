@@ -1,0 +1,223 @@
+{% set fake_img = '<figure class="Block_Gallery--image"><div class="img"></div></figure>' %}
+<section class="Block Block_Gallery {{ this.class }}">
+	<div class="container">
+		<div class="Block_Gallery--wrapper">
+			{% for row in this.data.rows %}
+				{# ------------- Display #1 ------------- #}
+				{% if row.gallery_display == '1' %}
+					<div class="Block_Gallery--row __display_1">
+						<div class="Block_Gallery--col __col_1">
+							<div class="Block_Gallery--item __item_1 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_1) }}</figure>
+							</div>
+						</div>
+						<div class="Block_Gallery--col __col_2">
+							<div class="Block_Gallery--item __item_2 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_2) }}</figure>
+							</div>
+							<div class="Block_Gallery--item __item_3 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_3) }}</figure>
+							</div>
+						</div>
+					</div>
+				{# ------------- Display #2 ------------- #}
+				{% elseif row.gallery_display == '2' %}
+					<div class="Block_Gallery--row __display_2">
+						<div class="Block_Gallery--col __col_1">
+							<div class="Block_Gallery--item __item_1 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_1) }}</figure>
+							</div>
+							<div class="Block_Gallery--item __item_2 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_2) }}</figure>
+							</div>
+						</div>
+						<div class="Block_Gallery--col __col_2">
+							<div class="Block_Gallery--item __item_3 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_3) }}</figure>
+							</div>
+						</div>
+					</div>
+				{# ------------- Display #3 ------------- #}
+				{% elseif row.gallery_display == '3' %}
+					<div class="Block_Gallery--row __display_3">
+						<div class="Block_Gallery--col __col_1">
+							<div class="Block_Gallery--item __item_1 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_1) }}</figure>
+							</div>
+						</div>
+						<div class="Block_Gallery--col __col_2">
+							<div class="Block_Gallery--item __item_2 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_2) }}</figure>
+							</div>
+							<div class="Block_Gallery--item __item_4 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_4) }}</figure>
+							</div>
+						</div>
+						<div class="Block_Gallery--col __col_3">
+							<div class="Block_Gallery--item __item_3 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_3) }}</figure>
+							</div>
+							<div class="Block_Gallery--item __item_5 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_5) }}</figure>
+							</div>
+						</div>
+					</div>
+				{# ------------- Display #4 ------------- #}
+				{% elseif row.gallery_display == '4' %}
+					<div class="Block_Gallery--row __display_4">
+						<div class="Block_Gallery--col __col_1">
+							<div class="Block_Gallery--item __item_1 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_1) }}</figure>
+							</div>
+							<div class="Block_Gallery--item __item_2 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_2) }}</figure>
+							</div>
+						</div>
+						<div class="Block_Gallery--col __col_2">
+							<div class="Block_Gallery--item __item_3 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_3) }}</figure>
+							</div>
+						</div>
+						<div class="Block_Gallery--col __col_3">
+							<div class="Block_Gallery--item __item_4 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_4) }}</figure>
+							</div>
+							<div class="Block_Gallery--item __item_5 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_5) }}</figure>
+							</div>
+						</div>
+					</div>
+				{# ------------- Display #5 ------------- #}
+				{% elseif row.gallery_display == '5' %}
+					<div class="Block_Gallery--row __display_5">
+						<div class="Block_Gallery--col __col_1">
+							<div class="Block_Gallery--item __item_1 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_1) }}</figure>
+							</div>
+							<div class="Block_Gallery--item __item_3 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_3) }}</figure>
+							</div>
+						</div>
+						<div class="Block_Gallery--col __col_2">
+							<div class="Block_Gallery--item __item_2 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_2) }}</figure>
+							</div>
+							<div class="Block_Gallery--item __item_4 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_4) }}</figure>
+							</div>
+						</div>
+						<div class="Block_Gallery--col __col_3">
+							<div class="Block_Gallery--item __item_5 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_5) }}</figure>
+							</div>
+						</div>
+					</div>
+				{# ------------- Display #6 ------------- #}
+				{% elseif row.gallery_display == '6' %}
+					<div class="Block_Gallery--row __display_6">
+						<div class="Block_Gallery--col __col_1">
+							<div class="Block_Gallery--item __item_1 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_1) }}</figure>
+							</div>
+						</div>
+						<div class="Block_Gallery--col __col_2">
+							<div class="Block_Gallery--item __item_2 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_2) }}</figure>
+							</div>
+						</div>
+					</div>
+				{# ------------- Display #7 ------------- #}
+				{% elseif row.gallery_display == '7' %}
+					<div class="Block_Gallery--row __display_7">
+						<div class="Block_Gallery--col __col_1">
+							<div class="Block_Gallery--item __item_1 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_1) }}</figure>
+							</div>
+						</div>
+						<div class="Block_Gallery--col __col_2">
+							<div class="Block_Gallery--item __item_2 __portrait">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_2) }}</figure>
+							</div>
+						</div>
+					</div>
+				{# ------------- Display #8 ------------- #}
+				{% elseif row.gallery_display == '8' %}
+					<div class="Block_Gallery--row __display_8">
+						<div class="Block_Gallery--col __col_1">
+							<div class="Block_Gallery--item __item_1 __portrait">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_1) }}</figure>
+							</div>
+						</div>
+						<div class="Block_Gallery--col __col_2">
+							<div class="Block_Gallery--item __item_2 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_2) }}</figure>
+							</div>
+						</div>
+					</div>
+				{# ------------- Display #9 ------------- #}
+				{% elseif row.gallery_display == '9' %}
+					<div class="Block_Gallery--row __display_9">
+						<div class="Block_Gallery--col __col_1">
+							<div class="Block_Gallery--item __item_1 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_1) }}</figure>
+							</div>
+						</div>
+						<div class="Block_Gallery--col __col_2">
+							<div class="Block_Gallery--row __row_1">
+								<div class="Block_Gallery--item __item_2 __portrait">
+									<figure class="Block_Gallery--image">{{ acf_img(row.items.image_2) }}</figure>
+								</div>
+								<div class="Block_Gallery--item __item_3 __portrait">
+									<figure class="Block_Gallery--image">{{ acf_img(row.items.image_3) }}</figure>
+								</div>
+							</div>
+						</div>
+					</div>
+				{# ------------- Display #10 ------------- #}
+				{% elseif row.gallery_display == '10' %}
+					<div class="Block_Gallery--row __display_10">
+						<div class="Block_Gallery--col __col_1">
+							<div class="Block_Gallery--row __row_1">
+								<div class="Block_Gallery--item __item_1 __portrait">
+									<figure class="Block_Gallery--image">{{ acf_img(row.items.image_1) }}</figure>
+								</div>
+								<div class="Block_Gallery--item __item_2 __portrait">
+									<figure class="Block_Gallery--image">{{ acf_img(row.items.image_2) }}</figure>
+								</div>
+							</div>
+						</div>
+						<div class="Block_Gallery--col __col_2">
+							<div class="Block_Gallery--item __item_3 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_3) }}</figure>
+							</div>
+						</div>
+					</div>
+				{# ------------- Display #11 ------------- #}
+				{% elseif row.gallery_display == '11' %}
+					<div class="Block_Gallery--row __display_11">
+						<div class="Block_Gallery--col __col_1">
+							<div class="Block_Gallery--item __item_1 __portrait">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_1) }}</figure>
+							</div>
+						</div>
+						<div class="Block_Gallery--col __col_2">
+							<div class="Block_Gallery--item __item_2 __landscape">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_2) }}</figure>
+							</div>
+						</div>
+						<div class="Block_Gallery--col __col_3">
+							<div class="Block_Gallery--item __item_3 __portrait">
+								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_3) }}</figure>
+							</div>
+						</div>
+					</div>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+
+	{% include 'components/Slider_Images.twig' with {
+		items: this.data.images,
+		lightbox: true,
+	} %}
+</section>

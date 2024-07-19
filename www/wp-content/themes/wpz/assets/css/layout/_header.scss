@@ -1,0 +1,224 @@
+// ======================================
+// Header
+// ======================================
+.Header {
+	position: sticky;
+	top: 0;
+	z-index: 800;
+	transition: ts(transform, short);
+}
+
+// ======================================
+// Header_Main
+// ======================================
+.Header_Main {
+	transition: ts(background, short), ts(color, short), ts(border-color, short);
+	background: color(white);
+	color: color(black);
+	padding: 1rem 0;
+	position: relative;
+	z-index: 10;
+	border-bottom: solid 1px color(shadow);
+
+	&--wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&--menu {
+		width: 100%;
+		display: flex;
+		align-content: center;
+		justify-content: flex-start;
+
+		@media #{$sm} {
+			order: 1;
+			justify-content: flex-end;
+		}
+	}
+
+	&--toggle {
+		width: 2.5rem;
+		height: 3rem;
+		cursor: pointer;
+		position: relative;
+
+		span {
+			background: currentColor;
+			display: block;
+			position: absolute;
+			width: 2.5rem;
+			height: 2px;
+			margin-top: -1px;
+			left: 0;
+			top: 50%;
+			transform-origin: center center;
+			transition: ts(transform), ts(opacity);
+			transform: translate3d(0, 0, 0);
+
+			&.__top { transform: translate3d(0, -0.625rem, 0); }
+			&.__mid { transform: translate3d(0, 0, 0); }
+			&.__btm { transform: translate3d(0, 0.625rem, 0); }
+		}
+
+		&:hover {
+			span {
+				&.__top { transform: translate3d(0, -0.5rem, 0); }
+				&.__mid { transform: scale3d(0.75, 1, 1); }
+				&.__btm { transform: translate3d(0, 0.5rem, 0); }
+			}
+		}
+	}
+
+	&--logo {
+		flex-shrink: 0;
+		position: relative;
+		height: 2.5rem;
+
+		img {
+			height: 100%;
+			width: auto;
+		}
+
+		@media #{$sm} {
+			order: 0;
+			height: 2rem;
+		}
+	}
+
+	&--aside {
+		width: 100%;
+		display: flex;
+		align-content: center;
+		justify-content: flex-end;
+
+		@media #{$sm} {
+			display: none;
+		}
+	}
+}
+
+// ======================================
+// Menu_Main
+// ======================================
+.Menu_Main {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	background: color(white);
+	color: color(black);
+	max-height: calc(100dvh - var(--wpz-header-height));
+	z-index: 5;
+	transition: ts(transform, long), ts(opacity, medium);
+	opacity: 0;
+	transform: translate3d(0, calc(-100% - var(--wpz-header-height) - var(--wpz-header-message-height)), 0);
+	padding: spacing(1.5) 0;
+
+	@media #{$sm} {
+		overflow-y: auto;
+	}
+
+	&--overlay {
+		position: fixed;
+		z-index: 0;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		height: 100dvh;
+		background: color(overlay);
+		visibility: hidden;
+		opacity: 0;
+		pointer-events: none;
+		transition: visibility 0s var(--wpz-ts-medium), ts(opacity, medium);
+	}
+
+	&--wrapper {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin: spacing(-0.5);
+
+		@media #{$md} {
+			flex-wrap: wrap;
+			justify-content: flex-start;
+		}
+	}
+
+	&--col {
+		margin: spacing(0.5);
+
+		@media #{$md} {
+			width: calc(33.33% - #{spacing()});
+		}
+
+		@media #{$sm} {
+			width: calc(50% - #{spacing()});
+		}
+	}
+
+	&--item {
+		&:last-child {
+			margin-bottom: 0 !important;
+		}
+
+		&.__title {
+			margin-bottom: 0.5rem;
+
+			.Menu_Main--item-link {
+				font-weight: fw(bold);
+			}
+		}
+
+		&-link {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			transition: ts(color, short);
+			padding: 0.125rem 0;
+
+			&:hover {
+				color: color(yellow);
+			}
+
+			svg {
+				width: 0.75rem;
+				height: 0.75rem;
+				margin-left: 0.5rem;
+			}
+		}
+	}
+}
+
+// ======================================
+// Menu_Main (open)
+// ======================================
+.__menu_main_open {
+	.Header_Main {
+		background: color(white);
+		color: color(black);
+		border-color: color(shadow);
+
+		&--toggle {
+			span {
+				&.__top { transform: rotate(-45deg) scale3d(0.875, 1, 1); }
+				&.__mid { transform: scale3d(0, 1, 1); }
+				&.__btm { transform: rotate(45deg) scale3d(0.875, 1, 1); }
+			}
+		}
+	}
+
+	.Menu_Main {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+
+		&--overlay {
+			visibility: visible;
+			opacity: 1;
+			pointer-events: all;
+			transition: ts(opacity, medium);
+		}
+	}
+}

@@ -1,0 +1,25 @@
+<nav class="Menu_Main">
+	<div class="container">
+		<div class="Menu_Main--wrapper">
+			{% for item_col in Config().menus.main.items  %}
+				<ul class="Menu_Main--col">
+					<li class="Menu_Main--item __title {{ item_col.class }}">
+						<a href="{{ item_col.link }}" class="Menu_Main--item-link" {% if item_col.target %}target="{{ item_col.target }}"{% endif %}>
+							{{ item_col.title }}
+							{{ wpz_icon('arrow-right') }}
+						</a>
+					</li>
+
+					{% for item in item_col.children %}
+						<li class="Menu_Main--item">
+							<a href="{{ item.link }}" class="Menu_Main--item-link {{ item.class }}" {% if item.target %}target="{{ item.target }}"{% endif %}>
+								{{ item.title }}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			{% endfor %}
+		</div>
+	</div>
+</nav>
+<div class="Menu_Main--overlay"></div>

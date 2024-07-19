@@ -1,0 +1,44 @@
+<section class="Block Block_Columns {{ this.class }}">
+	<div class="container">
+		<div class="Grid Block_Columns--grid __grid_{{ this.data.items|length }} __valign_{{ this.data.valign }} {% if this.data.order_reverse %}__order_reverse{% endif %}">
+			{% for item in this.data.items %}
+				<div class="Grid-item Block_Columns--item __{{ item.type }}">
+					{% if item.type == 'text' %}
+						<div class="Block_Columns--text wysiwyg-text">{{ item.wysiwyg_text }}</div>
+
+						{% if item.button_primary or item.button_secondary %}
+							<div class="Block--buttons Block_Columns--buttons">
+								{% if item.button_primary %}
+									<a {{ acf_link_attrs(item.button_primary, 'button __primary') }}>
+										{{ item.button_primary.title }}
+										{{ wpz_icon('arrow-forward-sharp') }}
+									</a>
+								{% endif %}
+								{% if item.button_secondary %}
+									<a {{ acf_link_attrs(item.button_secondary, 'button __secondary') }}>
+										{{ item.button_secondary.title }}
+									</a>
+								{% endif %}
+							</div>
+						{% endif %}
+					{% elseif item.type == 'image' %}
+						<figure class="Block_Columns--image __format_{{ item.format }} {% if get_image(item.image).post_mime_type == 'image/png' %}__png{% endif %}">
+							{{ acf_img(item.image) }}
+						</figure>
+					{% elseif item.type == 'video' %}
+						<div class="Video Block_Columns--video __format_{{ item.format }}">
+							{{ acf_video(item.video) }}
+						</div>
+					{% elseif item.type == 'slider' %}
+						<div class="Block_Columns--slider">
+							{% include 'components/Slider_Images.twig' with {
+								items: item.slider,
+								format: item.format,
+							} %}
+						</div>
+					{% endif %}
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

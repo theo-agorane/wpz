@@ -1,0 +1,15 @@
+# Wordpress files
+www/wp-config.php
+www/wp-content/*
+!www/wp-content/plugins
+!www/wp-content/mu-plugins
+!www/wp-content/languages
+!www/wp-content/themes
+!www/wp-content/blocks
+
+# Front files
+node_modules/
+log/
+package-lock.json
+composer.lock
+

@@ -1,0 +1,20 @@
+{% extends "layout/Html.twig" %}
+
+{% block content %}
+    <article class="Page404">
+        <section class="Block __background_light __spacing_top_XL __spacing_bottom_XL">
+            <div class="container-little">
+                <h1 class="Page404--title">404</h1>
+                <div class="Page404--content wysiwyg-text">
+                    <p>{{ _("La page demandée n'existe pas") }}</p>
+                </div>
+                <div class="Page404--button">
+                    <a href="{{ site.link }}" class="button __primary __icon-left">
+                        {{ wpz_icon('arrow-left') }}
+                        {{ _("Revenir à l'accueil") }}
+                    </a>
+                </div>
+            </div>
+        </section>
+    </article>
+{% endblock %}

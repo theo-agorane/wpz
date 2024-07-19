@@ -1,0 +1,27 @@
+<section class="Block Block_MediaFull {{ this.class }} {% if this.data.mobile_nomargin %}__mobile_nomargin{% endif %}">
+	<div class="container">
+		{% if this.data.type == 'image' %}
+			<figure class="Block_MediaFull--image __format_{{ this.data.format }}">
+				{{ acf_img(this.data.image.desktop) }}
+			</figure>
+			<figure class="Block_MediaFull--image-mobile __format_{{ this.data.format_mobile }}">
+				{% if this.data.image.mobile %}
+					{{ acf_img(this.data.image.mobile) }}
+				{% else %}
+					{{ acf_img(this.data.image.desktop) }}
+				{% endif %}
+			</figure>
+		{% elseif this.data.type == 'video' %}
+			<div class="Video Block_MediaFull--video __format_{{ this.data.format }}">
+				{{ acf_video(this.data.video) }}
+			</div>
+		{% elseif this.data.type == 'slider' %}
+			<div class="Block_MediaFull--slider">
+				{% include 'components/Slider_Images.twig' with {
+					items: this.data.slider,
+					format: this.data.format,
+				} %}
+			</div>
+		{% endif %}
+	</div>
+</section>

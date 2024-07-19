@@ -1,0 +1,48 @@
+<section class="Block Block_FAQ {{ this.class }}">
+	<div class="container">
+		{% if this.data.title.text %}
+			<{{ this.data.title.htag }} class="Block_FAQ--title h2">
+				{{ this.data.title.text }}
+			</{{ this.data.title.htag }}>
+		{% endif %}
+		{% if this.data.wysiwyg_text %}
+			<div class="Block_FAQ--description wysiwyg-text">
+				{{ this.data.wysiwyg_text }}
+			</div>
+		{% endif %}
+
+		{% for category in this.data.categories %}
+			<div class="Block_FAQ--category">
+				{% if category.title.text %}
+					<{{ category.title.htag }} class="Block_FAQ--category-title h3">
+						{{ category.title.text }}
+					</{{ category.title.htag }}>
+				{% endif %}
+
+				<div class="Block_FAQ--category-wrapper">
+					{% for item in category.items %}
+						{% set item = get_post(item) %}
+						<div class="Block_FAQ--item">
+							<div class="Block_FAQ--item-question">
+								<div class="Block_FAQ--item-question-text">{{ item.title }}</div>
+
+								<div class="Block_FAQ--item-plus">{{ wpz_icon('plus') }}</div>
+								<div class="Block_FAQ--item-minus">{{ wpz_icon('minus') }}</div>
+							</div>
+							<div class="Block_FAQ--item-answer">
+								<div class="Block_FAQ--item-answer-wrapper wysiwyg-text">{{ item.answer }}</div>
+							</div>
+						</div>
+					{% endfor %}
+
+					{% if category.items|length > 2 %}
+						<a class="Block_FAQ--load-more button __primary">
+							Afficher plus
+							{{ wpz_icon('arrow-bottom') }}
+						</a>
+					{% endif %}
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</section>

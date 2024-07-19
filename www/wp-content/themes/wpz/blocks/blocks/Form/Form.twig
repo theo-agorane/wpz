@@ -1,0 +1,34 @@
+<section class="Block Block_Form {{ this.class }}">
+	<div class="container">
+		<div class="Grid Block_Form--grid {% if this.data.content.active %}__grid_2{% else %}__grid_1{% endif %}">
+			{% if this.data.content.active %}
+				<div class="Grid-item Block_Form--item">
+					{% if this.data.content.title.text %}
+						<{{ this.data.content.title.htag }} class="Block_Form--title h2">
+							{{ this.data.content.title.text }}
+						</{{ this.data.content.title.htag }}>
+					{% endif %}
+					{% if this.data.content.wysiwyg_text %}
+						<div class="Block_Form--description wysiwyg-text">
+							{{ this.data.content.wysiwyg_text }}
+						</div>
+					{% endif %}
+					{% if this.data.content.button_phone %}
+						<div class="Block_Form--button">
+							<a href="tel:{{ this.data.content.button_phone|e('html_attr') }}" class="button-icon">
+								<span class="button-icon--icon">{{ wpz_icon('social-phone') }}</span>
+								<span class="button-icon--text">{{ this.data.content.button_phone }}</span>
+							</a>
+						</div>
+					{% endif %}
+				</div>
+			{% endif %}
+			{% if this.data.form %}
+				<div class="Grid-item Block_Form--item">
+					{% set shortcode_form = '[acfe_form name="' ~ this.data.form ~ '"]' %}
+					{{ fn('do_shortcode', shortcode_form)}}
+				</div>
+			{% endif %}
+		</div>
+	</div>
+</section>

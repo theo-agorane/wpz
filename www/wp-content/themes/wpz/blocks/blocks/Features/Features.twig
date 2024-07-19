@@ -1,0 +1,44 @@
+<section class="Block Block_Features {{ this.class }}">
+	<div class="container">
+		{% if this.data.title.text %}
+			<{{ this.data.title.htag }} class="Block_Features--title h2">
+				{{ this.data.title.text }}
+			</{{ this.data.title.htag }}>
+		{% endif %}
+		{% if this.data.wysiwyg_text %}
+			<div class="Block_Features--description wysiwyg-text">
+				{{ this.data.wysiwyg_text }}
+			</div>
+		{% endif %}
+		<div class="Block_Features--slider">
+			<div class="Slider_Features Slider">
+				<div class="swiper">
+					<div class="swiper-wrapper">
+						{% for item in this.data.items %}
+							<div class="swiper-slide">
+								<div class="Slider_Features--item">
+									{% if item.icon %}
+										<div class="Slider_Features--item-icon __color_highlight">{{ wpz_icon(item.icon) }}</div>
+									{% endif %}
+									{% if item.title.text %}
+										<{{ item.title.htag }} class="Slider_Features--item-title">
+											{{ item.title.text }}
+										</{{ item.title.htag }}>
+									{% endif %}
+									{% if item.wysiwyg_text %}
+										<div class="Slider_Features--item-text wysiwyg-text">{{ item.wysiwyg_text }}</div>
+									{% endif %}
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="Slider--navigation">
+					<div class="Slider--prev swiper-navigation-prev">{{ wpz_icon('arrow-left') }}</div>
+					<div class="Slider--scrollbar swiper-navigation-scrollbar"></div>
+					<div class="Slider--next swiper-navigation-next">{{ wpz_icon('arrow-forward-sharp') }}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

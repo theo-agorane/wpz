@@ -1,0 +1,43 @@
+.acf-wpz-color {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+.acf-wpz-gallery-display {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    width: 120px;
+    height: 54px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+[data-name="gallery_display"] .acf-radio-list li {
+    margin: 0 10px 10px 0 !important;
+}
+
+[data-name="gallery_display"] .acf-radio-list label {
+    padding: 2px;
+    border: solid 2px #EEEEEE;
+    border-radius: 2px;
+    display: block;
+}
+
+[data-name="gallery_display"] .acf-radio-list label:hover {
+    border-color: #C0C0C0;
+    opacity: 1;
+}
+
+[data-name="gallery_display"] .acf-radio-list label.selected {
+    border-color: #2271b1;
+    opacity: 1;
+}
+
+[data-name="gallery_display"] .acf-radio-list input {
+    display: none;
+}

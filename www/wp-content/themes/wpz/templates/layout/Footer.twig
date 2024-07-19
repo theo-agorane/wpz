@@ -1,0 +1,91 @@
+<footer class="Footer">
+	<div class="Footer_Main">
+		<div class="container">
+			<div class="Footer_Main--wrapper">
+				<div class="Footer_Main--col __company">
+					<div class="Footer_Main--company">
+						<div class="Footer_Main--logo">
+							<a href="{{ site.link }}">
+								<img src="{{ wpz_img('logo-wpz.svg') }}" alt="{{ site.name|e('html_attr') }} - Logo">
+							</a>
+						</div>
+						<div class="Footer_Main--contact">
+							{% if Config().footer.contact.address_text %}
+								<div class="Footer_Main--address">
+									{% if Config().footer.contact.address_link %}
+										<a href="{{ Config().footer.contact.address_link|e('html_attr') }}" target="_blank">
+											{{ Config().footer.contact.address_text }}
+										</a>
+									{% else %}
+										{{ Config().footer.contact.address_text }}
+									{% endif %}
+								</div>
+							{% endif %}
+							{% if Config().footer.contact.phone %}
+								<div class="Footer_Main--phone">
+									<a href="tel:{{ Config().footer.contact.phone|e('html_attr') }}">
+										{{ Config().footer.contact.phone }}
+									</a>
+								</div>
+							{% endif %}
+							<nav class="Footer_Main--social">
+								<ul class="Footer_Main--social-menu">
+									{% for item in Config().social_links %}
+										<li class="Footer_Main--social-menu-item">
+											<a {{ acf_link_attrs(item.link, 'Footer_Main--social-menu-item-link') }}>
+												<span class="__vhidden">{{ item.link.title }}</span>
+												{{ wpz_icon(item.icon) }}
+											</a>
+										</li>
+									{% endfor %}
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="Footer_Main--col __menu">
+					<nav class="Footer_Main--menu">
+						{% for item_col in Config().menus.footer.items %}
+							<ul class="Footer_Main--menu-col">
+								{% if item_col.link == '#' %}
+									<li class="Footer_Main--menu-title {{ item_col.class }}">{{ item_col.title }}</li>
+								{% else %}
+									<li class="Footer_Main--menu-title {{ item_col.class }}">
+										<a href="{{ item_col.link }}" class="Footer_Main--menu-title-link" {% if item_col.target %}target="{{ item_col.target }}"{% endif %}>
+											{{ item_col.title }}
+											{{ wpz_icon('arrow-right') }}
+										</a>
+									</li>
+								{% endif %}
+								{% for item in item_col.children %}
+									<li class="Footer_Main--menu-item {{ item.class }}">
+										<a href="{{ item.link }}" class="Footer_Main--menu-item-link" {% if item.target %}target="{{ item.target }}"{% endif %}>
+											{{ item.title }}
+										</a>
+									</li>
+								{% endfor %}
+							</ul>
+						{% endfor %}
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="Footer_Sub">
+		<div class="container">
+			<div class="Footer_Sub--wrapper">
+				<nav class="Footer_Sub--menu">
+					<ul class="Footer_Sub--menu-list">
+						{% for item in Config().menus.footer_sub.items %}
+							<li class="Footer_Sub--menu-item {{ item.class }}">
+								<a href="{{ item.link }}" class="Footer_Sub--menu-item-link" {% if item.target %}target="{{ item.target }}"{% endif %}>
+									{{ item.title }}
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</footer>

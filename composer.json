@@ -1,0 +1,11 @@
+{
+	"config": {
+		"vendor-dir": "www/wp-content/themes/wpz/vendor",
+		"allow-plugins": {
+			"composer/installers": true
+		}
+	},
+	"require": {
+		"timber/timber": "^2.0"
+	}
+}

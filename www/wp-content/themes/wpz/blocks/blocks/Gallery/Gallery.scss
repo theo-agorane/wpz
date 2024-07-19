@@ -1,0 +1,275 @@
+.Block_Gallery {
+	--gallery-gap: 0.5rem;
+
+	&--wrapper {
+		margin: calc(-0.5 * var(--gallery-gap));
+	}
+
+	&--row {
+		display: flex;
+		align-items: stretch;
+		justify-content: space-between;
+
+		@media #{$sm} {
+			flex-direction: column;
+		}
+
+		@media #{$xs} {
+			flex-direction: column !important;
+		}
+	}
+
+	&--col {
+		display: flex;
+		align-items: stretch;
+		justify-content: space-between;
+		flex-direction: column;
+
+		@media #{$sm} {
+			width: 100% !important;
+		}
+
+		@media #{$xs} {
+			flex-direction: column !important;
+		}
+	}
+
+	&--item {
+		width: 100%;
+		padding: calc(0.5 * var(--gallery-gap));
+		position: relative;
+		cursor: pointer;
+	}
+
+	.Slider_Images {
+		display: none;
+	}
+
+	@media #{$sm} {
+		.Block_Gallery--row .Block_Gallery--col .Block_Gallery--item {
+			&.__landscape {
+				@include keepratio(16, 9);
+			}
+
+			&.__portrait {
+				@include keepratio(3, 4);
+			}
+		}
+
+		.Slider_Images {
+			display: none !important;
+		}
+	}
+
+	@media #{$xs} {
+		.Block_Gallery--row .Block_Gallery--col .Block_Gallery--item {
+			width: 100% !important;
+		}
+	}
+
+	&--image {
+		position: absolute;
+		top: calc(0.5 * var(--gallery-gap));
+		left: calc(0.5 * var(--gallery-gap));
+		width: calc(100% - var(--gallery-gap));
+		height: calc(100% - var(--gallery-gap));
+
+		.img {
+			width: 100%;
+			height: 100%;
+			background: color(shadow);
+		}
+	}
+
+	/***************************************************
+	 * Display #1
+	 ***************************************************/
+	.__display_1 {
+		.__col_1 { flex-shrink: 0; width: 66.66%; }
+		.__col_2 { width: 33.33%; }
+		.__item_1 { @include keepratio(16, 9); }
+		.__item_2 { height: 50%; }
+		.__item_3 { height: 50%; }
+
+		@media #{$sm} {
+			.__col_2 { flex-direction: row; }
+			.__item_2 { height: auto; width: 50%; }
+			.__item_3 { height: auto; width: 50%; }
+		}
+	}
+
+	/***************************************************
+	 * Display #2
+	 ***************************************************/
+	.__display_2 {
+		.__col_1 { width: 33.33%; }
+		.__col_2 { flex-shrink: 0; width: 66.66%; }
+		.__item_1 { height: 50%; }
+		.__item_2 { height: 50%; }
+		.__item_3 { @include keepratio(16, 9); }
+
+		@media #{$sm} {
+			.__col_1 { flex-direction: row; }
+			.__item_1 { height: auto; width: 50%; }
+			.__item_2 { height: auto; width: 50%; }
+		}
+	}
+
+	/***************************************************
+	 * Display #3
+	 ***************************************************/
+	.__display_3 {
+		.__col_1 { flex-shrink: 0; width: 50%; }
+		.__col_2 { width: 25%; }
+		.__col_3 { width: 25%; }
+		.__item_1 { @include keepratio(3, 2); }
+		.__item_2 { height: 50%; }
+		.__item_3 { height: 50%; }
+		.__item_4 { height: 50%; }
+		.__item_5 { height: 50%; }
+
+		@media #{$sm} {
+			.__col_2 { flex-direction: row; }
+			.__col_3 { flex-direction: row; }
+			.__item_1 { }
+			.__item_2 { height: auto; width: 50%; }
+			.__item_3 { height: auto; width: 50%; }
+			.__item_4 { height: auto; width: 50%; }
+			.__item_5 { height: auto; width: 50%; }
+		}
+	}
+
+	/***************************************************
+	 * Display #4
+	 ***************************************************/
+	.__display_4 {
+		.__col_1 { width: 25%; }
+		.__col_2 { flex-shrink: 0; width: 50%; }
+		.__col_3 { width: 25%; }
+		.__item_1 { height: 50%; }
+		.__item_2 { height: 50%; }
+		.__item_3 { @include keepratio(3, 2); }
+		.__item_4 { height: 50%; }
+		.__item_5 { height: 50%; }
+
+		@media #{$sm} {
+			.__col_1 { flex-direction: row; }
+			.__col_3 { flex-direction: row; }
+			.__item_1 { height: auto; width: 50%; }
+			.__item_2 { height: auto; width: 50%; }
+			.__item_3 { }
+			.__item_4 { height: auto; width: 50%; }
+			.__item_5 { height: auto; width: 50%; }
+		}
+	}
+
+	/***************************************************
+	 * Display #5
+	 ***************************************************/
+	.__display_5 {
+		.__col_1 { width: 25%; }
+		.__col_2 { width: 25%; }
+		.__col_3 { flex-shrink: 0; width: 50%; }
+		.__item_1 { height: 50%; }
+		.__item_2 { height: 50%; }
+		.__item_3 { height: 50%; }
+		.__item_4 { height: 50%; }
+		.__item_5 { @include keepratio(3, 2); }
+
+		@media #{$sm} {
+			.__col_1 { flex-direction: row; }
+			.__col_2 { flex-direction: row; }
+			.__item_1 { height: auto; width: 50%; }
+			.__item_2 { height: auto; width: 50%; }
+			.__item_3 { height: auto; width: 50%; }
+			.__item_4 { height: auto; width: 50%; }
+			.__item_5 { }
+		}
+	}
+
+	/***************************************************
+	 * Display #6
+	 ***************************************************/
+	.__display_6 {
+		.__col_1 { width: 50%; }
+		.__col_2 { width: 50%; }
+		.__item_1 { @include keepratio(16, 9); }
+		.__item_2 { @include keepratio(16, 9); }
+
+		@media #{$sm} {
+		}
+	}
+
+	/***************************************************
+	 * Display #7
+	 ***************************************************/
+	.__display_7 {
+		.__col_1 { flex-shrink: 0; width: 66.66%; }
+		.__col_2 { width: 33.33%; }
+		.__item_1 { @include keepratio(16, 9); }
+		.__item_2 { height: 100%; }
+
+		@media #{$sm} {
+		}
+	}
+
+	/***************************************************
+	 * Display #8
+	 ***************************************************/
+	.__display_8 {
+		.__col_1 { width: 33.33%; }
+		.__col_2 { flex-shrink: 0; width: 66.66%; }
+		.__item_1 { height: 100%; }
+		.__item_2 { @include keepratio(16, 9); }
+
+		@media #{$sm} {
+		}
+	}
+
+	/***************************************************
+	 * Display #9
+	 ***************************************************/
+	.__display_9 {
+		.__col_1 { width: 50%; }
+		.__col_2 { width: 50%; }
+		.__row_1 { height: 100%; }
+		.__item_1 { @include keepratio(4, 3); }
+		.__item_2 { width: 50%; height: 100%; }
+		.__item_3 { width: 50%; height: 100%; }
+
+		@media #{$sm} {
+			.__row_1 { flex-direction: row; }
+		}
+	}
+
+	/***************************************************
+	 * Display #10
+	 ***************************************************/
+	.__display_10 {
+		.__col_1 { width: 50%; }
+		.__col_2 { width: 50%; }
+		.__row_1 { height: 100%; }
+		.__item_1 { width: 50%; height: 100%; }
+		.__item_2 { width: 50%; height: 100%; }
+		.__item_3 { @include keepratio(4, 3); }
+
+		@media #{$sm} {
+			.__row_1 { flex-direction: row; }
+		}
+	}
+
+	/***************************************************
+	 * Display #11
+	 ***************************************************/
+	.__display_11 {
+		.__col_1 { width: 25%; }
+		.__col_2 { width: 50%; }
+		.__col_3 { width: 25%; }
+		.__item_1 { height: 100%; }
+		.__item_2 { @include keepratio(4, 3); }
+		.__item_3 { height: 100%; }
+
+		@media #{$sm} {
+		}
+	}
+}

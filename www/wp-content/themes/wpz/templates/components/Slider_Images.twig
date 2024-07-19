@@ -1,0 +1,64 @@
+{% if not format %}
+	{% set format = "16_9" %}
+{% endif %}
+
+{% if items|length %}
+	<div class="Slider_Images __format_{{ format }} {% if lightbox %}__lightbox{% endif %}">
+		<div class="Slider_Images--wrapper">
+			<div class="Slider_Images--lightbox">
+				<div class="Slider_Images--swiper">
+					<div class="swiper">
+						<div class="swiper-wrapper">
+							{% for item in items %}
+								{# <div class="swiper-slide" data-caption="{{ item.alt()|e('html_attr') }}"> #}
+								<div class="swiper-slide" data-caption="Lorem ipsum dolor sit amet {{ loop.index }}">
+									<div class="Slider_Images--item">
+										<figure class="__format_{{ format }} Slider_Images--item-image">
+											{{ acf_img(item.ID) }}
+										</figure>
+										<figure class="Slider_Images--item-image-full">
+											{{ acf_img(item.ID, 'wpz-full') }}
+										</figure>
+									</div>
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+				<div class="Slider_Images--controls">
+					<div class="Slider_Images--controls-left">
+						<div class="Slider_Images--button __green" data-action="lightbox">
+							{{ wpz_icon('target') }}
+						</div>
+					</div>
+					<div class="Slider_Images--controls-right">
+						<div class="Slider_Images--button" data-action="prev">
+							{{ wpz_icon('arrow-left') }}
+						</div>
+						<div class="Slider_Images--thumbs">
+							<div class="swiper">
+								<div class="swiper-wrapper">
+									{% for item in items %}
+										<div class="swiper-slide">
+											<figure class="Slider_Images--thumbs-item">
+												{{ acf_img(item.ID, 'wpz-tiny') }}
+											</figure>
+										</div>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+						<div class="Slider_Images--button" data-action="next">
+							{{ wpz_icon('arrow-right') }}
+						</div>
+					</div>
+				</div>
+				<div class="Slider_Images--caption"></div>
+				<div class="Slider_Images--close" data-action="close">
+					{{ wpz_icon('close') }}
+				</div>
+			</div>
+			<div class="Slider_Images--overlay" data-action="close"></div>
+		</div>
+	</div>
+{% endif %}

@@ -1,0 +1,106 @@
+.Block {
+	--block-spacing-top: #{spacing(2)};
+	--block-spacing-bottom: #{spacing(2)};
+	--block-background: #{color(white)};
+	--block-color: #{color(black)};
+	--block-color-highlight: #{color(black)};
+
+	padding: var(--block-spacing-top) 0 var(--block-spacing-bottom);
+	background: var(--block-background);
+	color: var(--block-color);
+	position: relative;
+
+	&--buttons {
+		margin: spacing(0.75) spacing(-0.25) spacing(-0.25);
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+
+		.button {
+			margin: spacing(0.25);
+		}
+
+		@media #{$xs} {
+			.button {
+				width: 100%;
+				justify-content: center;
+			}
+		}
+	}
+
+	.__color_highlight,
+	.__color_highlight_hover:hover {
+		color: var(--block-color-highlight);
+	}
+}
+
+.__theme {
+	&_white {
+		--block-background: #{color(white)};
+		--block-color: #{color(black)};
+		--block-color-highlight: #{color(black)};
+
+		.button.__primary {
+			--btn-color: #{color(white)};
+			--btn-border: #{color(black)};
+			--btn-background: #{color(black)};
+			--btn-color-hover: #{color(white)};
+			--btn-background-hover: #{color(black)};
+			--btn-border-hover: #{color(black)};
+		}
+
+		.button.__secondary {
+			--btn-color: #{color(black)};
+			--btn-border: #{color(black)};
+			--btn-background: transparent;
+			--btn-color-hover: #{color(white)};
+			--btn-background-hover: #{color(black)};
+			--btn-border-hover: #{color(black)};
+		}
+	}
+
+	&_black {
+		--block-background: #{color(black)};
+		--block-color: #{color(white)};
+		--block-color-highlight: #{color(white)};
+
+		.button.__primary {
+			--btn-color: #{color(black)};
+			--btn-border: #{color(white)};
+			--btn-background: #{color(white)};
+			--btn-color-hover: #{color(black)};
+			--btn-background-hover: #{color(white)};
+			--btn-border-hover: #{color(white)};
+		}
+
+		.button.__secondary {
+			--btn-color: #{color(white)};
+			--btn-border: #{color(white)};
+			--btn-background: transparent;
+			--btn-color-hover: #{color(black)};
+			--btn-background-hover: #{color(white)};
+			--btn-border-hover: #{color(white)};
+		}
+	}
+}
+
+.__spacing {
+	&_top {
+		&_none { --block-spacing-top: 0; }
+		&_S { --block-spacing-top: #{spacing(1)}; }
+		&_M { --block-spacing-top: #{spacing(2)}; }
+		&_L { --block-spacing-top: #{spacing(3)}; }
+		&_XL { --block-spacing-top: #{spacing(4)}; }
+		&_XXL { --block-spacing-top: #{spacing(5)}; }
+	}
+
+	&_bottom {
+		&_none { --block-spacing-bottom: 0; }
+		&_S { --block-spacing-bottom: #{spacing(1)}; }
+		&_M { --block-spacing-bottom: #{spacing(2)}; }
+		&_L { --block-spacing-bottom: #{spacing(3)}; }
+		&_XL { --block-spacing-bottom: #{spacing(4)}; }
+		&_XXL { --block-spacing-bottom: #{spacing(5)}; }
+	}
+}

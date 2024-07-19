@@ -1,0 +1,27 @@
+.Block_MediaFull {
+	&.__mobile_nomargin {
+		@media #{$sm} {
+			margin: 0 !important;
+			padding: 0 !important;
+
+			.container {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+
+	&--image {
+		@media #{$sm} {
+			display: none;
+		}
+	}
+
+	&--image-mobile {
+		display: none;
+
+		@media #{$sm} {
+			display: block;
+		}
+	}
+}

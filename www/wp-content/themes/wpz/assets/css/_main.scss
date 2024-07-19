@@ -1,0 +1,96 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important;
+	backface-visibility: hidden;
+}
+
+html {
+	font-size: 16px;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+body {
+	color: color(black);
+	background: color(white);
+	font-size: 1rem;
+	line-height: 1.25;
+	padding: 0 !important;
+	margin: 0 !important;
+	min-height: 100vh;
+	font-family: font();
+	font-weight: fw();
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-variation-settings: "slnt" 0;
+}
+
+img {
+	object-fit: cover;
+	object-position: center center;
+	display: block;
+}
+
+a {
+	color: currentColor;
+	text-decoration: none;
+}
+
+figure {
+	position: relative;
+	overflow: hidden;
+	background: color(shadow);
+
+	img {
+		@include block-full;
+	}
+
+	&.__png {
+		background: none;
+	}
+}
+
+.__format_2_1  { @include keepratio(2, 1); }
+.__format_16_9 { @include keepratio(16, 9); }
+.__format_4_3  { @include keepratio(4, 3); }
+.__format_1_1  { @include keepratio(1, 1); }
+.__format_3_4  { @include keepratio(3, 4); }
+.__format_9_16 { @include keepratio(9, 16); }
+
+.Video {
+	position: relative;
+	overflow: hidden;
+	background: color(shadow);
+
+	video {
+		@include block-full;
+	}
+}
+
+svg {
+	fill: currentColor;
+}
+
+.container {
+	@include container;
+
+	&-medium {
+		@include container(medium);
+	}
+
+	&-little {
+		@include container(little);
+	}
+}
+
+.__vhidden {
+	@include visually-hidden;
+}
+
+.grecaptcha-badge {
+	@include visually-hidden;
+}

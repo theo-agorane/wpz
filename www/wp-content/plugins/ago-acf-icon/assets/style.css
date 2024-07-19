@@ -1,0 +1,311 @@
+/* ------------------------------------------------------------
+// Input Icon Field
+// ------------------------------------------------------------ */
+
+.icon-preview-wrapper {
+	position: relative;
+	padding-right: 40px;
+    min-height: 32px;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.icon-preview-wrapper .acf-input-wrap {
+    width: 100%;
+}
+
+.icon-preview-wrapper .icon-preview {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 32px;
+    height: 32px;
+}
+
+.icon-preview-wrapper .icon-preview svg,
+.icon-preview-wrapper .icon-preview .svg {
+    width: 32px;
+    height: 32px;
+    fill: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;    
+}
+
+.ago-acf-icon {
+    position: relative;
+    border-radius: 1px;
+    cursor: default;
+    background: #FFF;
+    user-select: none;
+    border: solid 1px #ddd;
+}
+
+.ago-acf-icon:hover {
+    border-color: #bbb;
+
+}
+
+.ago-acf-icon:hover .dropdown {
+    border-color: #bbb;
+}
+
+.ago-acf-icon.active {
+    z-index: 2000;
+}
+
+.ago-acf-icon.active .dropdown,
+.ago-acf-icon.active .overlay {
+    display: block;
+}
+
+.ago-acf-icon.active .toggle-indicator:before {
+    content: "\f142" !important;
+}
+
+.ago-acf-icon .toggle-indicator {
+    position: absolute;
+    right: 15px;
+    line-height: 1;
+    height: 20px;
+    top: 50%;
+    margin-top: -10px;
+    z-index: 5;
+}
+
+.ago-acf-icon .toggle-indicator:before {
+    display: inline-block;
+    font: 400 20px/1 dashicons;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none !important;
+    content: "\f140" !important;
+}
+
+.ago-acf-icon .value {
+    padding: 10px 15px;
+    line-height: 1;
+    position: relative;
+    z-index: 4;
+    background: #FFF;
+}
+
+.ago-acf-icon .value span {
+    text-transform: uppercase;
+}
+
+.ago-acf-icon .value svg,
+.ago-acf-icon .value .svg {
+    margin-right: 10px;
+}
+
+.ago-acf-icon .dropdown {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: #FFF;
+    border-top: solid 1px #ddd;
+    max-height: 195px;
+    overflow-y: scroll;
+    z-index: 3;
+    top: 100%;
+    margin-bottom: 20px;
+    min-width: 540px;
+}
+
+.ago-acf-icon span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ago-acf-icon svg {
+    vertical-align: middle;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    fill: #000;
+}
+
+.ago-acf-icon .svg {
+    vertical-align: middle;
+    display: inline-flex !important;
+    width: 32px;
+    height: 32px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: lowercase !important;
+}
+
+.ago-acf-icon .option {
+    padding: 10px;
+    cursor: pointer;
+    line-height: 1;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ago-acf-icon .option span {
+    display: none;
+}
+
+.ago-acf-icon .option:hover {
+    background: #f6f6f6;
+}
+
+.ago-acf-icon .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.25);
+    z-index: 0;
+    display: none;
+}
+
+/* ------------------------------------------------------------
+// Color Icon Field
+// ------------------------------------------------------------ */
+
+.icon-preview-wrapper {
+    position: relative;
+    padding-right: 30px;
+}
+
+.icon-preview-wrapper .icon-preview {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 28px;
+    height: 100%;
+    border: #DFDFDF solid 1px;
+    box-sizing: border-box;
+}
+
+.ago-blank-input-icon {
+    position: relative;
+    border-radius: 1px;
+    cursor: default;
+    background: #FFF;
+    user-select: none;
+    border: solid 1px #ddd;
+}
+
+.ago-blank-input-icon:hover {
+    border-color: #bbb;
+}
+
+.ago-blank-input-icon:hover .dropdown {
+    border-color: #bbb;
+}
+
+.ago-blank-input-icon.active {
+    z-index: 2000;
+}
+
+.ago-blank-input-icon.active .dropdown,
+.ago-blank-input-icon.active .overlay {
+    display: block;
+}
+
+.ago-blank-input-icon.active .toggle-indicator:before {
+    content: "\f142" !important;
+}
+
+.ago-blank-input-icon .toggle-indicator {
+    position: absolute;
+    right: 15px;
+    line-height: 1;
+    height: 20px;
+    top: 50%;
+    margin-top: -10px;
+    z-index: 5;
+}
+
+.ago-blank-input-icon .toggle-indicator:before {
+    display: inline-block;
+    font: 400 20px/1 dashicons;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none !important;
+    content: "\f140" !important;
+}
+
+.ago-blank-input-icon .value {
+    padding: 10px 15px;
+    line-height: 1;
+    position: relative;
+    z-index: 4;
+    background: #FFF;
+}
+
+.ago-blank-input-icon .value span {
+    text-transform: uppercase;
+}
+
+.ago-blank-input-icon .value .icon {
+    margin-right: 10px;
+}
+
+.ago-blank-input-icon .dropdown {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: #FFF;
+    border-top: solid 1px #ddd;
+    max-height: 195px;
+    overflow-y: scroll;
+    z-index: 3;
+    top: 100%;
+    margin-bottom: 20px;
+}
+
+.ago-blank-input-icon span {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.ago-blank-input-icon .option {
+    padding: 10px;
+    cursor: pointer;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ago-blank-input-icon .option span {
+    display: none;
+}
+
+.ago-blank-input-icon .option:hover {
+    background: #f6f6f6;
+}
+
+.ago-blank-input-icon .icon {
+    width: 32px;
+    height: 32px;
+    border: solid 1px #DFDFDF;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    text-transform: lowercase !important;
+}
+
+.ago-blank-input-icon .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.25);
+    z-index: 0;
+    display: none;
+}

@@ -1,0 +1,153 @@
+.Block_FAQ {
+	&--title {
+		// text-align: center;
+		max-width: var(--wpz-container-little);
+		//margin: 0 auto;
+
+		// @media #{$sm} {
+		// 	text-align: left;
+		// }
+	}
+
+	&--description {
+		max-width: var(--wpz-container-little);
+		margin: spacing() 0 0;
+		// margin: spacing() auto 0;
+		// text-align: center;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		// @media #{$sm} {
+		// 	text-align: left;
+		// }
+	}
+
+	&--category {
+		margin-top: spacing(2);
+
+		&-title {
+			font-weight: fw(medium);
+		}
+
+		&-wrapper {
+			margin-top: spacing();
+			text-align: center;
+		}
+	}
+
+	&--item {
+		border-bottom: solid 1px color(shadow);
+		cursor: pointer;
+		padding: 1rem 0;
+		text-align: left;
+
+		&:first-child {
+			border-top: solid 1px color(shadow);
+		}
+
+		&.__hidden {
+			@media #{$sm} {
+				display: none;
+			}
+		}
+
+		&-question {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			transition: ts(color, short);
+
+			&-text {
+				font-weight: fw(medium);
+				max-width: var(--wpz-container-little);
+			}
+		}
+
+		&-plus,
+		&-minus {
+			flex-shrink: 0;
+			margin-left: 1.5rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 0.875rem;
+			height: 0.875rem;
+
+			svg {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		&-minus {
+			display: none;
+		}
+
+		&-answer {
+			width: 100%;
+			position: relative;
+			transition: ts(height), ts(margin);
+			height: 0;
+			font-size: 0.875rem;
+
+			@media #{$md} {
+				order: 2;
+				width: 100%;
+			}
+
+			&-wrapper {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				max-width: var(--wpz-container-little);
+				opacity: 0;
+				visibility: hidden;
+				padding-top: 1rem;
+				transform: scale3d(1, 0, 1);
+				transform-origin: top center;
+				transition: visibility 0s var(--wpz-ts-long),
+					ts(opacity),
+					ts(transform);
+			}
+		}
+
+		&:hover,
+		&--active {
+			.Block_FAQ--item-question {
+				color: var(--block-title-color);
+			}
+		}
+
+		&--active {
+			.Block_FAQ--item-plus { display: none; }
+			.Block_FAQ--item-minus { display: block; }
+
+			.Block_FAQ--item-answer {
+				&-wrapper {
+					opacity: 1;
+					visibility: visible;
+					transform: none;
+					transition: ts(opacity), ts(transform);
+				}
+			}
+		}
+	}
+
+	&--load-more {
+		margin: spacing() 0 0;
+		display: none;
+		width: 100%;
+		justify-content: center;
+
+		@media #{$sm} {
+			display: inline-flex;
+
+			&.__hidden {
+				display: none;
+			}
+		}
+	}
+}

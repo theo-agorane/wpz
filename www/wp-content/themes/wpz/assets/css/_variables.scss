@@ -1,0 +1,82 @@
+// ==========================================
+// Variables
+// ==========================================
+$xxs: "screen and (max-width: 432px)";
+$xxs-min: "screen and (min-width: 433px)";
+$xs: "screen and (max-width: 576px)";
+$xs-min: "screen and (min-width: 577px)";
+$sm: "screen and (max-width: 768px)";
+$sm-min: "screen and (min-width: 769px)";
+$md: "screen and (max-width: 1024px)";
+$md-min: "screen and (min-width: 1025px)";
+$lg: "screen and (max-width: 1280px)";
+$lg-min: "screen and (min-width: 1281px)";
+$xl: "screen and (max-width: 1480px)";
+$xl-min: "screen and (min-width: 1481px)";
+
+// ==========================================
+// CSS Variables
+// ==========================================
+:root {
+	// Font
+	--wpz-font-text:		'Inter', sans-serif;
+	--wpz-font-title:		'Inter', #{var(--wpz-font-text)}, sans-serif;
+	--wpz-fw-light: 		300;
+	--wpz-fw-regular: 		400;
+	--wpz-fw-medium: 		500;
+	--wpz-fw-bold: 			700;
+
+	// Color
+	--wpz-color-black: 			#000000;
+	--wpz-color-white: 			#FFFFFF;
+	--wpz-color-shadow: 		#00000033;
+	--wpz-color-overlay: 		#000000AA;
+	--wpz-color-transparent: 	#00000000;
+
+	// Sizes
+	--wpz-container-large:	1280px;
+	--wpz-container-medium:	1080px;
+	--wpz-container-little:	768px;
+	--wpz-spacing: 			1.5rem;
+	@media #{$md} {
+		--wpz-spacing: 		1.25rem;
+	} @media #{$sm} {
+		--wpz-spacing: 		1rem;
+	}
+
+	// Transitions
+	--wpz-ts-easing: 		cubic-bezier(.23,1,.32,1);
+	--wpz-ts-short:			0.3s;
+	--wpz-ts-normal:		0.6s;
+	--wpz-ts-medium:		0.9s;
+	--wpz-ts-long:			1.2s;
+}
+
+@function font($font: text) {
+	@return var(--wpz-font-#{$font});
+}
+
+@function fw($fw: regular) {
+	@return var(--wpz-fw-#{$fw});
+}
+
+@function color($color) {
+	@return var(--wpz-color-#{$color});
+}
+
+@function spacing($x: 1) {
+	@return calc(#{$x} * var(--wpz-spacing));
+}
+
+@function ts($property: all, $duration: normal) {
+	@return $property var(--wpz-ts-#{$duration}) var(--wpz-ts-easing);
+}
+
+@mixin container($width: large) {
+	max-width: var(--wpz-container-#{$width});
+	margin-left: auto !important;
+	margin-right: auto !important;
+	padding-left: spacing();
+	padding-right: spacing();
+	width: 100%;
+}
