@@ -1,23 +1,23 @@
 <?php
 
-class BlockPost extends Timber\Post {
+class WPZ_Block_Post extends Timber\Post {
 
 	static function get_post($post) {
 		if (is_a($post, 'WP_Post')) {
-			return BlockPost::build($post);
+			return WPZ_Block_Post::build($post);
 		}
 		elseif (is_a($post, 'Timber\Post')) {
-			return BlockPost::build($post->__get('wp_object'));
+			return WPZ_Block_Post::build($post->__get('wp_object'));
 		}
 		elseif (is_int($post) || is_string($post)) {
-			return BlockPost::build(get_post($post));
+			return WPZ_Block_Post::build(get_post($post));
 		}
 
 		return $post;
 	}
 
 	static function get_posts($query = null) {
-		return Timber::get_posts($query, 'BlockPost');
+		return Timber::get_posts($query, 'WPZ_Block_Post');
 	}
 
 	public function render_content() {

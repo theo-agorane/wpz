@@ -56,7 +56,6 @@ class WPZ_Timber extends Timber\Site {
 		$twig->addFunction(new Twig\TwigFunction('acf_img', [$this, 'acf_img']));
 		$twig->addFunction(new Twig\TwigFunction('acf_video', [$this, 'acf_video']));
 		$twig->addFunction(new Twig\TwigFunction('format_price', [$this, 'format_price']));
-		$twig->addFunction(new Twig\TwigFunction('BlockPost', [$this, 'BlockPost']));
 		$twig->addFunction(new Twig\TwigFunction('WPZ', [$this, 'WPZ']));
 		return $twig;
 	}
@@ -151,13 +150,6 @@ class WPZ_Timber extends Timber\Site {
 	 */
 	public function format_price($price, $after = '') {
 		return wpz_format_price($price, $after);
-	}
-
-	/**
-	 * @twig_function BlockPost
-	 */
-	public function BlockPost($post) {
-		return BlockPost::get_post($post);
 	}
 
 	/**

@@ -1,6 +1,6 @@
 <?php
 
-class BlockKey extends Block {
+class BlockKey extends WPZ_Block {
 
 	public $key = 'BlockKey';
 	

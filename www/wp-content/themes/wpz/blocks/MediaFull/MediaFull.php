@@ -1,6 +1,6 @@
 <?php
 
-class MediaFull extends Block {
+class MediaFull extends WPZ_Block {
 
 	public $key = 'MediaFull';
 	

@@ -1,6 +1,6 @@
 <?php
 
-class Blocks {
+class WPZ_Blocks {
 
 	private $blocks;
 	public static $blocks_dir = BLOCKS_DIR;
@@ -12,35 +12,35 @@ class Blocks {
 		$this->setup_acf();
 
 		if (is_admin()) {
-			new BlocksAdmin();
-			new BlocksModal();
+			new WPZ_Blocks_Admin();
+			new WPZ_Blocks_Modal();
 		}
 	}
 
 	public function get_blocks() {
 		if ($this->blocks == NULL) {
-			$this->blocks = Blocks::load_blocks();
+			$this->blocks = WPZ_Blocks::load_blocks();
 		}
 
 		return $this->blocks;
 	}
 
 	public static function load_blocks() {
-		if (is_dir(Blocks::$blocks_dir)) {
-			return array_diff(scandir(Blocks::$blocks_dir), ['.', '..']);
+		if (is_dir(WPZ_Blocks::$blocks_dir)) {
+			return array_diff(scandir(WPZ_Blocks::$blocks_dir), ['.', '..']);
 		}
 
 		return [];
 	}
 
 	public static function load_blocks_with_details() {
-		$blocks_key = Blocks::load_blocks();
+		$blocks_key = WPZ_Blocks::load_blocks();
 		$blocks = [];
 
 		foreach ($blocks_key as $key) {
 			$blocks[$key] = [
-				'created' => filectime(Blocks::$blocks_dir . '/' . $key),
-				'modified' => filemtime(Blocks::$blocks_dir . '/' . $key),
+				'created' => filectime(WPZ_Blocks::$blocks_dir . '/' . $key),
+				'modified' => filemtime(WPZ_Blocks::$blocks_dir . '/' . $key),
 			];
 		}
 
@@ -57,7 +57,7 @@ class Blocks {
 		Timber::$locations = [];
 
 		foreach ($this->get_blocks() as $block) {
-			$dir = Blocks::$blocks_dir . '/' . $block;
+			$dir = WPZ_Blocks::$blocks_dir . '/' . $block;
 			$file = $dir . '/' . $block . '.php';
 
 			if (file_exists($file)) {
@@ -78,12 +78,12 @@ class Blocks {
 		// On charge les JSON dans tous les dossiers de Block
 		// (wp-content/blocks/blocks/*)
 		foreach ($this->get_blocks() as $block) {
-			$path[] = Blocks::$blocks_dir . '/' . $block;
+			$path[] = WPZ_Blocks::$blocks_dir . '/' . $block;
 		}
 
 		// On charge les JSON dans le dossier "acf"
 		// (wp-content/blocks/acf/*)
-		$path[] = Blocks::$acf_dir;
+		$path[] = WPZ_Blocks::$acf_dir;
 
 		return $path;
 	}
@@ -96,13 +96,13 @@ class Blocks {
 			// Si c'est un Block, on sauvegarde le JSON dans le dossier du Block
 			// (wp-content/bim-blocks/blocks/*)
 			if ($block) {
-				$path = Blocks::$blocks_dir . '/' . $block;
+				$path = WPZ_Blocks::$blocks_dir . '/' . $block;
 			}
 
-			// Si c'est un groupe  Blocks ou options, on sauvegarde le JSON dans le dossier "acf"
+			// Si c'est un groupe  WPZ_Blocks ou options, on sauvegarde le JSON dans le dossier "acf"
 			// (wp-content/bim-blocks/acf/*)
 			if (strpos($key, 'group_flexibleblocks') > -1) {
-				$path = Blocks::$acf_dir;
+				$path = WPZ_Blocks::$acf_dir;
 			}
 		}
 
@@ -162,7 +162,7 @@ class Blocks {
 
 		foreach ($blocks as $block) {
 			$key = $this->get_block_id_by_acf_group_key($block['key']);
-			$layout_key = Blocks::get_acf_layout_key_by_block_id($key);
+			$layout_key = WPZ_Blocks::get_acf_layout_key_by_block_id($key);
 			$subfields = acf_get_fields($block['ID']);
 
 			$field['layouts'][$layout_key] = [

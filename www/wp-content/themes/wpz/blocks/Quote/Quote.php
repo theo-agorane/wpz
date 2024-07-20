@@ -1,6 +1,6 @@
 <?php
 
-class Quote extends Block {
+class Quote extends WPZ_Block {
 
 	public $key = 'Quote';
 	

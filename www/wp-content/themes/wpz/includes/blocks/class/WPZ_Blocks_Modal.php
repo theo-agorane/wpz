@@ -1,6 +1,6 @@
 <?php
 
-class BlocksModal {
+class WPZ_Blocks_Modal {
 
 	public function __construct() {
 		add_action('acf/input/admin_enqueue_scripts', [$this, 'enqueue_scripts'], 10000);

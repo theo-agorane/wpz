@@ -1,6 +1,6 @@
 <?php
 
-class Gallery extends Block {
+class Gallery extends WPZ_Block {
 
 	public $key = 'Gallery';
 	

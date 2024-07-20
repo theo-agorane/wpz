@@ -1,6 +1,6 @@
 <?php
 
-class Form extends Block {
+class Form extends WPZ_Block {
 
 	public $key = 'Form';
 	

@@ -1,6 +1,6 @@
 <?php
 
-class BlocksAdmin {
+class WPZ_Blocks_Admin {
 
 	public static $admin_dir = BLOCKS_PLUGIN . '/admin';
 	public $current_screen = NULL;
@@ -32,12 +32,12 @@ class BlocksAdmin {
 		$blocks = Blocks::load_blocks_with_details();
 		$notice = $this->notice;
 
-		require BlocksAdmin::$admin_dir . '/admin.php';
+		require WPZ_Blocks_Admin::$admin_dir . '/admin.php';
 	}
 
 	public function render_admin_header() {
 		if ($this->is_current_screen()) {
-			require BlocksAdmin::$admin_dir . '/admin-header.php';
+			require WPZ_Blocks_Admin::$admin_dir . '/admin-header.php';
 		}
 	}
 

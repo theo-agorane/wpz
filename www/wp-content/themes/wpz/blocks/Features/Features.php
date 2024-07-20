@@ -1,6 +1,6 @@
 <?php
 
-class Features extends Block {
+class Features extends WPZ_Block {
 
 	public $key = 'Features';
 	

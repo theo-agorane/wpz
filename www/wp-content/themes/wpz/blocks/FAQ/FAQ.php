@@ -1,6 +1,6 @@
 <?php
 
-class FAQ extends Block {
+class FAQ extends WPZ_Block {
 
 	public $key = 'FAQ';
 	

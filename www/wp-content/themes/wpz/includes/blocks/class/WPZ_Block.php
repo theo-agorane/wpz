@@ -1,6 +1,6 @@
 <?php
 
-class Block {
+class WPZ_Block {
 
 	public $data;
 	public $options;
