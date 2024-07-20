@@ -5,7 +5,6 @@
 	position: sticky;
 	top: 0;
 	z-index: 800;
-	transition: ts(transform, short);
 }
 
 // ======================================
@@ -113,7 +112,7 @@
 	z-index: 5;
 	transition: ts(transform, long), ts(opacity, medium);
 	opacity: 0;
-	transform: translate3d(0, calc(-100% - var(--wpz-header-height) - var(--wpz-header-message-height)), 0);
+	transform: translate3d(0, calc(-100% - var(--wpz-header-height)), 0);
 	padding: spacing(1.5) 0;
 
 	@media #{$sm} {
@@ -176,12 +175,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: flex-start;
-			transition: ts(color, short);
 			padding: 0.125rem 0;
-
-			&:hover {
-				color: color(yellow);
-			}
 
 			svg {
 				width: 0.75rem;

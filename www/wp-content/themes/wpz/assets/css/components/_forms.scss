@@ -54,12 +54,17 @@
 				font-family: font();
 				font-size: 1;
 				background: color(white);
+				color: color(black);
 				border: solid 1px color(shadow);
 				border-radius: 5px;
 				outline: none !important;
 				padding: 0.625rem 0.75rem;
 				line-height: 1.25;
 				min-height: 2.5rem;
+
+				&:focus {
+					border-color: color(black);
+				}
 			}
 
 			ul.acf-radio-list,

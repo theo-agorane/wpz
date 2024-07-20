@@ -10,27 +10,27 @@
 							</a>
 						</div>
 						<div class="Footer_Main--contact">
-							{% if Config().footer.contact.address_text %}
+							{% if WPZ().config.footer.contact.address_text %}
 								<div class="Footer_Main--address">
-									{% if Config().footer.contact.address_link %}
-										<a href="{{ Config().footer.contact.address_link|e('html_attr') }}" target="_blank">
-											{{ Config().footer.contact.address_text }}
+									{% if WPZ().config.footer.contact.address_link %}
+										<a href="{{ WPZ().config.footer.contact.address_link|e('html_attr') }}" target="_blank">
+											{{ WPZ().config.footer.contact.address_text }}
 										</a>
 									{% else %}
-										{{ Config().footer.contact.address_text }}
+										{{ WPZ().config.footer.contact.address_text }}
 									{% endif %}
 								</div>
 							{% endif %}
-							{% if Config().footer.contact.phone %}
+							{% if WPZ().config.footer.contact.phone %}
 								<div class="Footer_Main--phone">
-									<a href="tel:{{ Config().footer.contact.phone|e('html_attr') }}">
-										{{ Config().footer.contact.phone }}
+									<a href="tel:{{ WPZ().config.footer.contact.phone|e('html_attr') }}">
+										{{ WPZ().config.footer.contact.phone }}
 									</a>
 								</div>
 							{% endif %}
 							<nav class="Footer_Main--social">
 								<ul class="Footer_Main--social-menu">
-									{% for item in Config().social_links %}
+									{% for item in WPZ().config.social_links %}
 										<li class="Footer_Main--social-menu-item">
 											<a {{ acf_link_attrs(item.link, 'Footer_Main--social-menu-item-link') }}>
 												<span class="__vhidden">{{ item.link.title }}</span>
@@ -45,7 +45,7 @@
 				</div>
 				<div class="Footer_Main--col __menu">
 					<nav class="Footer_Main--menu">
-						{% for item_col in Config().menus.footer.items %}
+						{% for item_col in WPZ().config.menus.footer.items %}
 							<ul class="Footer_Main--menu-col">
 								{% if item_col.link == '#' %}
 									<li class="Footer_Main--menu-title {{ item_col.class }}">{{ item_col.title }}</li>
@@ -76,7 +76,7 @@
 			<div class="Footer_Sub--wrapper">
 				<nav class="Footer_Sub--menu">
 					<ul class="Footer_Sub--menu-list">
-						{% for item in Config().menus.footer_sub.items %}
+						{% for item in WPZ().config.menus.footer_sub.items %}
 							<li class="Footer_Sub--menu-item {{ item.class }}">
 								<a href="{{ item.link }}" class="Footer_Sub--menu-item-link" {% if item.target %}target="{{ item.target }}"{% endif %}>
 									{{ item.title }}

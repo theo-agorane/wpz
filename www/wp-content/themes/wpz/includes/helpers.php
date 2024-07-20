@@ -1,7 +1,23 @@
 <?php
 
 /**
- * @function pre
+ * @const WORDPRESS_IMAGE_SIZES
+ */
+define('WP_IMAGE_SIZES', [
+    'thumbnail',
+    'medium',
+    'medium_large',
+    'large',
+    '1536x1536',
+    '2048x2048',
+    '2560x2560',
+    'woocommerce_thumbnail',
+    'woocommerce_single',
+    'woocommerce_gallery_thumbnail',
+]);
+
+/**
+ * @function pre (better var_dump)
  */
 function pre($str, $exit = false) {
 	echo '<pre>';
@@ -14,9 +30,9 @@ function pre($str, $exit = false) {
 }
 
 /**
- * @function hoscar_format_price
+ * @function wpz_format_price
  */
-function hoscar_format_price($price, $after = '') {
+function wpz_format_price($price, $after = '') {
 	return '<span class="price">' . 
 		number_format(floatval($price), 2, ",", " ")
 		//. '&nbsp;'

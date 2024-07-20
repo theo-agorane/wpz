@@ -1,7 +1,7 @@
 <nav class="Menu_Main">
 	<div class="container">
 		<div class="Menu_Main--wrapper">
-			{% for item_col in Config().menus.main.items  %}
+			{% for item_col in WPZ().config.menus.main.items  %}
 				<ul class="Menu_Main--col">
 					<li class="Menu_Main--item __title {{ item_col.class }}">
 						<a href="{{ item_col.link }}" class="Menu_Main--item-link" {% if item_col.target %}target="{{ item_col.target }}"{% endif %}>

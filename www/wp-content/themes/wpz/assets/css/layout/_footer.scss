@@ -85,10 +85,6 @@
 	&--phone {
 		margin-top: spacing();
 		font-weight: fw(medium);
-
-		a {
-			transition: ts(color);
-		}
 	}
 
 	&--address {
@@ -124,7 +120,6 @@
 					justify-content: center;
 					border-radius: 5px;
 					transform: translate3d(-0.25rem, 0, 0);
-					transition: ts(background, short);
 
 					svg {
 						width: 1.25rem;
@@ -168,7 +163,6 @@
 			font-size: 1rem;
 
 			&-link {
-				transition: ts(color, short);
 				display: flex;
 				align-items: center;
 				justify-content: flex-start;
@@ -190,10 +184,6 @@
 
 			&.__strong {
 				font-weight: fw(bold);
-			}
-
-			&-link {
-				transition: ts(color, short);
 			}
 		}
 	}
@@ -232,10 +222,6 @@
 
 		&-item {
 			margin: spacing(0.25) spacing(0.75);
-
-			&-link {
-				transition: ts(color, short);
-			}
 		}
 	}
 }
