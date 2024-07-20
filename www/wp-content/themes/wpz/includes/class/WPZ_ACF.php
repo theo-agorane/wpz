@@ -11,7 +11,7 @@ class WPZ_ACF {
 		add_filter('acf/load_field', [$this, 'populate_fields']);
 
 		// Custom ACF Fields
-        add_action('acf/include_field_types', [$this, 'create_field_icon']);
+        add_action('acf/include_field_types', [$this, 'create_custom_fields'], 999);
 	}
 
 	/**
@@ -81,10 +81,16 @@ class WPZ_ACF {
 
 	/**
 	 * @action acf/include_field_types
-	 * @function create_field_icon
+	 * @function create_custom_fields
 	 */
-	public function create_field_icon() {
+	public function create_custom_fields() {
+		// Field Icon
+		require_once dirname(__FILE__) . '/WPZ_ACF_Field_Icon.php';
         new WPZ_ACF_Field_Icon();
+        
+		// Field Button
+		require_once dirname(__FILE__) . '/WPZ_ACF_Field_Button.php';
+        new WPZ_ACF_Field_Button();
 	}
 
 }

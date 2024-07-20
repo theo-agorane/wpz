@@ -2,14 +2,10 @@
 
 class WPZ_ACF_Field_Icon extends acf_field {
 
-    public $name = 'wpz-acf-field-icon';
-    public $label = 'Icône';
-    public $icons = [];
-    public $all_icons_file = '/dist/all-icons.svg';
-    public $icons_dir = '/dist/icons/';
-    public $category = 'WPZ';
-    public $symbols = '';
-    public $defaults = [];
+    var $icons = [],
+        $all_icons_file = '/dist/all-icons.svg?240720001',
+        $icons_dir = '/dist/icons/',
+        $symbols = '';
 
 	/**
 	 * @constructor
@@ -22,6 +18,19 @@ class WPZ_ACF_Field_Icon extends acf_field {
 
 		parent::__construct();
 	}
+
+    /**
+     * @extend acf_field
+     * @function initialize 
+     */
+    public function initialize() {
+        parent::initialize();
+
+        $this->name = 'wpz-acf-field-icon';
+        $this->label = 'Icône';
+        $this->category = 'WPZ';
+        $this->defaults = [];
+    }
 
 	/**
 	 * @action admin_enqueue_scripts

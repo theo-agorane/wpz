@@ -1,0 +1,22 @@
+/* ------------------------------------------------------------
+// ACF Admin - Dropdown icon
+// ------------------------------------------------------------ */
+.field-type-icon-wpz-acf-field-button:before {
+    mask-image: url('/wp-content/plugins/advanced-custom-fields-pro/assets/images/field-type-icons/icon-field-file.svg') !important;
+}
+
+/* ------------------------------------------------------------
+// ACF Button Field
+// ------------------------------------------------------------ */
+.acf-field-wpz-acf-field-button .acf-link .link-wrap {
+    display: block !important;
+}
+
+.acf-field-wpz-acf-field-button .acf-link .link-wrap .link-title {
+    display: block;
+}
+
+.acf-field-wpz-acf-field-button .acf-link .link-wrap .link-url {
+    display: block;
+    padding: 0 5px;
+}

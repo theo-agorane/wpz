@@ -134,7 +134,7 @@
                     "label": "Icône",
                     "name": "icon",
                     "aria-label": "",
-                    "type": "ago-acf-icon",
+                    "type": "wpz-acf-field-icon",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -295,5 +295,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1718553301
+    "modified": 1721471763
 }

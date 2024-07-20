@@ -11,7 +11,6 @@ require_once 'includes/class/WPZ_Config.php';
 require_once 'includes/class/WPZ_Timber.php';
 require_once 'includes/class/WPZ_Forms.php';
 require_once 'includes/class/WPZ_ACF.php';
-require_once 'includes/class/WPZ_ACF_Field_Icon.php';
 //require_once 'includes/class/WPZ_Polylang.php';
 
 // WPZ

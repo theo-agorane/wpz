@@ -6,7 +6,7 @@
 }
 
 /* ------------------------------------------------------------
-// Input Icon Field
+// ACF Icon Field
 // ------------------------------------------------------------ */
 
 .icon-preview-wrapper {
@@ -98,15 +98,23 @@
     position: relative;
     z-index: 4;
     background: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .wpz-acf-field-icon .value span {
     text-transform: uppercase;
+    padding-right: 30px;
+    width: 100%;
 }
 
 .wpz-acf-field-icon .value svg,
 .wpz-acf-field-icon .value .svg {
     margin-right: 10px;
+    flex-shrink: 0;
+    width: 32px;
+    padding: 0;
 }
 
 .wpz-acf-field-icon .dropdown {
