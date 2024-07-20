@@ -13,7 +13,7 @@ class WPZ_Blocks_Modal {
 	}
 
 	public function setBlockImagesInModal() {
-		$blocks = Blocks::load_blocks();
+		$blocks = WPZ_Blocks::load_blocks();
 
 		echo '<style>';
 

@@ -9,6 +9,9 @@ class WPZ_ACF {
 		add_filter('acf/settings/load_json', [$this, 'acf_load_json'], 100);
 		add_filter('acf/settings/save_json', [$this, 'acf_save_json'], 100);
 		add_filter('acf/load_field', [$this, 'populate_fields']);
+
+		// Custom ACF Fields
+        add_action('acf/include_field_types', [$this, 'create_field_icon']);
 	}
 
 	/**
@@ -74,6 +77,14 @@ class WPZ_ACF {
 	    }
 
 	    return $field;
+	}
+
+	/**
+	 * @action acf/include_field_types
+	 * @function create_field_icon
+	 */
+	public function create_field_icon() {
+        new WPZ_ACF_Field_Icon();
 	}
 
 }

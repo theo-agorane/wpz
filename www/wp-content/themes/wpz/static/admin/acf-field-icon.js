@@ -3,20 +3,22 @@
 // ------------------------------------------------------------
 
 (function($) {
+    console.log(typeof acf);
 
     if (typeof acf == 'undefined') return;
+
   
     function initialize_field(field) {
-        new ACFIconSelect(field.$el);
+        new WPZ_ACF_Field_Icon(field.$el);
     }
   
     if( typeof acf.addAction !== 'undefined' ) {
-        acf.addAction('ready_field/type=ago-acf-icon', initialize_field);
-        acf.addAction('append_field/type=ago-acf-icon', initialize_field);
+        acf.addAction('ready_field/type=wpz-acf-field-icon', initialize_field);
+        acf.addAction('append_field/type=wpz-acf-field-icon', initialize_field);
     } else {
         $(document).on('acf/setup_fields', function(e, postbox) {
             // find all relevant fields
-            $(postbox).find('.field[data-field_type="ago-acf-icon"]').each(function(){
+            $(postbox).find('.field[data-field_type="wpz-acf-field-icon"]').each(function(){
                 // initialize
                 initialize_field( $(this) );
             });
@@ -27,31 +29,31 @@
 
 
 (function($) {
-    window.ACFIconSelect = function($el) { this.init($el); }
+    window.WPZ_ACF_Field_Icon = function($el) { this.init($el); }
 
-    ACFIconSelect.prototype.index = 0;
-    ACFIconSelect.prototype.init = function($el) {
-        if (!!$el.attr('ago-icons-initialized')) return;
+    WPZ_ACF_Field_Icon.prototype.index = 0;
+    WPZ_ACF_Field_Icon.prototype.init = function($el) {
+        if (!!$el.attr('wpz-acf-field-icon--initialized')) return;
 
         // Variables
         this.$container = $el.find('.acf-input');
         this.$input = this.$container.find('input');
-        this.$select = this.$container.find('.ago-acf-icon');
+        this.$select = this.$container.find('.wpz-acf-field-icon');
         this.$dropdown = this.$select.find('.dropdown');
         this.$overlay = this.$select.find('.overlay');
         this.$value = this.$select.find('.value');
         this.$options = this.$dropdown.find('.option');
         this.value = this.$input.val();
 
-        $el.attr('ago-icons-initialized', 1);
+        $el.attr('wpz-acf-field-icon--initialized', 1);
 
         // Actions
         this.setEventListeners();
 
-        $el.addClass('ago-icons-selector');
+        $el.addClass('wpz-acf-field-icon--selector');
     }
 
-    ACFIconSelect.prototype.setEventListeners = function() {
+    WPZ_ACF_Field_Icon.prototype.setEventListeners = function() {
         // Event Listeners
         var _this = this;
 
@@ -84,7 +86,7 @@
 	if (typeof acf == 'undefined') return;
 
 	function initialize_field(field) {
-		new ACFIconSelect(field.$el);
+		new WPZ_ACF_Field_Icon(field.$el);
 	}
 
 	function initialize_option_field(field) {
@@ -107,8 +109,8 @@
 	}
 	
 	if( typeof acf.addAction !== 'undefined' ) {
-		acf.addAction('ready_field/type=ago-acf-icon', initialize_field);
-		acf.addAction('append_field/type=ago-acf-icon', initialize_field);
+		acf.addAction('ready_field/type=wpz-acf-field-icon', initialize_field);
+		acf.addAction('append_field/type=wpz-acf-field-icon', initialize_field);
 
 		//acf.addAction('ready_field/name=ago-icon-slug', initialize_option_field);
 		//acf.addAction('append_field/name=ago-icon-slug', initialize_option_field);
@@ -117,7 +119,7 @@
 		$(document).on('acf/setup_fields', function(e, postbox) {
 			
 			// find all relevant fields
-			$(postbox).find('.field[data-field_type="ago-acf-icon"]').each(function(){
+			$(postbox).find('.field[data-field_type="wpz-acf-field-icon"]').each(function(){
 				// initialize
 				initialize_field( $(this) );
 			});
@@ -132,31 +134,31 @@
 	// ============================================
 	// Color select custom
 	// ============================================
-	window.ACFIconSelect = function($el) { this.init($el); }
+	window.WPZ_ACF_Field_Icon = function($el) { this.init($el); }
 
-	ACFIconSelect.prototype.index = 0;
-	ACFIconSelect.prototype.init = function($el) {
-		if (!!$el.attr('ago-icons-initialized')) return;
+	WPZ_ACF_Field_Icon.prototype.index = 0;
+	WPZ_ACF_Field_Icon.prototype.init = function($el) {
+		if (!!$el.attr('wpz-acf-field-icon--initialized')) return;
 
 		// Variables
 		this.$container = $el.find('.acf-input');
 		this.$input = this.$container.find('input');
-		this.$select = this.$container.find('.ago-acf-icon');
+		this.$select = this.$container.find('.wpz-acf-field-icon');
 		this.$dropdown = this.$select.find('.dropdown');
 		this.$overlay = this.$select.find('.overlay');
 		this.$value = this.$select.find('.value');
 		this.$options = this.$dropdown.find('.option');
 		this.value = this.$input.val();
 
-		$el.attr('ago-icons-initialized', 1);
+		$el.attr('wpz-acf-field-icon--initialized', 1);
 
 		// Actions
 		this.setEventListeners();
 
-		$el.addClass('ago-icons-selector');
+		$el.addClass('wpz-acf-field-icon--selector');
 	}
 
-	ACFIconSelect.prototype.setEventListeners = function() {
+	WPZ_ACF_Field_Icon.prototype.setEventListeners = function() {
 		// Event Listeners
 		var _this = this;
 

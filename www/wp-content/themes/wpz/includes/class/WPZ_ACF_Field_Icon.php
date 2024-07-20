@@ -1,36 +1,59 @@
 <?php
 
-class AcfFieldSelectIcon extends acf_field {
+class WPZ_ACF_Field_Icon extends acf_field {
 
-    var $name = AGOACFICON_BASENAME;
-    var $label = 'Icône';
-    var $icons = [];
-    var $symbols = '';
+    public $name = 'wpz-acf-field-icon';
+    public $label = 'Icône';
+    public $icons = [];
+    public $all_icons_file = '/dist/all-icons.svg';
+    public $icons_dir = '/dist/icons/';
+    public $category = 'WPZ';
+    public $symbols = '';
+    public $defaults = [];
 
-    /*
-    *  __construct
-    *
-    *  @type    function
-    *  @param   N/A
-    *  @return  N/A
-    */
-    function __construct($icons, $symbols) {
-        $this->name = $this->name;
-        $this->label = $this->label;
-        $this->category = "Agorane";
-        $this->defaults = [];
-        $this->icons = $icons;
-        $this->symbols = $symbols;
+	/**
+	 * @constructor
+	 */
+	public function __construct() {
+		$this->preview_image = plugins_url() . '';
+        $this->load_theme_icons();
 
-        parent::__construct();
-    }  
+		add_action('admin_enqueue_scripts', [$this, 'admin_scripts']);
 
-    /*
-    *  render_field
-    *
-    *  @type    function
-    *  @param   N/A
-    *  @return  N/A
+		parent::__construct();
+	}
+
+	/**
+	 * @action admin_enqueue_scripts
+	 * @function admin_scripts 
+	 */
+	public function admin_scripts() {
+	    wp_enqueue_style('wpz-acf-field-icon-style', get_stylesheet_directory_uri() . '/static/admin/acf-field-icon.css');
+	    wp_enqueue_script('wpz-acf-field-icon-js', get_stylesheet_directory_uri() . '/static/admin/acf-field-icon.js', ['jquery'], null, true);
+
+        echo '<script type="text/javascript">';
+        echo 'var iconsSvg = "'. get_template_directory_uri() . $this->icons_dir .'";';
+        echo '</script>';
+	}
+
+	/**
+	 * @function load_theme_icons 
+	 */
+	public function load_theme_icons() {
+        $iconFiles = scandir(get_template_directory() . '' . $this->icons_dir);
+        $this->icons = [];
+        $this->symbols = get_template_directory_uri() . '' . $this->all_icons_file;
+
+        foreach ($iconFiles as $icon) {
+            if (str_contains($icon, '.svg')) {
+                $this->icons[] = str_replace('.svg', '', $icon);
+            }
+        }
+	}
+
+
+    /**
+    * @function render_field
     */
     function render_field($field) {
         $value_icon = null;

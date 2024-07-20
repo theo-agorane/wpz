@@ -3,21 +3,20 @@
 class WPZ_Class {
 
 	public $config;
-	public $timber;
-	public $forms;
-	public $acf;
-	public $pll;
+	//public $pll;
 
 	/**
 	 * @constructor
 	 */
 	public function __construct() {
+		// Site Configuration
 		$this->config = new WPZ_Config();
-		$this->timber = new WPZ_Timber();
-		$this->forms  = new WPZ_Forms();
-		$this->acf    = new WPZ_ACF();
-		$this->pll    = new WPZ_Polylang();
+		new WPZ_Timber();
+		new WPZ_Forms();
+		new WPZ_ACF();
+		//$this->pll = new WPZ_Polylang();
 
+		// Front Configuration
 		add_action('wp_footer', [$this, 'add_scripts'], 10);
 		add_action('wp_enqueue_scripts', [$this, 'add_styles'], 80);
 		add_action('admin_enqueue_scripts', [$this, 'admin_scripts']);
@@ -26,7 +25,6 @@ class WPZ_Class {
 		add_filter('upload_mimes', [$this, 'accepted_mime_types']);
 		add_action('init', [$this, 'add_image_sizes'], 999);
 		add_filter('intermediate_image_sizes_advanced', [$this, 'remove_image_sizes'], 999);
-
 		$this->clean_wp_scripts_styles();
 	}
 
@@ -101,8 +99,8 @@ class WPZ_Class {
 	 * @function admin_scripts 
 	 */
 	public function admin_scripts() {
-	    wp_enqueue_style('wpz-style-admin', get_stylesheet_directory_uri() . '/static/admin.css');
-	    wp_enqueue_style('wpz-js-admin', get_stylesheet_directory_uri() . '/static/admin.js');
+	    wp_enqueue_style('wpz-admin-style', get_stylesheet_directory_uri() . '/static/admin/admin.css');
+	    wp_enqueue_script('wpz-admin-js', get_stylesheet_directory_uri() . '/static/admin/admin.js');
 	}
 
 	/**
