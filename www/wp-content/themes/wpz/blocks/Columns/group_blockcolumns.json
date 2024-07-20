@@ -87,6 +87,7 @@
             "collapsed": "",
             "button_label": "Ajouter une colonne",
             "rows_per_page": 20,
+            "acfe_repeater_stylised_button": 0,
             "sub_fields": [
                 {
                     "key": "field_666dbe905ae85",
@@ -147,10 +148,10 @@
                 },
                 {
                     "key": "field_666e12c4a3736",
-                    "label": "Bouton primaire",
-                    "name": "button_primary",
+                    "label": "Boutons",
+                    "name": "buttons",
                     "aria-label": "",
-                    "type": "link",
+                    "type": "repeater",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": [
@@ -167,32 +168,97 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
-                    "parent_repeater": "field_666dbe865ae84"
-                },
-                {
-                    "key": "field_666e12e0a3737",
-                    "label": "Bouton secondaire",
-                    "name": "button_secondary",
-                    "aria-label": "",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_666dbe905ae85",
-                                "operator": "==",
-                                "value": "text"
-                            }
-                        ]
+                    "acfe_repeater_stylised_button": 0,
+                    "layout": "table",
+                    "pagination": 0,
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Ajouter un bouton",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_669c3ab9a1b89",
+                            "label": "Bouton",
+                            "name": "data",
+                            "aria-label": "",
+                            "type": "wpz-acf-field-button",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "sub_fields": [
+                                {
+                                    "key": "field_wpz_button__link",
+                                    "ID": "field_wpz_button__link",
+                                    "name": "link",
+                                    "_name": "link",
+                                    "label": "Texte et Lien",
+                                    "type": "link",
+                                    "aria-label": "",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array"
+                                },
+                                {
+                                    "key": "field_wpz_button__type",
+                                    "ID": "field_wpz_button__type",
+                                    "name": "type",
+                                    "_name": "type",
+                                    "label": "Type",
+                                    "type": "radio",
+                                    "aria-label": "",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "primary": "Bouton primaire",
+                                        "secondary": "Bouton secondaire"
+                                    },
+                                    "return_format": "value",
+                                    "default_value": "primary",
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "layout": "vertical",
+                                    "save_other_choice": 0
+                                },
+                                {
+                                    "key": "field_wpz_button__icon",
+                                    "ID": "field_wpz_button__icon",
+                                    "name": "icon",
+                                    "_name": "icon",
+                                    "label": "Icône",
+                                    "type": "wpz-acf-field-icon",
+                                    "aria-label": "",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    }
+                                }
+                            ],
+                            "parent_repeater": "field_666e12c4a3736"
+                        }
                     ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
                     "parent_repeater": "field_666dbe865ae84"
                 },
                 {
@@ -227,7 +293,9 @@
                     "max_size": "",
                     "mime_types": "",
                     "preview_size": "medium",
-                    "parent_repeater": "field_666dbe865ae84"
+                    "parent_repeater": "field_666dbe865ae84",
+                    "uploader": "",
+                    "acfe_thumbnail": 0
                 },
                 {
                     "key": "field_666e1320a3739",
@@ -256,7 +324,8 @@
                     "min_size": "",
                     "max_size": "",
                     "mime_types": "",
-                    "parent_repeater": "field_666dbe865ae84"
+                    "parent_repeater": "field_666dbe865ae84",
+                    "uploader": ""
                 },
                 {
                     "key": "field_666e133aa373a",
@@ -387,7 +456,12 @@
             "display": "group",
             "layout": "row",
             "prefix_label": 0,
-            "prefix_name": 0
+            "prefix_name": 0,
+            "acfe_seamless_style": 0,
+            "acfe_clone_modal": 0,
+            "acfe_clone_modal_close": 0,
+            "acfe_clone_modal_button": "",
+            "acfe_clone_modal_size": "large"
         }
     ],
     "location": [
@@ -408,5 +482,12 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721471763
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1721514711
 }

@@ -55,7 +55,7 @@ class WPZ_Timber extends Timber\Site {
 		$twig->addFunction(new Twig\TwigFunction('acf_link_attrs', [$this, 'acf_link_attrs']));
 		$twig->addFunction(new Twig\TwigFunction('acf_img', [$this, 'acf_img']));
 		$twig->addFunction(new Twig\TwigFunction('acf_video', [$this, 'acf_video']));
-		$twig->addFunction(new Twig\TwigFunction('format_price', [$this, 'format_price']));
+		$twig->addFunction(new Twig\TwigFunction('acf_button', [$this, 'acf_button']));
 		$twig->addFunction(new Twig\TwigFunction('WPZ', [$this, 'WPZ']));
 		return $twig;
 	}
@@ -146,10 +146,25 @@ class WPZ_Timber extends Timber\Site {
 	}
 
 	/**
-	 * @twig_function format_price
+	 * @twig_function acf_button
 	 */
-	public function format_price($price, $after = '') {
-		return wpz_format_price($price, $after);
+	public function acf_button($button = []) {
+		$button_html = '';
+
+		if (!empty($button)) {
+			$button_html .= '<a ';
+			$button_html .= $this->acf_link_attrs($button['link'], 'button __' . $button['type']);
+			$button_html .= '>';
+			$button_html .= $button['link']['title'];
+
+			if (!empty($button['icon'])) {
+				$button_html .= $this->wpz_icon($button['icon']);
+			}
+
+			$button_html .= '</a>';
+		}
+
+		return $button_html;
 	}
 
 	/**

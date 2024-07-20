@@ -39,6 +39,8 @@
 		--block-background: #{color(white)};
 		--block-color: #{color(black)};
 		--block-color-highlight: #{color(black)};
+		padding: 0;
+		margin: var(--block-spacing-top) 0 var(--block-spacing-bottom);
 
 		.button.__primary {
 			--btn-color: #{color(white)};

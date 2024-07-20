@@ -6,19 +6,11 @@
 					{% if item.type == 'text' %}
 						<div class="Block_Columns--text wysiwyg-text">{{ item.wysiwyg_text }}</div>
 
-						{% if item.button_primary or item.button_secondary %}
+						{% if item.buttons|length %}
 							<div class="Block--buttons Block_Columns--buttons">
-								{% if item.button_primary %}
-									<a {{ acf_link_attrs(item.button_primary, 'button __primary') }}>
-										{{ item.button_primary.title }}
-										{{ wpz_icon('arrow-forward-sharp') }}
-									</a>
-								{% endif %}
-								{% if item.button_secondary %}
-									<a {{ acf_link_attrs(item.button_secondary, 'button __secondary') }}>
-										{{ item.button_secondary.title }}
-									</a>
-								{% endif %}
+								{% for button in item.buttons %}
+									{{ acf_button(button.data) }}
+								{% endfor %}
 							</div>
 						{% endif %}
 					{% elseif item.type == 'image' %}

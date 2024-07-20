@@ -8,15 +8,20 @@
 /* ------------------------------------------------------------
 // ACF Button Field
 // ------------------------------------------------------------ */
-.acf-field-wpz-acf-field-button .acf-link .link-wrap {
+.acf-field-wpz-acf-field-button .acf-link.-value .link-wrap {
     display: block !important;
+    text-align: right;
+    line-height: 22px;
 }
 
 .acf-field-wpz-acf-field-button .acf-link .link-wrap .link-title {
     display: block;
+    text-align: left;
 }
 
 .acf-field-wpz-acf-field-button .acf-link .link-wrap .link-url {
     display: block;
     padding: 0 5px;
+    text-align: left;
+    margin-bottom: 5px;
 }
