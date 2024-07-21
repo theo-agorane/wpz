@@ -136,12 +136,15 @@ class WPZ_Timber extends Timber\Site {
 	/**
 	 * @twig_function acf_video
 	 */
-	public function acf_video($video) {
-		if (!$video) return;
+	public function acf_video($video = []) {
+		$video_html = '';
 
-		$video_html = '<video controls>';
-		$video_html .= '<source src="'. $video['link'] .'" type="'. $video['mime_type'] .'">';
-		$video_html .= '</video>';
+		if (!empty($video)) {
+			$video_html .= '<video controls>';
+			$video_html .= '<source src="'. $video['link'] .'" type="'. $video['mime_type'] .'">';
+			$video_html .= '</video>';
+		}
+
 		return $video_html;
 	}
 

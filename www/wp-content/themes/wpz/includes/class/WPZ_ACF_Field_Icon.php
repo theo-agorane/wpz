@@ -11,7 +11,6 @@ class WPZ_ACF_Field_Icon extends acf_field {
 	 * @constructor
 	 */
 	public function __construct() {
-		$this->preview_image = plugins_url() . '';
         $this->load_theme_icons();
 
 		add_action('admin_enqueue_scripts', [$this, 'admin_scripts']);

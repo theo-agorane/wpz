@@ -22,7 +22,7 @@ class WPZ_ACF_Field_Button extends acf_field__group {
         $this->label = 'Bouton';
         $this->category = 'WPZ';
         $this->defaults = [
-            'sub_fields' => $this->get_button_fields(),
+            'sub_fields' => $this->get_sub_fields(),
             'layout'     => 'table',
         ];
     }
@@ -37,9 +37,9 @@ class WPZ_ACF_Field_Button extends acf_field__group {
     }
 
     /**
-     * @function get_button_fields 
+     * @function get_sub_fields 
      */
-    public function get_button_fields() {
+    public function get_sub_fields() {
         $fields = [
             // 1. Field Link
             $this->get_button_field_array(
@@ -72,7 +72,7 @@ class WPZ_ACF_Field_Button extends acf_field__group {
                 ],
             ),
 
-            // 3. Icône
+            // 3. Field icon
             $this->get_button_field_array(
                 'icon',
                 'Icône',
