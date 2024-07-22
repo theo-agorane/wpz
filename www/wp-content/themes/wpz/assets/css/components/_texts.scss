@@ -50,7 +50,7 @@ h5, .h5 {
 		&:last-child { margin-bottom: 0; }
 	}
 
-	a {
+	a:not(.button) {
 		font-weight: fw(medium);
 		border-bottom: solid 1px color(shadow);
 		transition: ts(color, short), ts(border-color, short);

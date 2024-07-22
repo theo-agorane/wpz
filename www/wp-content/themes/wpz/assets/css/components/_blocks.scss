@@ -34,58 +34,6 @@
 	}
 }
 
-.__theme {
-	&_white {
-		--block-background: #{color(white)};
-		--block-color: #{color(black)};
-		--block-color-highlight: #{color(black)};
-		padding: 0;
-		margin: var(--block-spacing-top) 0 var(--block-spacing-bottom);
-
-		.button.__primary {
-			--btn-color: #{color(white)};
-			--btn-border: #{color(black)};
-			--btn-background: #{color(black)};
-			--btn-color-hover: #{color(white)};
-			--btn-background-hover: #{color(black)};
-			--btn-border-hover: #{color(black)};
-		}
-
-		.button.__secondary {
-			--btn-color: #{color(black)};
-			--btn-border: #{color(black)};
-			--btn-background: transparent;
-			--btn-color-hover: #{color(white)};
-			--btn-background-hover: #{color(black)};
-			--btn-border-hover: #{color(black)};
-		}
-	}
-
-	&_black {
-		--block-background: #{color(black)};
-		--block-color: #{color(white)};
-		--block-color-highlight: #{color(white)};
-
-		.button.__primary {
-			--btn-color: #{color(black)};
-			--btn-border: #{color(white)};
-			--btn-background: #{color(white)};
-			--btn-color-hover: #{color(black)};
-			--btn-background-hover: #{color(white)};
-			--btn-border-hover: #{color(white)};
-		}
-
-		.button.__secondary {
-			--btn-color: #{color(white)};
-			--btn-border: #{color(white)};
-			--btn-background: transparent;
-			--btn-color-hover: #{color(black)};
-			--btn-background-hover: #{color(white)};
-			--btn-border-hover: #{color(white)};
-		}
-	}
-}
-
 .__spacing {
 	&_top {
 		&_none { --block-spacing-top: 0; }

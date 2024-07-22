@@ -13,6 +13,7 @@ class WPZ_Class {
 		$this->config = new WPZ_Config();
 		new WPZ_Timber();
 		new WPZ_Forms();
+		new WPZ_FAQ();
 		new WPZ_ACF();
 		//$this->pll = new WPZ_Polylang();
 

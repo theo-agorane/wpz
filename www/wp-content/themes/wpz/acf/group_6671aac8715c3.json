@@ -1,0 +1,160 @@
+{
+    "key": "group_6671aac8715c3",
+    "title": "WPZ – FAQ",
+    "fields": [
+        {
+            "key": "field_6671aac858cc7",
+            "label": "Réponse",
+            "name": "answer",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_669e690e1fc50",
+            "label": "Boutons",
+            "name": "buttons",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_repeater_stylised_button": 0,
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Ajouter un bouton",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_669e69271fc51",
+                    "label": "Bouton",
+                    "name": "data",
+                    "aria-label": "",
+                    "type": "wpz-acf-field-button",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "table",
+                    "sub_fields": [
+                        {
+                            "key": "field_wpz_button__link",
+                            "ID": "field_wpz_button__link",
+                            "name": "link",
+                            "_name": "link",
+                            "label": "Texte et Lien",
+                            "type": "link",
+                            "aria-label": "",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_wpz_button__type",
+                            "ID": "field_wpz_button__type",
+                            "name": "type",
+                            "_name": "type",
+                            "label": "Type",
+                            "type": "radio",
+                            "aria-label": "",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "primary": "Bouton primaire",
+                                "secondary": "Bouton secondaire"
+                            },
+                            "return_format": "value",
+                            "default_value": "primary",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_wpz_button__icon",
+                            "ID": "field_wpz_button__icon",
+                            "name": "icon",
+                            "_name": "icon",
+                            "label": "Icône",
+                            "type": "wpz-acf-field-icon",
+                            "aria-label": "",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            }
+                        }
+                    ],
+                    "parent_repeater": "field_669e690e1fc50"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "faq"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1721657653
+}

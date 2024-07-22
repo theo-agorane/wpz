@@ -72,8 +72,8 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			width: 0.875rem;
-			height: 0.875rem;
+			width: 1rem;
+			height: 1rem;
 
 			svg {
 				width: 100%;
@@ -112,6 +112,10 @@
 					ts(opacity),
 					ts(transform);
 			}
+		}
+
+		&-buttons {
+			margin-top: spacing(0.5);
 		}
 
 		&:hover,

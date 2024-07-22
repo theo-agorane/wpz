@@ -26,11 +26,23 @@
 							<div class="Block_FAQ--item-question">
 								<div class="Block_FAQ--item-question-text">{{ item.title }}</div>
 
-								<div class="Block_FAQ--item-plus">{{ wpz_icon('plus') }}</div>
-								<div class="Block_FAQ--item-minus">{{ wpz_icon('minus') }}</div>
+								<div class="Block_FAQ--item-plus">{{ wpz_icon('add-outline') }}</div>
+								<div class="Block_FAQ--item-minus">{{ wpz_icon('remove-outline') }}</div>
 							</div>
 							<div class="Block_FAQ--item-answer">
-								<div class="Block_FAQ--item-answer-wrapper wysiwyg-text">{{ item.answer }}</div>
+								<div class="Block_FAQ--item-answer-wrapper">
+									<div class="wysiwyg-text">
+										{{ item.answer }}
+									</div>
+
+									{% if item.buttons|length %}
+										<div class="Block--buttons Block_FAQ--item-buttons">
+											{% for button in item.buttons %}
+												{{ acf_button(button.data) }}
+											{% endfor %}
+										</div>
+									{% endif %}
+								</div>
 							</div>
 						</div>
 					{% endfor %}
@@ -38,7 +50,7 @@
 					{% if category.items|length > 2 %}
 						<a class="Block_FAQ--load-more button __primary">
 							Afficher plus
-							{{ wpz_icon('arrow-bottom') }}
+							{{ wpz_icon('arrow-down-outline') }}
 						</a>
 					{% endif %}
 				</div>

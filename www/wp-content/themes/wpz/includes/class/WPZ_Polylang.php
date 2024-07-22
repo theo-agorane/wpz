@@ -32,6 +32,7 @@ class WPZ_Polylang {
 	 */
 	function add_post_types_to_pll($post_types, $is_settings) {
 	    $post_types['config'] = 'config';
+	    $post_types['faq'] = 'faq';
 
 	    return $post_types;
 	}
