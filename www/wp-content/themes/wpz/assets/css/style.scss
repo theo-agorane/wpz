@@ -1,16 +1,19 @@
-@import '../../../../../../node_modules/reset-css/sass/reset';
-@import '../../../../../../node_modules/swiper/swiper-bundle.css';
+@import 'reset-css/sass/reset';
+@import 'swiper/swiper-bundle.css';
+@import 'lenis/dist/lenis.css';
 
 @import 'mixins';
 @import 'variables';
 @import 'main';
 
-@import 'components/buttons';
-@import 'components/texts';
-@import 'components/forms';
-@import 'components/grid';
-@import 'components/blocks';
-@import 'components/themes';
+@import 'core/buttons';
+@import 'core/texts';
+@import 'core/forms';
+@import 'core/grid';
+@import 'core/blocks';
+@import 'core/themes';
+@import 'core/scroll';
+
 @import 'components/slider-images';
 
 @import 'layout/footer';

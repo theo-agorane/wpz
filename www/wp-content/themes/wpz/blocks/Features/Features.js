@@ -1,4 +1,5 @@
-import Swiper, { Navigation, Scrollbar } from 'swiper';
+import Swiper from 'swiper';
+import { Navigation, Scrollbar } from 'swiper/modules';
 
 class Features {
 	

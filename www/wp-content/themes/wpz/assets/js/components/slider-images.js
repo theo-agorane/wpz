@@ -1,5 +1,5 @@
-// Swiper
-import Swiper, { Navigation, Thumbs } from 'swiper';
+import Swiper from 'swiper';
+import { Navigation, Scrollbar } from 'swiper/modules';
 
 class Slider_Images {
 

@@ -1,8 +1,8 @@
-<section class="Block Block_Form {{ this.class }}">
+<section class="Block Block_Form {{ this.class }}" data-scroll-section>
 	<div class="container">
 		<div class="Grid Block_Form--grid {% if this.data.content.active %}__grid_2{% else %}__grid_1{% endif %}">
 			{% if this.data.content.active %}
-				<div class="Grid-item Block_Form--item">
+				<div class="Grid-item Block_Form--item" data-scroll-item>
 					{% if this.data.content.title.text %}
 						<{{ this.data.content.title.htag }} class="Block_Form--title h2">
 							{{ this.data.content.title.text }}
@@ -24,7 +24,7 @@
 				</div>
 			{% endif %}
 			{% if this.data.form %}
-				<div class="Grid-item Block_Form--item">
+				<div class="Grid-item Block_Form--item" data-scroll-item>
 					{% set shortcode_form = '[acfe_form name="' ~ this.data.form ~ '"]' %}
 					{{ fn('do_shortcode', shortcode_form)}}
 				</div>

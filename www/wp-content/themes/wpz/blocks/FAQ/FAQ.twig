@@ -1,12 +1,12 @@
-<section class="Block Block_FAQ {{ this.class }}">
+<section class="Block Block_FAQ {{ this.class }}" data-scroll-section>
 	<div class="container">
 		{% if this.data.title.text %}
-			<{{ this.data.title.htag }} class="Block_FAQ--title h2">
+			<{{ this.data.title.htag }} class="Block_FAQ--title h2" data-scroll-item>
 				{{ this.data.title.text }}
 			</{{ this.data.title.htag }}>
 		{% endif %}
 		{% if this.data.wysiwyg_text %}
-			<div class="Block_FAQ--description wysiwyg-text">
+			<div class="Block_FAQ--description wysiwyg-text" data-scroll-item>
 				{{ this.data.wysiwyg_text }}
 			</div>
 		{% endif %}
@@ -14,7 +14,7 @@
 		{% for category in this.data.categories %}
 			<div class="Block_FAQ--category">
 				{% if category.title.text %}
-					<{{ category.title.htag }} class="Block_FAQ--category-title h3">
+					<{{ category.title.htag }} class="Block_FAQ--category-title h3" data-scroll-item>
 						{{ category.title.text }}
 					</{{ category.title.htag }}>
 				{% endif %}
@@ -22,7 +22,7 @@
 				<div class="Block_FAQ--category-wrapper">
 					{% for item in category.items %}
 						{% set item = get_post(item) %}
-						<div class="Block_FAQ--item">
+						<div class="Block_FAQ--item" data-scroll-item>
 							<div class="Block_FAQ--item-question">
 								<div class="Block_FAQ--item-question-text">{{ item.title }}</div>
 

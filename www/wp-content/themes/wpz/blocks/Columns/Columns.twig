@@ -1,8 +1,8 @@
-<section class="Block Block_Columns {{ this.class }}">
+<section class="Block Block_Columns {{ this.class }}" data-scroll-section>
 	<div class="container">
 		<div class="Grid Block_Columns--grid __grid_{{ this.data.items|length }} __valign_{{ this.data.valign }} {% if this.data.order_reverse %}__order_reverse{% endif %}">
 			{% for item in this.data.items %}
-				<div class="Grid-item Block_Columns--item __{{ item.type }}">
+				<div class="Grid-item Block_Columns--item __{{ item.type }}" data-scroll-item>
 					{% if item.type == 'text' %}
 						<div class="Block_Columns--text wysiwyg-text">{{ item.wysiwyg_text }}</div>
 

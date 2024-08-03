@@ -1,0 +1,63 @@
+@media #{$sm-min} {
+	[data-scroll-section] {
+		&.__scroll_active {
+
+		}
+	}
+
+	@keyframes fadeInFromTop {
+		0% { transform: translate3d(0, calc(-1 * var(--scroll-item-translate)), 0); opacity: 0; }
+		100% { transform: translate3d(0, 0, 0); opacity: 1; }
+	}
+
+	@keyframes fadeInFromBottom {
+		0% { transform: translate3d(0, var(--scroll-item-translate), 0); opacity: 0; }
+		100% { transform: translate3d(0, 0, 0); opacity: 1; }
+	}
+
+	@keyframes fadeInFromLeft {
+		0% { transform: translate3d(calc(-1 * var(--scroll-item-translate)), 0, 0); opacity: 0; }
+		100% { transform: translate3d(0, 0, 0); opacity: 1; }
+	}
+
+	@keyframes fadeInFromRight {
+		0% { transform: translate3d(var(--scroll-item-translate), 0, 0); opacity: 0; }
+		100% { transform: translate3d(0, 0, 0); opacity: 1; }
+	}
+
+	@keyframes fadeInScale {
+		0% { transform: scale3d(0, 0, 1); opacity: 0; }
+		100% { transform: scale3d(1, 1, 1); opacity: 1; }
+	}
+
+	[data-scroll-item] {
+		opacity: 0;
+		animation-timing-function: var(--wpz-ts-easing);
+		animation-duration: var(--wpz-ts-long);
+		animation-fill-mode: forwards;
+		--scroll-item-translate: 1rem;
+
+		transform: translate3d(0, var(--scroll-item-translate), 0);
+		&.__scroll_active { animation-name: fadeInFromBottom; }
+	}
+
+	[data-scroll-item="top"] {
+		transform: translate3d(0, calc(-1 * var(--scroll-item-translate)), 0);
+		&.__scroll_active { animation-name: fadeInFromTop; }
+	}
+
+	[data-scroll-item="left"] {
+		transform: translate3d(calc(-1 * var(--scroll-item-translate)), 0, 0);
+		&.__scroll_active { animation-name: fadeInFromLeft; }
+	}
+
+	[data-scroll-item="right"] {
+		transform: translate3d(var(--scroll-item-translate), 0, 0);
+		&.__scroll_active { animation-name: fadeInFromRight; }
+	}
+
+	[data-scroll-item="scale"] {
+		transform: scale3d(0, 0, 1);
+		&.__scroll_active { animation-name: fadeInScale; }
+	}
+}

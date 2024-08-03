@@ -1,5 +1,4 @@
-{% set fake_img = '<figure class="Block_Gallery--image"><div class="img"></div></figure>' %}
-<section class="Block Block_Gallery {{ this.class }}">
+<section class="Block Block_Gallery {{ this.class }}" data-scroll-section>
 	<div class="container">
 		<div class="Block_Gallery--wrapper">
 			{% for row in this.data.rows %}
@@ -7,15 +6,15 @@
 				{% if row.gallery_display == '1' %}
 					<div class="Block_Gallery--row __display_1">
 						<div class="Block_Gallery--col __col_1">
-							<div class="Block_Gallery--item __item_1 __landscape">
+							<div class="Block_Gallery--item __item_1 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_1) }}</figure>
 							</div>
 						</div>
 						<div class="Block_Gallery--col __col_2">
-							<div class="Block_Gallery--item __item_2 __landscape">
+							<div class="Block_Gallery--item __item_2 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_2) }}</figure>
 							</div>
-							<div class="Block_Gallery--item __item_3 __landscape">
+							<div class="Block_Gallery--item __item_3 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_3) }}</figure>
 							</div>
 						</div>
@@ -24,15 +23,15 @@
 				{% elseif row.gallery_display == '2' %}
 					<div class="Block_Gallery--row __display_2">
 						<div class="Block_Gallery--col __col_1">
-							<div class="Block_Gallery--item __item_1 __landscape">
+							<div class="Block_Gallery--item __item_1 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_1) }}</figure>
 							</div>
-							<div class="Block_Gallery--item __item_2 __landscape">
+							<div class="Block_Gallery--item __item_2 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_2) }}</figure>
 							</div>
 						</div>
 						<div class="Block_Gallery--col __col_2">
-							<div class="Block_Gallery--item __item_3 __landscape">
+							<div class="Block_Gallery--item __item_3 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_3) }}</figure>
 							</div>
 						</div>
@@ -41,23 +40,23 @@
 				{% elseif row.gallery_display == '3' %}
 					<div class="Block_Gallery--row __display_3">
 						<div class="Block_Gallery--col __col_1">
-							<div class="Block_Gallery--item __item_1 __landscape">
+							<div class="Block_Gallery--item __item_1 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_1) }}</figure>
 							</div>
 						</div>
 						<div class="Block_Gallery--col __col_2">
-							<div class="Block_Gallery--item __item_2 __landscape">
+							<div class="Block_Gallery--item __item_2 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_2) }}</figure>
 							</div>
-							<div class="Block_Gallery--item __item_4 __landscape">
+							<div class="Block_Gallery--item __item_4 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_4) }}</figure>
 							</div>
 						</div>
 						<div class="Block_Gallery--col __col_3">
-							<div class="Block_Gallery--item __item_3 __landscape">
+							<div class="Block_Gallery--item __item_3 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_3) }}</figure>
 							</div>
-							<div class="Block_Gallery--item __item_5 __landscape">
+							<div class="Block_Gallery--item __item_5 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_5) }}</figure>
 							</div>
 						</div>
@@ -66,23 +65,23 @@
 				{% elseif row.gallery_display == '4' %}
 					<div class="Block_Gallery--row __display_4">
 						<div class="Block_Gallery--col __col_1">
-							<div class="Block_Gallery--item __item_1 __landscape">
+							<div class="Block_Gallery--item __item_1 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_1) }}</figure>
 							</div>
-							<div class="Block_Gallery--item __item_2 __landscape">
+							<div class="Block_Gallery--item __item_2 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_2) }}</figure>
 							</div>
 						</div>
 						<div class="Block_Gallery--col __col_2">
-							<div class="Block_Gallery--item __item_3 __landscape">
+							<div class="Block_Gallery--item __item_3 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_3) }}</figure>
 							</div>
 						</div>
 						<div class="Block_Gallery--col __col_3">
-							<div class="Block_Gallery--item __item_4 __landscape">
+							<div class="Block_Gallery--item __item_4 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_4) }}</figure>
 							</div>
-							<div class="Block_Gallery--item __item_5 __landscape">
+							<div class="Block_Gallery--item __item_5 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_5) }}</figure>
 							</div>
 						</div>
@@ -91,23 +90,23 @@
 				{% elseif row.gallery_display == '5' %}
 					<div class="Block_Gallery--row __display_5">
 						<div class="Block_Gallery--col __col_1">
-							<div class="Block_Gallery--item __item_1 __landscape">
+							<div class="Block_Gallery--item __item_1 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_1) }}</figure>
 							</div>
-							<div class="Block_Gallery--item __item_3 __landscape">
+							<div class="Block_Gallery--item __item_3 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_3) }}</figure>
 							</div>
 						</div>
 						<div class="Block_Gallery--col __col_2">
-							<div class="Block_Gallery--item __item_2 __landscape">
+							<div class="Block_Gallery--item __item_2 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_2) }}</figure>
 							</div>
-							<div class="Block_Gallery--item __item_4 __landscape">
+							<div class="Block_Gallery--item __item_4 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_4) }}</figure>
 							</div>
 						</div>
 						<div class="Block_Gallery--col __col_3">
-							<div class="Block_Gallery--item __item_5 __landscape">
+							<div class="Block_Gallery--item __item_5 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_5) }}</figure>
 							</div>
 						</div>
@@ -116,12 +115,12 @@
 				{% elseif row.gallery_display == '6' %}
 					<div class="Block_Gallery--row __display_6">
 						<div class="Block_Gallery--col __col_1">
-							<div class="Block_Gallery--item __item_1 __landscape">
+							<div class="Block_Gallery--item __item_1 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_1) }}</figure>
 							</div>
 						</div>
 						<div class="Block_Gallery--col __col_2">
-							<div class="Block_Gallery--item __item_2 __landscape">
+							<div class="Block_Gallery--item __item_2 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_2) }}</figure>
 							</div>
 						</div>
@@ -130,12 +129,12 @@
 				{% elseif row.gallery_display == '7' %}
 					<div class="Block_Gallery--row __display_7">
 						<div class="Block_Gallery--col __col_1">
-							<div class="Block_Gallery--item __item_1 __landscape">
+							<div class="Block_Gallery--item __item_1 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_1) }}</figure>
 							</div>
 						</div>
 						<div class="Block_Gallery--col __col_2">
-							<div class="Block_Gallery--item __item_2 __portrait">
+							<div class="Block_Gallery--item __item_2 __portrait" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_2) }}</figure>
 							</div>
 						</div>
@@ -144,12 +143,12 @@
 				{% elseif row.gallery_display == '8' %}
 					<div class="Block_Gallery--row __display_8">
 						<div class="Block_Gallery--col __col_1">
-							<div class="Block_Gallery--item __item_1 __portrait">
+							<div class="Block_Gallery--item __item_1 __portrait" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_1) }}</figure>
 							</div>
 						</div>
 						<div class="Block_Gallery--col __col_2">
-							<div class="Block_Gallery--item __item_2 __landscape">
+							<div class="Block_Gallery--item __item_2 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_2) }}</figure>
 							</div>
 						</div>
@@ -158,16 +157,16 @@
 				{% elseif row.gallery_display == '9' %}
 					<div class="Block_Gallery--row __display_9">
 						<div class="Block_Gallery--col __col_1">
-							<div class="Block_Gallery--item __item_1 __landscape">
+							<div class="Block_Gallery--item __item_1 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_1) }}</figure>
 							</div>
 						</div>
 						<div class="Block_Gallery--col __col_2">
 							<div class="Block_Gallery--row __row_1">
-								<div class="Block_Gallery--item __item_2 __portrait">
+								<div class="Block_Gallery--item __item_2 __portrait" data-scroll-item>
 									<figure class="Block_Gallery--image">{{ acf_img(row.items.image_2) }}</figure>
 								</div>
-								<div class="Block_Gallery--item __item_3 __portrait">
+								<div class="Block_Gallery--item __item_3 __portrait" data-scroll-item>
 									<figure class="Block_Gallery--image">{{ acf_img(row.items.image_3) }}</figure>
 								</div>
 							</div>
@@ -178,16 +177,16 @@
 					<div class="Block_Gallery--row __display_10">
 						<div class="Block_Gallery--col __col_1">
 							<div class="Block_Gallery--row __row_1">
-								<div class="Block_Gallery--item __item_1 __portrait">
+								<div class="Block_Gallery--item __item_1 __portrait" data-scroll-item>
 									<figure class="Block_Gallery--image">{{ acf_img(row.items.image_1) }}</figure>
 								</div>
-								<div class="Block_Gallery--item __item_2 __portrait">
+								<div class="Block_Gallery--item __item_2 __portrait" data-scroll-item>
 									<figure class="Block_Gallery--image">{{ acf_img(row.items.image_2) }}</figure>
 								</div>
 							</div>
 						</div>
 						<div class="Block_Gallery--col __col_2">
-							<div class="Block_Gallery--item __item_3 __landscape">
+							<div class="Block_Gallery--item __item_3 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_3) }}</figure>
 							</div>
 						</div>
@@ -196,17 +195,17 @@
 				{% elseif row.gallery_display == '11' %}
 					<div class="Block_Gallery--row __display_11">
 						<div class="Block_Gallery--col __col_1">
-							<div class="Block_Gallery--item __item_1 __portrait">
+							<div class="Block_Gallery--item __item_1 __portrait" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_1) }}</figure>
 							</div>
 						</div>
 						<div class="Block_Gallery--col __col_2">
-							<div class="Block_Gallery--item __item_2 __landscape">
+							<div class="Block_Gallery--item __item_2 __landscape" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_2) }}</figure>
 							</div>
 						</div>
 						<div class="Block_Gallery--col __col_3">
-							<div class="Block_Gallery--item __item_3 __portrait">
+							<div class="Block_Gallery--item __item_3 __portrait" data-scroll-item>
 								<figure class="Block_Gallery--image">{{ acf_img(row.items.image_3) }}</figure>
 							</div>
 						</div>

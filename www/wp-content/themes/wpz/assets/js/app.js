@@ -1,7 +1,9 @@
 // Blocks
 import '../../includes/blocks/generated/blocks.js';
 
-import './components/svg-icons.js';
+import './core/svg-icons.js';
+import './core/scroll-animate.js';
+
 import './components/slider-images.js';
 
 import './layout/header.js';

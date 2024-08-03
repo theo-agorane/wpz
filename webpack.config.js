@@ -16,6 +16,7 @@ const entryPoints = {
 };
 
 module.exports = {
+  watch: true,
   entry: entryPoints,
   output: {
     path: path.resolve(__dirname, outputPath),
