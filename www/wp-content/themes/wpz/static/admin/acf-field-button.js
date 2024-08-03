@@ -3,10 +3,7 @@
 // ------------------------------------------------------------
 
 (function($) {
-    console.log(typeof acf);
-
     if (typeof acf == 'undefined') return;
-
   
     function initialize_field(field) {
         new WPZ_ACF_Field_Button(field.$el);

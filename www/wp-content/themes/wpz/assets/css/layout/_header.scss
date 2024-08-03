@@ -12,8 +12,8 @@
 // ======================================
 .Header_Main {
 	transition: ts(background, short), ts(color, short), ts(border-color, short);
-	background: color(white);
-	color: color(black);
+	background: color(background);
+	color: color(text);
 	padding: 1rem 0;
 	position: relative;
 	z-index: 10;
@@ -106,8 +106,8 @@
 	top: 100%;
 	left: 0;
 	width: 100%;
-	background: color(white);
-	color: color(black);
+	background: color(background);
+	color: color(text);
 	max-height: calc(100dvh - var(--wpz-header-height));
 	z-index: 5;
 	transition: ts(transform, long), ts(opacity, medium);
@@ -191,8 +191,8 @@
 // ======================================
 .__menu_main_open {
 	.Header_Main {
-		background: color(white);
-		color: color(black);
+		background: color(background);
+		color: color(text);
 		border-color: color(shadow);
 
 		&--toggle {

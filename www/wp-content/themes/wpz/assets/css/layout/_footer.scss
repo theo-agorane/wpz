@@ -112,9 +112,9 @@
 				&-link {
 					width: 2.5rem;
 					height: 2.5rem;
-					border: solid 1px color(black);
+					border: solid 1px color(text);
 					background: transparent;
-					color: color(black);
+					color: color(text);
 					display: flex;
 					align-items: center;
 					justify-content: center;
@@ -127,8 +127,8 @@
 					}
 
 					&:hover {
-						color: color(white);
-						background: color(black);
+						color: color(background);
+						background: color(text);
 					}
 
 					@media #{$xxs} {

@@ -53,8 +53,8 @@
 			select {
 				font-family: font();
 				font-size: 1;
-				background: color(white);
-				color: color(black);
+				background: color(background);
+				color: color(text);
 				border: solid 1px color(shadow);
 				border-radius: 5px;
 				outline: none !important;
@@ -63,7 +63,7 @@
 				min-height: 2.5rem;
 
 				&:focus {
-					border-color: color(black);
+					border-color: color(text);
 				}
 			}
 

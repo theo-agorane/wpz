@@ -1,0 +1,997 @@
+{
+    "key": "group_66ad902416bc5",
+    "title": "WPZ – Thèmes",
+    "fields": [
+        {
+            "key": "field_66ad9a5f215d0",
+            "label": "Couleurs du thème",
+            "name": "wpz_theme_colors",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "sub_fields": [
+                {
+                    "key": "field_66ad9a85215d1",
+                    "label": "Couleur de fond",
+                    "name": "background",
+                    "aria-label": "",
+                    "type": "wpz-acf-field-color",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "background": "#FFFFFF",
+                        "text": "#000000",
+                        "yellow": "#eeee22",
+                        "red": "#dd3333"
+                    },
+                    "default_value": "background",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "layout": "vertical"
+                },
+                {
+                    "key": "field_66ad9aac215d2",
+                    "label": "Couleur de texte",
+                    "name": "text",
+                    "aria-label": "",
+                    "type": "wpz-acf-field-color",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "background": "#FFFFFF",
+                        "text": "#000000",
+                        "yellow": "#eeee22",
+                        "red": "#dd3333"
+                    },
+                    "default_value": "text",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "layout": "vertical"
+                },
+                {
+                    "key": "field_66ad9abd215d3",
+                    "label": "Couleur d'accentuation",
+                    "name": "highlight",
+                    "aria-label": "",
+                    "type": "wpz-acf-field-color",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "background": "#FFFFFF",
+                        "text": "#000000",
+                        "yellow": "#eeee22",
+                        "red": "#dd3333"
+                    },
+                    "default_value": "text",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "layout": "vertical"
+                },
+                {
+                    "key": "field_66ad9b35819fd",
+                    "label": "Bouton primaire",
+                    "name": "button_primary",
+                    "aria-label": "",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "row",
+                    "acfe_seamless_style": 0,
+                    "acfe_group_modal": 0,
+                    "sub_fields": [
+                        {
+                            "key": "field_66ad9ba1c8ae6",
+                            "label": "Couleur de fond",
+                            "name": "background",
+                            "aria-label": "",
+                            "type": "wpz-acf-field-color",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "background": "#FFFFFF",
+                                "text": "#000000",
+                                "yellow": "#eeee22",
+                                "red": "#dd3333"
+                            },
+                            "default_value": "text",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical"
+                        },
+                        {
+                            "key": "field_66ad9bccc8ae7",
+                            "label": "Couleur de texte",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "wpz-acf-field-color",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "background": "#FFFFFF",
+                                "text": "#000000",
+                                "yellow": "#eeee22",
+                                "red": "#dd3333"
+                            },
+                            "default_value": "background",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical"
+                        },
+                        {
+                            "key": "field_66ad9bd7c8ae8",
+                            "label": "Couleur de bordure",
+                            "name": "border",
+                            "aria-label": "",
+                            "type": "wpz-acf-field-color",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "background": "#FFFFFF",
+                                "text": "#000000",
+                                "yellow": "#eeee22",
+                                "red": "#dd3333"
+                            },
+                            "default_value": "text",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical"
+                        },
+                        {
+                            "key": "field_66ad9bfc4b5f4",
+                            "label": "Couleur de fond (hover)",
+                            "name": "background-hover",
+                            "aria-label": "",
+                            "type": "wpz-acf-field-color",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "background": "#FFFFFF",
+                                "text": "#000000",
+                                "yellow": "#eeee22",
+                                "red": "#dd3333"
+                            },
+                            "default_value": "text",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical"
+                        },
+                        {
+                            "key": "field_66ad9c174b5f5",
+                            "label": "Couleur de texte (hover)",
+                            "name": "text-hover",
+                            "aria-label": "",
+                            "type": "wpz-acf-field-color",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "background": "#FFFFFF",
+                                "text": "#000000",
+                                "yellow": "#eeee22",
+                                "red": "#dd3333"
+                            },
+                            "default_value": "background",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical"
+                        },
+                        {
+                            "key": "field_66ad9c2c4b5f6",
+                            "label": "Couleur de bordure (hover)",
+                            "name": "border-hover",
+                            "aria-label": "",
+                            "type": "wpz-acf-field-color",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "background": "#FFFFFF",
+                                "text": "#000000",
+                                "yellow": "#eeee22",
+                                "red": "#dd3333"
+                            },
+                            "default_value": "text",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical"
+                        }
+                    ],
+                    "acfe_group_modal_close": 0,
+                    "acfe_group_modal_button": "",
+                    "acfe_group_modal_size": "large"
+                },
+                {
+                    "key": "field_66ad9c85399fa",
+                    "label": "Bouton secondaire",
+                    "name": "button_secondary",
+                    "aria-label": "",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "row",
+                    "acfe_seamless_style": 0,
+                    "acfe_group_modal": 0,
+                    "sub_fields": [
+                        {
+                            "key": "field_66ad9c85399fb",
+                            "label": "Couleur de fond",
+                            "name": "background",
+                            "aria-label": "",
+                            "type": "wpz-acf-field-color",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "background": "#FFFFFF",
+                                "text": "#000000",
+                                "yellow": "#eeee22",
+                                "red": "#dd3333"
+                            },
+                            "default_value": "background",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical"
+                        },
+                        {
+                            "key": "field_66ad9c85399fc",
+                            "label": "Couleur de texte",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "wpz-acf-field-color",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "background": "#FFFFFF",
+                                "text": "#000000",
+                                "yellow": "#eeee22",
+                                "red": "#dd3333"
+                            },
+                            "default_value": "text",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical"
+                        },
+                        {
+                            "key": "field_66ad9c85399fd",
+                            "label": "Couleur de bordure",
+                            "name": "border",
+                            "aria-label": "",
+                            "type": "wpz-acf-field-color",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "background": "#FFFFFF",
+                                "text": "#000000",
+                                "yellow": "#eeee22",
+                                "red": "#dd3333"
+                            },
+                            "default_value": "text",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical"
+                        },
+                        {
+                            "key": "field_66ad9c85399fe",
+                            "label": "Couleur de fond (hover)",
+                            "name": "background-hover",
+                            "aria-label": "",
+                            "type": "wpz-acf-field-color",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "background": "#FFFFFF",
+                                "text": "#000000",
+                                "yellow": "#eeee22",
+                                "red": "#dd3333"
+                            },
+                            "default_value": "text",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical"
+                        },
+                        {
+                            "key": "field_66ad9c85399ff",
+                            "label": "Couleur de texte (hover)",
+                            "name": "text-hover",
+                            "aria-label": "",
+                            "type": "wpz-acf-field-color",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "background": "#FFFFFF",
+                                "text": "#000000",
+                                "yellow": "#eeee22",
+                                "red": "#dd3333"
+                            },
+                            "default_value": "background",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical"
+                        },
+                        {
+                            "key": "field_66ad9c8539a00",
+                            "label": "Couleur de bordure (hover)",
+                            "name": "border-hover",
+                            "aria-label": "",
+                            "type": "wpz-acf-field-color",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "background": "#FFFFFF",
+                                "text": "#000000",
+                                "yellow": "#eeee22",
+                                "red": "#dd3333"
+                            },
+                            "default_value": "text",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical"
+                        }
+                    ],
+                    "acfe_group_modal_close": 0,
+                    "acfe_group_modal_button": "",
+                    "acfe_group_modal_size": "large"
+                }
+            ],
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large"
+        },
+        {
+            "key": "field_66ad90256fda1",
+            "label": "Thèmes supplémentaires",
+            "name": "wpz_themes",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_repeater_stylised_button": 1,
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Ajouter un thème",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_66ada4098115e",
+                    "label": "Nom du thème",
+                    "name": "name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Seulement des lettres minuscules et des tirets (-)",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_66ad90256fda1"
+                },
+                {
+                    "key": "field_66ada538b0469",
+                    "label": "Couleurs du thème",
+                    "name": "colors",
+                    "aria-label": "",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "acfe_seamless_style": 0,
+                    "acfe_group_modal": 0,
+                    "sub_fields": [
+                        {
+                            "key": "field_66ada538b046a",
+                            "label": "Couleur de fond",
+                            "name": "background",
+                            "aria-label": "",
+                            "type": "wpz-acf-field-color",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "background": "#FFFFFF",
+                                "text": "#000000",
+                                "yellow": "#eeee22",
+                                "red": "#dd3333"
+                            },
+                            "default_value": "background",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical"
+                        },
+                        {
+                            "key": "field_66ada538b046b",
+                            "label": "Couleur de texte",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "wpz-acf-field-color",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "background": "#FFFFFF",
+                                "text": "#000000",
+                                "yellow": "#eeee22",
+                                "red": "#dd3333"
+                            },
+                            "default_value": "text",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical"
+                        },
+                        {
+                            "key": "field_66ada538b046c",
+                            "label": "Couleur d'accentuation",
+                            "name": "highlight",
+                            "aria-label": "",
+                            "type": "wpz-acf-field-color",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "background": "#FFFFFF",
+                                "text": "#000000",
+                                "yellow": "#eeee22",
+                                "red": "#dd3333"
+                            },
+                            "default_value": "text",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical"
+                        },
+                        {
+                            "key": "field_66ada538b046d",
+                            "label": "Bouton primaire",
+                            "name": "button_primary",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "row",
+                            "acfe_seamless_style": 0,
+                            "acfe_group_modal": 0,
+                            "sub_fields": [
+                                {
+                                    "key": "field_66ada538b046e",
+                                    "label": "Couleur de fond",
+                                    "name": "background",
+                                    "aria-label": "",
+                                    "type": "wpz-acf-field-color",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "background": "#FFFFFF",
+                                        "text": "#000000",
+                                        "yellow": "#eeee22",
+                                        "red": "#dd3333"
+                                    },
+                                    "default_value": "text",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "layout": "vertical"
+                                },
+                                {
+                                    "key": "field_66ada538b046f",
+                                    "label": "Couleur de texte",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "wpz-acf-field-color",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "background": "#FFFFFF",
+                                        "text": "#000000",
+                                        "yellow": "#eeee22",
+                                        "red": "#dd3333"
+                                    },
+                                    "default_value": "background",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "layout": "vertical"
+                                },
+                                {
+                                    "key": "field_66ada538b0470",
+                                    "label": "Couleur de bordure",
+                                    "name": "border",
+                                    "aria-label": "",
+                                    "type": "wpz-acf-field-color",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "background": "#FFFFFF",
+                                        "text": "#000000",
+                                        "yellow": "#eeee22",
+                                        "red": "#dd3333"
+                                    },
+                                    "default_value": "text",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "layout": "vertical"
+                                },
+                                {
+                                    "key": "field_66ada538b0471",
+                                    "label": "Couleur de fond (hover)",
+                                    "name": "background-hover",
+                                    "aria-label": "",
+                                    "type": "wpz-acf-field-color",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "background": "#FFFFFF",
+                                        "text": "#000000",
+                                        "yellow": "#eeee22",
+                                        "red": "#dd3333"
+                                    },
+                                    "default_value": "text",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "layout": "vertical"
+                                },
+                                {
+                                    "key": "field_66ada538b0472",
+                                    "label": "Couleur de texte (hover)",
+                                    "name": "text-hover",
+                                    "aria-label": "",
+                                    "type": "wpz-acf-field-color",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "background": "#FFFFFF",
+                                        "text": "#000000",
+                                        "yellow": "#eeee22",
+                                        "red": "#dd3333"
+                                    },
+                                    "default_value": "background",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "layout": "vertical"
+                                },
+                                {
+                                    "key": "field_66ada538b0473",
+                                    "label": "Couleur de bordure (hover)",
+                                    "name": "border-hover",
+                                    "aria-label": "",
+                                    "type": "wpz-acf-field-color",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "background": "#FFFFFF",
+                                        "text": "#000000",
+                                        "yellow": "#eeee22",
+                                        "red": "#dd3333"
+                                    },
+                                    "default_value": "text",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "layout": "vertical"
+                                }
+                            ],
+                            "acfe_group_modal_close": 0,
+                            "acfe_group_modal_button": "",
+                            "acfe_group_modal_size": "large"
+                        },
+                        {
+                            "key": "field_66ada538b0474",
+                            "label": "Bouton secondaire",
+                            "name": "button_secondary",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "row",
+                            "acfe_seamless_style": 0,
+                            "acfe_group_modal": 0,
+                            "sub_fields": [
+                                {
+                                    "key": "field_66ada538b0475",
+                                    "label": "Couleur de fond",
+                                    "name": "background",
+                                    "aria-label": "",
+                                    "type": "wpz-acf-field-color",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "background": "#FFFFFF",
+                                        "text": "#000000",
+                                        "yellow": "#eeee22",
+                                        "red": "#dd3333"
+                                    },
+                                    "default_value": "background",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "layout": "vertical"
+                                },
+                                {
+                                    "key": "field_66ada538b0476",
+                                    "label": "Couleur de texte",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "wpz-acf-field-color",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "background": "#FFFFFF",
+                                        "text": "#000000",
+                                        "yellow": "#eeee22",
+                                        "red": "#dd3333"
+                                    },
+                                    "default_value": "text",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "layout": "vertical"
+                                },
+                                {
+                                    "key": "field_66ada538b0477",
+                                    "label": "Couleur de bordure",
+                                    "name": "border",
+                                    "aria-label": "",
+                                    "type": "wpz-acf-field-color",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "background": "#FFFFFF",
+                                        "text": "#000000",
+                                        "yellow": "#eeee22",
+                                        "red": "#dd3333"
+                                    },
+                                    "default_value": "text",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "layout": "vertical"
+                                },
+                                {
+                                    "key": "field_66ada538b0478",
+                                    "label": "Couleur de fond (hover)",
+                                    "name": "background-hover",
+                                    "aria-label": "",
+                                    "type": "wpz-acf-field-color",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "background": "#FFFFFF",
+                                        "text": "#000000",
+                                        "yellow": "#eeee22",
+                                        "red": "#dd3333"
+                                    },
+                                    "default_value": "text",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "layout": "vertical"
+                                },
+                                {
+                                    "key": "field_66ada538b0479",
+                                    "label": "Couleur de texte (hover)",
+                                    "name": "text-hover",
+                                    "aria-label": "",
+                                    "type": "wpz-acf-field-color",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "background": "#FFFFFF",
+                                        "text": "#000000",
+                                        "yellow": "#eeee22",
+                                        "red": "#dd3333"
+                                    },
+                                    "default_value": "background",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "layout": "vertical"
+                                },
+                                {
+                                    "key": "field_66ada538b047a",
+                                    "label": "Couleur de bordure (hover)",
+                                    "name": "border-hover",
+                                    "aria-label": "",
+                                    "type": "wpz-acf-field-color",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "background": "#FFFFFF",
+                                        "text": "#000000",
+                                        "yellow": "#eeee22",
+                                        "red": "#dd3333"
+                                    },
+                                    "default_value": "text",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "layout": "vertical"
+                                }
+                            ],
+                            "acfe_group_modal_close": 0,
+                            "acfe_group_modal_button": "",
+                            "acfe_group_modal_size": "large"
+                        }
+                    ],
+                    "acfe_group_modal_close": 0,
+                    "acfe_group_modal_button": "",
+                    "acfe_group_modal_size": "large",
+                    "parent_repeater": "field_66ad90256fda1"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-themes"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1722656088
+}

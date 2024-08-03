@@ -26,8 +26,8 @@ class WPZ_Block {
 	public function get_class() {
 		$class = [];
 
-		if (!empty($this->options['theme'])) {
-			$class[] = '__theme_' . $this->options['theme'];
+		if (!empty($this->options['wpz_theme'])) {
+			$class[] = '__theme_' . $this->options['wpz_theme'];
 		}
 
 		if (!empty($this->options['spacing']['top'])) {

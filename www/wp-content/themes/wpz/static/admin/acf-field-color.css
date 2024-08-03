@@ -1,0 +1,57 @@
+/* ------------------------------------------------------------
+// ACF Admin - Dropdown icon
+// ------------------------------------------------------------ */
+.field-type-icon-wpz-acf-field-color:before {
+    mask-image: url('/wp-content/plugins/advanced-custom-fields-pro/assets/images/field-type-icons/icon-field-color-picker.svg') !important;
+}
+
+/* ------------------------------------------------------------
+// ACF Button Field
+// ------------------------------------------------------------ */
+.acf-field-wpz-acf-field-color .acf-radio-list {
+    padding: 0;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: -6px;
+}
+
+.acf-field-wpz-acf-field-color .acf-radio-list li {
+    font-size: 0;
+    display: block;
+}
+
+.acf-field-wpz-acf-field-color .acf-radio-list li label {
+    display: block;
+    font-size: 0;
+    padding: 6px;
+    margin: 3px;
+    line-height: 0;
+    border: solid 1px transparent;
+    border-radius: 3px;
+}
+
+.acf-field-wpz-acf-field-color .acf-radio-list li label:hover {
+    border-color: #EBEBEB;
+    cursor: pointer;
+}
+
+.acf-field-wpz-acf-field-color .acf-radio-list li label:before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    border: solid 1px #c3c4c7;
+    background: var(--acf-field-color);
+}
+
+.acf-field-wpz-acf-field-color .acf-radio-list li label input {
+    display: none;
+}
+
+.acf-field-wpz-acf-field-color .acf-radio-list li label:has(input:checked) {
+    border-color: #1d2327;
+}

@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_666dbd0deedb3",
-            "label": "Couleur de fond",
-            "name": "theme",
+            "label": "Thème",
+            "name": "wpz_theme",
             "aria-label": "",
             "type": "radio",
             "instructions": "",
@@ -17,7 +17,7 @@
                 "id": ""
             },
             "choices": [],
-            "default_value": "white",
+            "default_value": "default",
             "return_format": "value",
             "allow_null": 0,
             "other_choice": 0,
@@ -39,6 +39,11 @@
                 "id": ""
             },
             "layout": "table",
+            "acfe_seamless_style": 0,
+            "acfe_group_modal": 0,
+            "acfe_group_modal_close": 0,
+            "acfe_group_modal_button": "",
+            "acfe_group_modal_size": "large",
             "sub_fields": [
                 {
                     "key": "field_666dc0d7c56a8",
@@ -98,12 +103,7 @@
                     "layout": "vertical",
                     "save_other_choice": 0
                 }
-            ],
-            "acfe_seamless_style": 0,
-            "acfe_group_modal": 0,
-            "acfe_group_modal_close": 0,
-            "acfe_group_modal_button": "",
-            "acfe_group_modal_size": "large"
+            ]
         }
     ],
     "location": [
@@ -131,5 +131,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1721471763
+    "modified": 1722655288
 }

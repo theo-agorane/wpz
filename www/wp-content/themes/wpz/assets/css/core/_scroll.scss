@@ -1,10 +1,4 @@
 @media #{$sm-min} {
-	[data-scroll-section] {
-		&.__scroll_active {
-
-		}
-	}
-
 	@keyframes fadeInFromTop {
 		0% { transform: translate3d(0, calc(-1 * var(--scroll-item-translate)), 0); opacity: 0; }
 		100% { transform: translate3d(0, 0, 0); opacity: 1; }
@@ -28,6 +22,19 @@
 	@keyframes fadeInScale {
 		0% { transform: scale3d(0, 0, 1); opacity: 0; }
 		100% { transform: scale3d(1, 1, 1); opacity: 1; }
+	}
+
+	[data-scroll-section] {
+		&:not(:first-child) {
+			opacity: 0;
+			animation-timing-function: var(--wpz-ts-easing);
+			animation-duration: var(--wpz-ts-long);
+			animation-fill-mode: forwards;
+			--scroll-item-translate: 1rem;
+
+			transform: translate3d(0, var(--scroll-item-translate), 0);
+			&.__scroll_active { animation-name: fadeInFromBottom; }
+		}
 	}
 
 	[data-scroll-item] {

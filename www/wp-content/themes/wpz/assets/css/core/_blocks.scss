@@ -1,13 +1,13 @@
 .Block {
 	--block-spacing-top: #{spacing(2)};
 	--block-spacing-bottom: #{spacing(2)};
-	--block-background: #{color(white)};
-	--block-color: #{color(black)};
-	--block-color-highlight: #{color(black)};
+	--block-color-background: #{color(background)};
+	--block-color-text: #{color(text)};
+	--block-color-highlight: #{color(text)};
 
 	padding: var(--block-spacing-top) 0 var(--block-spacing-bottom);
-	background: var(--block-background);
-	color: var(--block-color);
+	background: var(--block-color-background);
+	color: var(--block-color-text);
 	position: relative;
 
 	&--buttons {
@@ -51,5 +51,12 @@
 		&_L { --block-spacing-bottom: #{spacing(3)}; }
 		&_XL { --block-spacing-bottom: #{spacing(4)}; }
 		&_XXL { --block-spacing-bottom: #{spacing(5)}; }
+	}
+}
+
+.__theme {
+	&_default {
+		padding: 0;
+		margin: var(--block-spacing-top) 0 var(--block-spacing-bottom);
 	}
 }

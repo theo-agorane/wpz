@@ -6,11 +6,28 @@ class WPZ_Config {
 	 * @constructor
 	 */
 	public function __construct() {
+		add_action('admin_menu', [$this, 'add_menu_page']);
 		add_action('init', [$this, 'add_custom_post_type']);
 
 		$this->get_current_lang();
 		$this->get_config_for_current_lang();
 		$this->get_menus_for_current_lang();
+	}
+
+	/**
+	 * @action admin_menu
+	 * @function add_menu_page
+	 */
+	function add_menu_page() {
+		add_menu_page(
+			'WPZ',
+			'WPZ',
+			'manage_options',
+			'wpz-config',
+			'',
+			'dashicons-admin-generic',
+			30,
+		);
 	}
 
 	/**
@@ -38,10 +55,10 @@ class WPZ_Config {
 		 	'public' => true,
 		 	'has_archive' => false,
 		 	'hierarchical' => false,
-		 	'menu_position' => 25,
-		 	'menu_icon' => 'dashicons-admin-generic',
+		 	'menu_position' => 1,
 		 	'show_ui' => true,
 		 	'show_in_rest' => true,
+		 	'show_in_menu' => 'wpz-config',
 		 	'supports' => ['title'],
 		 	'with_front' => false,
 		]);

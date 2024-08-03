@@ -3,14 +3,14 @@ button {
 }
 
 .button {
-	--btn-color: #{color(black)};
-	--btn-border: #{color(black)};
+	--btn-text: #{color(text)};
+	--btn-border: #{color(text)};
 	--btn-background: transparent;
-	--btn-color-hover: #{color(white)};
-	--btn-background-hover: #{color(black)};
-	--btn-border-hover: #{color(black)};
+	--btn-text-hover: #{color(background)};
+	--btn-background-hover: #{color(text)};
+	--btn-border-hover: #{color(text)};
 
-	color: var(--btn-color);
+	color: var(--btn-text);
 	background: var(--btn-background);
 	border: solid 1px var(--btn-border);
 	font-weight: fw(medium);
@@ -30,7 +30,7 @@ button {
 	&:hover,
 	&.__active {
 		background: var(--btn-background-hover);
-		color: var(--btn-color-hover);
+		color: var(--btn-text-hover);
 		border-color: var(--btn-border-hover);
 	}
 
@@ -72,6 +72,6 @@ button {
 
 a:hover .button {
 	background: var(--btn-background-hover);
-	color: var(--btn-color-hover);
+	color: var(--btn-text-hover);
 	border-color: var(--btn-border-hover);
 }

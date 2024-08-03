@@ -52,12 +52,6 @@ class WPZ_ACF {
 	    }
 
 	    switch ($field['name']) {
-	    	case 'theme':
-		        $field['choices'] = [
-		            'white' => '<div class="acf-wpz-color" style="background: #FFFFFF; border: solid 1px #ebebeb;"></div> Blanc',
-		            'black' => '<div class="acf-wpz-color" style="background: #000000;"></div> Noir',
-		        ];
-	    	break;
 	    	case 'gallery_display':
 	    		if (get_current_screen() != null && get_current_screen()->id == 'acf-field-group') {
 		            $field['choices'] = [];
@@ -91,6 +85,10 @@ class WPZ_ACF {
 		// Field Button
 		require_once dirname(__FILE__) . '/WPZ_ACF_Field_Button.php';
         new WPZ_ACF_Field_Button();
+        
+		// Field Color
+		require_once dirname(__FILE__) . '/WPZ_ACF_Field_Color.php';
+        new WPZ_ACF_Field_Color();
 	}
 
 }

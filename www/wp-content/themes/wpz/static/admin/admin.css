@@ -1,10 +1,15 @@
 .acf-wpz-color {
     display: inline-block;
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
     vertical-align: middle;
-    border-radius: 2px;
-    box-sizing: border-box;
+    border-radius: 3px;
+    border: solid 1px #ebebeb;
+    background: var(--acf-wpz-color);
+}
+
+.acf-wpz-color-text {
+    text-transform: capitalize;
 }
 
 .acf-wpz-gallery-display {

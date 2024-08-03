@@ -15,6 +15,7 @@ class WPZ_Class {
 		new WPZ_Forms();
 		new WPZ_FAQ();
 		new WPZ_ACF();
+		new WPZ_Themes();
 		//$this->pll = new WPZ_Polylang();
 
 		// Front Configuration
