@@ -4,9 +4,9 @@ Plugin Name: Disable XML-RPC-API
 Plugin URI: https://neatma.com
 Contributors: aminnz,neatmarketing
 Description: Simple plugin to disable XML-RPC API and X-Pingback for faster and more secure website.
-Tags: disable xml-rpc, xmlrpc, disable xmlrpc,remove xmlrpc, XML-RPC, pingback, stop brute force attacks
-Tested up to: 6.3
-Requires at least: 4.8
+Tags: disable xml-rpc, xmlrpc, disable xmlrpc, pingback, stop brute force attacks
+Tested up to: 6.6
+Requires at least: 5.0
 Author: Neatma
 Author URI: https://neatma.com
 Donate link: http://neatma.com/wpsg-plugin
@@ -37,23 +37,6 @@ Protect your website from xmlrpc brute-force attacks,DOS and DDOS attacks, this 
 * Disable wlw manifest
 * And some other options
 
-
-**Need more protection for your website?**
-
-Use WP Security Guard to protect your website againts hackers, spammers and bad bots.
-
-**WP Security Guard Main Features**
-
-* Anti BruteForce Attack
-* Anti Hack Firewall
-* Security Monitoring
-* Math Captcha & Google reCaptcha 
-* Two Factor Authentication
-* File Integrity Monitoring
-* No Captcha Anti Spam
-* And More...
-
-**[Learn more about WP Security Guard](https://neatma.com/wpsg-plugin/)**
 
 
 **What is XMLRPC**
@@ -156,22 +139,22 @@ screenshot-2.jpg
 * Hotfix for error on update 
 
 = 2.1.4.3 =
-* Hotfix for error on removing wordpress metadata 
+* Hotfix for error on removing v metadata 
 
 = 2.1.4.4 =
 * Fix warning undefined variable $htaccess_code when disable hotlink fix is off
 * Fix warning Undefined array key “plugins” on PHP 8+
 
 = 2.1.4.5 =
-* Fix removing pingback header issue in the last major update
+* Fix removing vpingback header issue in the last major update
 * Update tested up to wp 6.1
 
 = 2.1.4.7 =
-* Fix issues on uninstallation hook
+* Fix issues on vuninstallation hook
 * Minor improvements on admin review notification 
 
 = 2.1.4.8 =
-* Fix bug with disable wp reset API option 
+* Fix bug v wp reset API option 
 
 = 2.1.4.9 =
 * Update Jetpack default whitelist IPs
@@ -181,3 +164,8 @@ screenshot-2.jpg
 
 = 2.1.5 =
 * Hotfix for .htaccess error and disabling the admin notices
+
+= 2.1.6 =
+* Clean Up the plugin codes (remove unnecessary codes)
+* Add VaultPress IPs to JetPack allowlist
+* Test compatibility with WordPress 6.6.1

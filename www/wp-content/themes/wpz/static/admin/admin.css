@@ -1,15 +1,60 @@
 .acf-wpz-color {
     display: inline-block;
+    font-size: 0;
+    padding: 4px;
+    margin: 2px;
+    line-height: 0;
+    border: solid 1px transparent;
+    border-radius: 100%;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+.acf-wpz-color:before {
+    content: '';
+    display: block;
     width: 24px;
     height: 24px;
-    vertical-align: middle;
-    border-radius: 3px;
-    border: solid 1px #ebebeb;
+    border-radius: 100%;
+    border: solid 1px #c3c4c7;
     background: var(--acf-wpz-color);
+    box-sizing: border-box;
 }
 
 .acf-wpz-color-text {
     text-transform: capitalize;
+    opacity: 0.6;
+}
+
+.acf-field[data-name="wpz_theme"] .acf-radio-list {
+    margin: -4px;
+    padding: 0;
+    border: 0;
+}
+
+.acf-field[data-name="wpz_theme"] .acf-radio-list label {
+    cursor: pointer;
+}
+
+.acf-field[data-name="wpz_theme"] .acf-radio-list label:hover .acf-wpz-color {
+    border-color: #EBEBEB;
+}
+
+.acf-field[data-name="wpz_theme"] .acf-radio-list label:hover .acf-wpz-color-text,
+.acf-field[data-name="wpz_theme"] .acf-radio-list li:has(input:checked) .acf-wpz-color-text {
+    opacity: 1;
+}
+
+.acf-field[data-name="wpz_theme"] .acf-radio-list li {
+    display: block;
+}
+
+.acf-field[data-name="wpz_theme"] .acf-radio-list li input {
+    display: none;
+}
+
+.acf-field[data-name="wpz_theme"] .acf-radio-list li:has(input:checked) .acf-wpz-color {
+    border-color: #6d888C;
 }
 
 .acf-wpz-gallery-display {

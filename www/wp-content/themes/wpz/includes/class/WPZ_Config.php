@@ -20,8 +20,8 @@ class WPZ_Config {
 	 */
 	function add_menu_page() {
 		add_menu_page(
-			'WPZ',
-			'WPZ',
+			'Configuration',
+			'Configuration',
 			'manage_options',
 			'wpz-config',
 			'',

@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin: -6px;
+    margin: -4px;
 }
 
 .acf-field-wpz-acf-field-color .acf-radio-list li {
@@ -26,11 +26,12 @@
 .acf-field-wpz-acf-field-color .acf-radio-list li label {
     display: block;
     font-size: 0;
-    padding: 6px;
-    margin: 3px;
+    padding: 4px;
+    margin: 2px;
     line-height: 0;
     border: solid 1px transparent;
-    border-radius: 3px;
+    border-radius: 100%;
+    box-sizing: border-box;
 }
 
 .acf-field-wpz-acf-field-color .acf-radio-list li label:hover {
@@ -43,9 +44,10 @@
     display: block;
     width: 24px;
     height: 24px;
-    border-radius: 3px;
+    border-radius: 100%;
     border: solid 1px #c3c4c7;
     background: var(--acf-field-color);
+    box-sizing: border-box;
 }
 
 .acf-field-wpz-acf-field-color .acf-radio-list li label input {
@@ -53,5 +55,5 @@
 }
 
 .acf-field-wpz-acf-field-color .acf-radio-list li label:has(input:checked) {
-    border-color: #1d2327;
+    border-color: #6d888C;
 }

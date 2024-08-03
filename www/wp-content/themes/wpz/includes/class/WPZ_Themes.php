@@ -37,13 +37,10 @@ class WPZ_Themes {
 	 * @function add_css_variables_inline_style
 	 */
 	function add_css_variables_inline_style() {
-
-		$style = '<style>';
-		$style .= $this->get_colors_css();
-		$style .= $this->get_themes_css();
-		$style .= '</style>';
-
-		echo $style;
+		echo '<style>';
+		echo $this->get_colors_css();
+		echo $this->get_themes_css();
+		echo '</style>';
 	}
 	
 	/**
@@ -112,8 +109,10 @@ class WPZ_Themes {
 			'transparent' => $color_text . '00',
 		];
 
-		foreach ($colors_custom as $color) {
-			$colors[sanitize_title($color['name'])] = $color['color'];
+		if (is_array($colors_custom)) {
+			foreach ($colors_custom as $color) {
+				$colors[sanitize_title($color['name'])] = $color['color'];
+			}
 		}
 
 		return $colors;
@@ -130,8 +129,13 @@ class WPZ_Themes {
 			'default' => $theme_default,
 		];
 
-		foreach ($themes_custom as $theme) {
-			$themes[sanitize_title($theme['name'])] = $theme['colors'];
+		$themes['default']['background'] = get_field('wpz_color_background', 'option');
+		$themes['default']['text'] = get_field('wpz_color_text', 'option');
+
+		if (is_array($themes_custom)) {
+			foreach ($themes_custom as $theme) {
+				$themes[sanitize_title($theme['name'])] = $theme['colors'];
+			}
 		}
 
 		return $themes;
