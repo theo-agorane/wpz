@@ -77,7 +77,7 @@ class WPZ_Class {
 	public function add_scripts() {
 	    wp_enqueue_script('wpz-js', get_stylesheet_directory_uri() . '/dist/app.js');
 	    wp_localize_script('wpz-js', 'ajaxUrl', [admin_url('admin-ajax.php')]);
-	    wp_localize_script('wpz-js', 'iconsSvg', [get_stylesheet_directory_uri() . '/dist/all-icons.svg?240720001']);
+	    wp_localize_script('wpz-js', 'iconsSvg', [get_stylesheet_directory_uri() . '/dist/all-icons.svg?240803001']);
 
 	    wp_deregister_script('wp-embed');
 	}

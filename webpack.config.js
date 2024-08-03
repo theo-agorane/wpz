@@ -1,5 +1,4 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 var path = require('path');
 
 // change these variables to fit your project
@@ -26,13 +25,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
-    /*
-    new BrowserSyncPlugin({
-      proxy: localDomain,
-      files: [ outputPath + '/*.css' ],
-      injectCss: true,
-    }, { reload: false, }),
-    */
   ],
   module: {
     rules: [

@@ -70,7 +70,7 @@
 // ======================================
 @mixin keepratio($width: 16, $height: 9) {
 	position: relative;
-	$ratio: $height / $width;
+	$ratio: calc(0.01 * #{$width} / #{$height});
 	aspect-ratio: #{$width} / #{$height};
 
 	&:before {
@@ -78,7 +78,7 @@
 		display: block;
 		position: relative;
 		z-index: 0;
-		padding-bottom: percentage($ratio);
+		padding-bottom: $ratio;
 	}
 }
 

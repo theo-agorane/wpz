@@ -129,8 +129,8 @@ class WPZ_Themes {
 			'default' => $theme_default,
 		];
 
-		$themes['default']['background'] = get_field('wpz_color_background', 'option');
-		$themes['default']['text'] = get_field('wpz_color_text', 'option');
+		$themes['default']['background'] = 'background';
+		$themes['default']['text'] = 'text';
 
 		if (is_array($themes_custom)) {
 			foreach ($themes_custom as $theme) {

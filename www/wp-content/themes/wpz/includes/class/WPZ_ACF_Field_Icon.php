@@ -1,9 +1,11 @@
 <?php
 
+define('CURRENT_TIMESTAMP', time());
+
 class WPZ_ACF_Field_Icon extends acf_field {
 
     var $icons = [],
-        $all_icons_file = '/dist/all-icons.svg?240720001',
+        $all_icons_file = '/dist/all-icons.svg?' . CURRENT_TIMESTAMP,
         $icons_dir = '/dist/icons/',
         $symbols = '';
 

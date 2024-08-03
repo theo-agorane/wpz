@@ -26,6 +26,13 @@ $xl-min: "screen and (min-width: 1481px)";
 	--wpz-fw-medium: 		500;
 	--wpz-fw-bold: 			700;
 
+	// Transitions
+	--wpz-ts-easing: 		cubic-bezier(.23,1,.32,1);
+	--wpz-ts-short:			0.3s;
+	--wpz-ts-normal:		0.6s;
+	--wpz-ts-medium:		0.9s;
+	--wpz-ts-long:			1.2s;
+
 	// Sizes
 	--wpz-container-large:	1280px;
 	--wpz-container-medium:	1080px;
@@ -36,13 +43,6 @@ $xl-min: "screen and (min-width: 1481px)";
 	} @media #{$sm} {
 		--wpz-spacing: 		1rem;
 	}
-
-	// Transitions
-	--wpz-ts-easing: 		cubic-bezier(.23,1,.32,1);
-	--wpz-ts-short:			0.3s;
-	--wpz-ts-normal:		0.6s;
-	--wpz-ts-medium:		0.9s;
-	--wpz-ts-long:			1.2s;
 }
 
 @function font($font: text) {

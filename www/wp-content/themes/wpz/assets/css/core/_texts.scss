@@ -100,8 +100,8 @@ h5, .h5 {
 		position: relative;
 		overflow: hidden;
 		background: color(shadow);
-		@include keepratio(16, 9);
 		margin: 1.25rem 0;
+		@include keepratio(16, 9);
 
 		&:first-child { margin-top: 0; }
 		&:last-child { margin-bottom: 0; }

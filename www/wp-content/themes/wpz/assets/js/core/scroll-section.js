@@ -8,7 +8,7 @@ export default class Scroll_Section {
 		this.items = this.container.querySelectorAll('[data-scroll-item]');
 
 		[].forEach.call(this.items, (item, i) => {
-			item.style.animationDelay = `${i*Scroll_Section.ITEM_DELAY}s`;
+			item.style.animationDelay = `${(i+1)*Scroll_Section.ITEM_DELAY}s`;
 		});
 	}
 

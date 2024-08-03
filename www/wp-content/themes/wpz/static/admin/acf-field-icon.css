@@ -12,7 +12,7 @@
 .icon-preview-wrapper {
 	position: relative;
 	padding-right: 40px;
-    min-height: 32px;
+    min-height: 24px;
     display: flex;
     justify-content: stretch;
     align-items: center;
@@ -26,15 +26,15 @@
     position: absolute;
     right: 0;
     top: 0;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
 }
 
 .icon-preview-wrapper .icon-preview svg,
 .icon-preview-wrapper .icon-preview .svg {
-    width: 32px;
-    height: 32px;
-    fill: #000;
+    width: 24px;
+    height: 24px;
+    color: #000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -113,7 +113,7 @@
 .wpz-acf-field-icon .value .svg {
     margin-right: 10px;
     flex-shrink: 0;
-    width: 32px;
+    width: 24px;
     padding: 0;
 }
 
@@ -140,16 +140,16 @@
 .wpz-acf-field-icon svg {
     vertical-align: middle;
     display: inline-block;
-    width: 32px;
-    height: 32px;
-    fill: #000;
+    width: 24px;
+    height: 24px;
+    color: #000;
 }
 
 .wpz-acf-field-icon .svg {
     vertical-align: middle;
     display: inline-flex !important;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     align-items: center;
     justify-content: center;
     text-align: center;
