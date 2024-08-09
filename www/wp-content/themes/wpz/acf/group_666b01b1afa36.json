@@ -3,6 +3,21 @@
     "title": "WPZ – Configuration",
     "fields": [
         {
+            "key": "field_66b61a8172492",
+            "label": "Test",
+            "name": "test",
+            "aria-label": "",
+            "type": "wpz-acf-field-icon",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
             "key": "field_666b01b235d9c",
             "label": "Configuration",
             "name": "config",
@@ -313,5 +328,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1721471763
+    "modified": 1723210384
 }

@@ -1,6 +1,5 @@
 import imagemin from 'imagemin';
 import imageminSvgo from 'imagemin-svgo';
-import { outlineFile, outlineSvg } from '@davestewart/outliner';
 import fs from 'fs';
 import { optimize as svgOptimize } from 'svgo';
 import { parseSvg } from 'svgo/lib/parser.js';
@@ -27,14 +26,33 @@ const logos = await imagemin([logosSrc], {
 
 const icons = await imagemin([iconsSrc], {
 	destination: iconsDist,
-	plugins: [],
+	plugins: [
+		imageminSvgo({
+			plugins: [{
+				name: 'preset-default',
+				params: {
+					overrides: {
+						removeViewBox: false,
+					},
+				},
+			}],
+		}),
+	],
 });
 
 fs.readdir(iconsDist, (errDir, files) => {
+	if (errDir) {
+		console.log(errDir); return;
+	}
+
 	files.forEach(file => {
 		const svgPath = `${iconsDist}${file}`;
 
 		fs.readFile(svgPath, (errFile, baseSvg) => {
+			if (errFile) {
+				console.log(errFile); return;
+			}
+
 			const optimizedSvg = svgOptimize(baseSvg, {
 				path: svgPath,
 				plugins: [
@@ -79,8 +97,10 @@ fs.readdir(iconsDist, (errDir, files) => {
 				}
 			}
 
-			fs.writeFile(svgPath, stringifySvg(svg), (err) => {
-				
+			fs.writeFile(svgPath, stringifySvg(svg), (errFile) => {
+				if (errFile) {
+					console.log(err); return;
+				}
 			});
 		});
 	});

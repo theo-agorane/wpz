@@ -48,18 +48,10 @@ button {
 	}
 
 	svg {
-		fill: currentColor;
 		width: 1.5em;
 		height: 1.5em;
 		margin: -0.25em -0.25rem -0.25em 1rem;
 		flex-shrink: 0;
-
-		&[data-icon*="chevron"],
-		&[data-icon="close"],
-		&[data-icon*="arrow"] {
-			width: 1em;
-			height: 1em;
-		}
 	}
 
 	&.__icon-left {

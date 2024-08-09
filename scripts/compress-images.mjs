@@ -12,6 +12,7 @@ const iconsDist = 	`${theme}/dist/icons/`;
 
 const images = await imagemin([imagesSrc], {
 	destination: imagesDist,
+	preserveDirectories: true,
 	plugins: [
 		imageminJpegtran({
 			quality: [0.7, 0.9],

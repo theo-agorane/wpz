@@ -1,11 +1,9 @@
 <?php
 
-define('CURRENT_TIMESTAMP', time());
-
 class WPZ_ACF_Field_Icon extends acf_field {
 
     var $icons = [],
-        $all_icons_file = '/dist/all-icons.svg?' . CURRENT_TIMESTAMP,
+        $all_icons_file = '/dist/all-icons.svg',
         $icons_dir = '/dist/icons/',
         $symbols = '';
 
@@ -42,7 +40,8 @@ class WPZ_ACF_Field_Icon extends acf_field {
 	    wp_enqueue_script('wpz-acf-field-icon-js', get_stylesheet_directory_uri() . '/static/admin/acf-field-icon.js', ['jquery'], null, true);
 
         echo '<script type="text/javascript">';
-        echo 'var iconsSvg = "'. get_template_directory_uri() . $this->icons_dir .'";';
+        echo 'var acfIconsSvg = "'. $this->symbols .'";';
+        echo 'var acfIconsList = '. json_encode($this->icons) .';';
         echo '</script>';
 	}
 
@@ -52,7 +51,7 @@ class WPZ_ACF_Field_Icon extends acf_field {
 	public function load_theme_icons() {
         $iconFiles = scandir(get_template_directory() . '' . $this->icons_dir);
         $this->icons = [];
-        $this->symbols = get_template_directory_uri() . '' . $this->all_icons_file;
+        $this->symbols = get_template_directory_uri() . '' . $this->all_icons_file . WPZ()->get_cache_key();
 
         foreach ($iconFiles as $icon) {
             if (str_contains($icon, '.svg')) {
@@ -66,42 +65,10 @@ class WPZ_ACF_Field_Icon extends acf_field {
     * @function render_field
     */
     function render_field($field) {
-        $value_icon = null;
         ?>
         <div class="<?php echo $this->name; ?>">
             <span class="toggle-indicator"></span>
-            <div class="overlay"></div>
-            <div class="dropdown">
-                <?php 
-                    echo '<div class="option" data-value="">';
-                    echo '  <span class="svg">x</span>';
-                    echo '  <span>Aucun</span>';
-                    echo '</div>';
-
-                    foreach ($this->icons as $icon) {
-                        if ($field['value'] == $icon) {
-                            $value_icon = $icon;
-                        }
-
-                        echo '<div class="option" data-value="'. $icon .'">';
-                        echo '  <svg><use href="'. $this->symbols .'#'. $icon .'"></use></svg>';
-                        echo '  <span>'. $icon .'</span>';
-                        echo '</div>';
-                    }
-                ?>
-            </div>
-            <div class="value">
-                <?php 
-                if ($value_icon) {
-                    echo '<svg><use href="'. $this->symbols .'#'. $value_icon .'"></use></svg> ';
-                    echo '<span>'. $value_icon .'</span>';
-                }
-                else {
-                    echo '<span class="svg">x</span>';
-                    echo '<span>Aucun</span>';
-                }
-                ?>
-            </div>
+            <div class="value"></div>
         </div>
         <input type="hidden" name="<?php echo esc_attr($field['name']) ?>" value="<?php echo esc_attr($field['value']) ?>" >
         <?php

@@ -1,180 +1,205 @@
 // ------------------------------------------------------------
 // Input Icon Field
 // ------------------------------------------------------------
+class WPZ_ACF_Field_Icon {
+	
+	constructor(field) {
+		this.el = field.$el[0];
+		this.input = this.el.querySelector('input');
+		this.elValue = this.el.querySelector('.value');
+
+		this.el.addEventListener('click', this.openSelector.bind(this));
+
+		this.setValue(this.input.value);
+	}
+
+	openSelector() {
+		acfIconSelector.open(this);
+	}
+
+	setValue(icon) {
+		this.input.value = icon;
+
+		if (icon) {
+			this.elValue.innerHTML = '';
+			
+			const svg = acfIconSelector.createSvg(icon);
+			this.elValue.appendChild(svg);
+
+			const span = document.createElement('span');
+			span.innerHTML = icon;
+			this.elValue.appendChild(span);
+		}
+		else {
+			this.elValue.innerHTML = '<span class="svg">-</span> <span>Aucun</span>';
+		}
+	}
+
+}
+
+// ------------------------------------------------------------
+// Input Icon Field
+// ------------------------------------------------------------
+class WPZ_ACF_Field_Icon_Selector {
+
+	constructor() {
+		this.buildHtml();
+		this.buildIcons();
+
+		this.elOverlay.addEventListener('click', this.close.bind(this));
+		this.inputSearch.addEventListener('input', this.updateSearch.bind(this));
+		this.elClose.addEventListener('click', () => {
+			this.selectIcon();
+		});
+
+		[].forEach.call(this.icons, (icon) => {
+			icon.addEventListener('click', () => {
+				this.selectIcon(icon.dataset.icon);
+			});
+		});
+	}
+
+	buildHtml() {
+		this.el = document.createElement('div');
+		this.el.classList.add('wpz-acf-icon-selector');
+		document.body.appendChild(this.el);
+
+		this.elOverlay = document.createElement('div');
+		this.elOverlay.classList.add('overlay');
+		this.el.appendChild(this.elOverlay);
+
+		this.elWrapper = document.createElement('div');
+		this.elWrapper.classList.add('wrapper');
+		this.el.appendChild(this.elWrapper);
+
+		this.elHeader = document.createElement('div');
+		this.elHeader.classList.add('header');
+		this.elWrapper.appendChild(this.elHeader);
+
+		this.elSearch = document.createElement('div');
+		this.elSearch.classList.add('search');
+		this.elHeader.appendChild(this.elSearch);
+
+		this.inputSearch = document.createElement('input');
+		this.inputSearch.type = 'search';
+		this.inputSearch.placeholder = 'Rechercher...';
+		this.elSearch.appendChild(this.inputSearch);
+
+		this.elClose = document.createElement('div');
+		this.elClose.classList.add('close');
+		this.elHeader.appendChild(this.elClose);
+
+		this.elList = document.createElement('div');
+		this.elList.classList.add('list');
+		this.elWrapper.appendChild(this.elList);
+	}
+
+	createSvg(icon) {
+		const iconPath = acfIconsSvg + '#' + icon;
+		const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+	    svg.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
+
+		const use = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+		use.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', iconPath);
+		svg.appendChild(use);
+
+		return svg;
+	}
+
+	buildIcons() {
+		[].forEach.call(acfIconsList, (icon) => {
+			const el = document.createElement('div');
+			el.classList.add('icon');
+			el.dataset.icon = icon;
+
+			const svg = this.createSvg(icon);
+			el.appendChild(svg);
+
+			this.elList.appendChild(el);
+		});
+
+		this.icons = this.elList.querySelectorAll('.icon');
+	}
+
+	updateSearch() {
+		[].forEach.call(this.icons, (icon) => {
+			if (this.inputSearch.value == '' || icon.dataset.icon.indexOf(this.inputSearch.value.toLowerCase()) > -1) {
+				icon.classList.remove('__hidden');
+			}
+			else {
+				icon.classList.add('__hidden');
+			}
+		});
+	}
+
+	setActive(value) {
+		[].forEach.call(this.icons, (icon) => {
+			if (value && value == icon.dataset.icon) {
+				icon.classList.add('__active');
+			}
+			else {
+				icon.classList.remove('__active');
+			}
+		});
+	}
+
+	selectIcon(icon = '') {
+		if (this.field) {
+			this.field.setValue(icon);
+			this.close();
+		}
+	}
+
+	open(field) {
+		this.field = field;
+		this.setActive(field.input.value);
+
+		this.inputSearch.value = '';
+		this.updateSearch();
+
+		this.el.classList.add('__open');
+		this.bindedKeypress = this.onKeypress.bind(this);
+		document.addEventListener('keydown', this.bindedKeypress, true);
+	}
+
+	close() {
+		this.el.classList.remove('__open');
+		document.removeEventListener('keydown', this.bindedKeypress, true);
+	}
+
+	onKeypress(e) {
+		if (e.code == 'Escape') {
+			e.preventDefault();
+			this.close();
+		}
+	}
+
+}
+
+// ------------------------------------------------------------
+// ACF instanciation
+// ------------------------------------------------------------
 
 (function($) {
     if (typeof acf == 'undefined') return;
 
     function initialize_field(field) {
-        new WPZ_ACF_Field_Icon(field.$el);
+    	if (!window.acfIconSelector) {
+		    window.acfIconSelector = new WPZ_ACF_Field_Icon_Selector();
+    	}
+
+        new WPZ_ACF_Field_Icon(field);
     }
   
-    if( typeof acf.addAction !== 'undefined' ) {
+    if (typeof acf.addAction !== 'undefined') {
         acf.addAction('ready_field/type=wpz-acf-field-icon', initialize_field);
         acf.addAction('append_field/type=wpz-acf-field-icon', initialize_field);
-    } else {
+    }
+    else {
         $(document).on('acf/setup_fields', function(e, postbox) {
-            // find all relevant fields
-            $(postbox).find('.field[data-field_type="wpz-acf-field-icon"]').each(function(){
-                // initialize
-                initialize_field( $(this) );
+            $(postbox).find('.field[data-field_type="wpz-acf-field-icon"]').each(function() {
+                initialize_field($(this));
             });
         });
     }
-
-})(jQuery);
-
-
-(function($) {
-    window.WPZ_ACF_Field_Icon = function($el) { this.init($el); }
-
-    WPZ_ACF_Field_Icon.prototype.index = 0;
-    WPZ_ACF_Field_Icon.prototype.init = function($el) {
-        if (!!$el.attr('wpz-acf-field-icon--initialized')) return;
-
-        // Variables
-        this.$container = $el.find('.acf-input');
-        this.$input = this.$container.find('input');
-        this.$select = this.$container.find('.wpz-acf-field-icon');
-        this.$dropdown = this.$select.find('.dropdown');
-        this.$overlay = this.$select.find('.overlay');
-        this.$value = this.$select.find('.value');
-        this.$options = this.$dropdown.find('.option');
-        this.value = this.$input.val();
-
-        $el.attr('wpz-acf-field-icon--initialized', 1);
-
-        // Actions
-        this.setEventListeners();
-
-        $el.addClass('wpz-acf-field-icon--selector');
-    }
-
-    WPZ_ACF_Field_Icon.prototype.setEventListeners = function() {
-        // Event Listeners
-        var _this = this;
-
-        this.$value.on('click', function() {
-              _this.$select.toggleClass('active');
-        });
-
-        this.$options.on('click', function() {
-            var content = this.innerHTML,
-              value = this.attributes['data-value'].value;
-
-            _this.$value.html(content);
-            _this.$input.val(value);
-            _this.$select.removeClass('active');
-        });
-
-        this.$overlay.on('click', function() {
-            _this.$select.removeClass('active');
-        });
-    }
-
-})(jQuery);
-
-// ------------------------------------------------------------
-// Input Select Field
-// ------------------------------------------------------------
-
-(function($) {
-
-	if (typeof acf == 'undefined') return;
-
-	function initialize_field(field) {
-		new WPZ_ACF_Field_Icon(field.$el);
-	}
-
-	function initialize_option_field(field) {
-		var $wrap = field.$el.find('.acf-input'),
-			icon = field.$el.find('input').val(),
-			$preview = $('<div class="icon-preview"></div>'),
-			$svg = $('<svg><use href="'+svgSymbolsUrl+'#'+icon+'"></use></svg>');
-
-		$wrap.addClass('icon-preview-wrapper');
-		$preview.append($svg);
-		$wrap.append($preview);
-
-		$wrap.find('input').on('input', function() {
-			var $input = $(this),
-				$icon = $input.parent().siblings('.icon-preview'),
-				$use = $icon.find('svg use');
-
-			$use.attr('href', svgSymbolsUrl+'#'+$input.val());
-		});
-	}
-	
-	if( typeof acf.addAction !== 'undefined' ) {
-		acf.addAction('ready_field/type=wpz-acf-field-icon', initialize_field);
-		acf.addAction('append_field/type=wpz-acf-field-icon', initialize_field);
-
-		//acf.addAction('ready_field/name=ago-icon-slug', initialize_option_field);
-		//acf.addAction('append_field/name=ago-icon-slug', initialize_option_field);
-
-	} else {
-		$(document).on('acf/setup_fields', function(e, postbox) {
-			
-			// find all relevant fields
-			$(postbox).find('.field[data-field_type="wpz-acf-field-icon"]').each(function(){
-				// initialize
-				initialize_field( $(this) );
-			});
-		
-		});
-	}
-
-})(jQuery);
-
-
-(function($) {
-	// ============================================
-	// Color select custom
-	// ============================================
-	window.WPZ_ACF_Field_Icon = function($el) { this.init($el); }
-
-	WPZ_ACF_Field_Icon.prototype.index = 0;
-	WPZ_ACF_Field_Icon.prototype.init = function($el) {
-		if (!!$el.attr('wpz-acf-field-icon--initialized')) return;
-
-		// Variables
-		this.$container = $el.find('.acf-input');
-		this.$input = this.$container.find('input');
-		this.$select = this.$container.find('.wpz-acf-field-icon');
-		this.$dropdown = this.$select.find('.dropdown');
-		this.$overlay = this.$select.find('.overlay');
-		this.$value = this.$select.find('.value');
-		this.$options = this.$dropdown.find('.option');
-		this.value = this.$input.val();
-
-		$el.attr('wpz-acf-field-icon--initialized', 1);
-
-		// Actions
-		this.setEventListeners();
-
-		$el.addClass('wpz-acf-field-icon--selector');
-	}
-
-	WPZ_ACF_Field_Icon.prototype.setEventListeners = function() {
-		// Event Listeners
-		var _this = this;
-
-		this.$value.on('click', function() {
-			_this.$select.toggleClass('active');
-		});
-
-		this.$options.on('click', function() {
-			var content = this.innerHTML,
-				value = this.attributes['data-value'].value;
-
-			_this.$value.html(content);
-			_this.$input.val(value);
-			_this.$select.removeClass('active');
-		});
-
-		this.$overlay.on('click', function() {
-			_this.$select.removeClass('active');
-		});
-	}
-
 })(jQuery);

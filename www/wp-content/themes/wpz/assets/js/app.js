@@ -2,7 +2,7 @@
 import '../../includes/blocks/generated/blocks.js';
 
 import './core/svg-icons.js';
-//import './core/scroll-animate.js';
+import './core/scroll-animate.js';
 
 import './components/slider-images.js';
 

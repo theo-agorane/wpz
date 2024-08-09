@@ -20,7 +20,7 @@
     "css-loader": "^7.1.2",
     "file-loader": "^6.2.0",
     "fs": "^0.0.1-security",
-    "imagemin": "^9.0.0",
+    "imagemin": "github:imagemin/imagemin#bfd7c547045f68ed92243c6a772f6265a08a687f",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-jpegtran": "^7.0.0",
     "imagemin-pngquant": "^10.0.0",
@@ -39,8 +39,8 @@
   "scripts": {
     "images": "node scripts/compress-images.mjs",
     "svg-symbols": "svg-symbols www/wp-content/themes/wpz/dist/icons > www/wp-content/themes/wpz/dist/all-icons.svg",
-    "icons": "node scripts/compress-icons.mjs && npm run svg-symbols",
-    "build": "webpack --mode production && npm run images && npm run icons",
+    "icons": "node scripts/compress-icons.mjs & npm run svg-symbols",
+    "build": "npm run images & npm run icons & webpack --mode production",
     "dev": "webpack --mode development --watch"
   },
   "babel": {

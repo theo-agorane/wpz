@@ -9,72 +9,24 @@
 // ACF Icon Field
 // ------------------------------------------------------------ */
 
-.icon-preview-wrapper {
-	position: relative;
-	padding-right: 40px;
-    min-height: 24px;
-    display: flex;
-    justify-content: stretch;
-    align-items: center;
-}
-
-.icon-preview-wrapper .acf-input-wrap {
-    width: 100%;
-}
-
-.icon-preview-wrapper .icon-preview {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 24px;
-    height: 24px;
-}
-
-.icon-preview-wrapper .icon-preview svg,
-.icon-preview-wrapper .icon-preview .svg {
-    width: 24px;
-    height: 24px;
-    color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;    
-}
-
 .wpz-acf-field-icon {
     position: relative;
-    border-radius: 1px;
-    cursor: default;
+    border-radius: 3px;
+    cursor: pointer;
     background: #FFF;
     user-select: none;
-    border: solid 1px #ddd;
+    border: solid 1px #aaa;
 }
 
 .wpz-acf-field-icon:hover {
-    border-color: #bbb;
+    border-color: #7e8993;
 
-}
-
-.wpz-acf-field-icon:hover .dropdown {
-    border-color: #bbb;
-}
-
-.wpz-acf-field-icon.active {
-    z-index: 2000;
-}
-
-.wpz-acf-field-icon.active .dropdown,
-.wpz-acf-field-icon.active .overlay {
-    display: block;
-}
-
-.wpz-acf-field-icon.active .toggle-indicator:before {
-    content: "\f142" !important;
 }
 
 .wpz-acf-field-icon .toggle-indicator {
     position: absolute;
-    right: 15px;
+    right: 4px;
+    width: 20px;
     line-height: 1;
     height: 20px;
     top: 50%;
@@ -93,11 +45,10 @@
 }
 
 .wpz-acf-field-icon .value {
-    padding: 10px 15px;
+    padding: 8px 12px;
     line-height: 1;
     position: relative;
     z-index: 4;
-    background: #FFF;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -105,81 +56,177 @@
 
 .wpz-acf-field-icon .value span {
     text-transform: uppercase;
-    padding-right: 30px;
+    padding-right: 16px;
     width: 100%;
 }
 
 .wpz-acf-field-icon .value svg,
 .wpz-acf-field-icon .value .svg {
-    margin-right: 10px;
+    margin-right: 12px;
     flex-shrink: 0;
     width: 24px;
+    height: 24px;
     padding: 0;
 }
 
-.wpz-acf-field-icon .dropdown {
-    display: none;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    background: #FFF;
-    border-top: solid 1px #ddd;
-    max-height: 195px;
-    overflow-y: scroll;
-    z-index: 3;
-    top: 100%;
-    margin-bottom: 20px;
-    min-width: 540px;
-}
-
-.wpz-acf-field-icon span {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.wpz-acf-field-icon svg {
-    vertical-align: middle;
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    color: #000;
-}
-
-.wpz-acf-field-icon .svg {
-    vertical-align: middle;
-    display: inline-flex !important;
-    width: 24px;
-    height: 24px;
+.wpz-acf-field-icon .value .svg {
+    display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    text-transform: lowercase !important;
 }
 
-.wpz-acf-field-icon .option {
-    padding: 10px;
-    cursor: pointer;
-    line-height: 1;
-    text-transform: uppercase;
-    display: inline-block;
-    vertical-align: middle;
+/* ------------------------------------------------------------
+// ACF Icon Selector
+// ------------------------------------------------------------ */
+body.__no_scroll {
+    overflow: hidden;
 }
 
-.wpz-acf-field-icon .option span {
-    display: none;
+.wpz-acf-icon-selector,
+.wpz-acf-icon-selector * {
+    box-sizing: border-box;
 }
 
-.wpz-acf-field-icon .option:hover {
-    background: #f6f6f6;
-}
-
-.wpz-acf-field-icon .overlay {
+.wpz-acf-icon-selector {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.25);
-    z-index: 0;
+    z-index: 999999;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
     display: none;
+}
+
+.wpz-acf-icon-selector.__open {
+    display: flex;
+}
+
+.wpz-acf-icon-selector .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+}
+
+.wpz-acf-icon-selector .wrapper {
+    background: #FFFFFF;
+    border-radius: 3px;
+    z-index: 10;
+    height: 100%;
+    width: 100%;
+    max-width: 970px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.wpz-acf-icon-selector .header {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    border-bottom: solid 1px #aaa;
+}
+
+.wpz-acf-icon-selector .close {
+    border-left: solid 1px #aaa;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wpz-acf-icon-selector .close:before {
+    display: inline-block;
+    font: 400 24px/1 dashicons;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none !important;
+    content: "\f158" !important;
+}
+
+.wpz-acf-icon-selector .close:hover {
+    background: #f0f0f0;
+    color: #000;
+}
+
+.wpz-acf-icon-selector .search {
+    width: 100%;
+}
+
+.wpz-acf-icon-selector .search input {
+    border: none;
+    height: 48px;
+    line-height: 24px;
+    padding: 12px 24px;
+    width: 100%;
+    outline: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+}
+
+.wpz-acf-icon-selector .search input:hover {
+    background: #f0f0f0;
+    color: #000;
+}
+
+.wpz-acf-icon-selector .list {
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+
+.wpz-acf-icon-selector .list::-webkit-scrollbar { width: 10px; }
+.wpz-acf-icon-selector .list::-webkit-scrollbar-track { background: #f0f0f0; }
+.wpz-acf-icon-selector .list::-webkit-scrollbar-thumb { background: #aaa; }
+.wpz-acf-icon-selector .list::-webkit-scrollbar-thumb:hover { background: #7e8993; }
+
+.wpz-acf-icon-selector .list .icon {
+    width: 48px;
+    height: 48px;
+    border-right: solid 1px #f0f0f0;
+    border-bottom: solid 1px #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.wpz-acf-icon-selector .list .icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.wpz-acf-icon-selector .list .icon:hover {
+    background: #f0f0f0;
+    color: #000;
+}
+
+.wpz-acf-icon-selector .list .icon.__active {
+    background: #000 !important;
+    color: #FFF !important;
+    border-color: #000 !important;
+}
+
+.wpz-acf-icon-selector .list .icon.__hidden {
+    display: none;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
 }
