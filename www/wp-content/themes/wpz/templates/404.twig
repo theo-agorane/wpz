@@ -2,18 +2,17 @@
 
 {% block content %}
     <article class="Page404">
-        <section class="Block __background_light __spacing_top_XL __spacing_bottom_XL">
+        <section class="Block __theme_{{ WPZ().config.page404.wpz_theme }} __spacing_top_XXL __spacing_bottom_XXL" data-scroll-section>
             <div class="container-little">
-                <h1 class="Page404--title">404</h1>
-                <div class="Page404--content wysiwyg-text">
-                    <p>{{ _("La page demandée n'existe pas") }}</p>
-                </div>
-                <div class="Page404--button">
-                    <a href="{{ site.link }}" class="button __primary __icon-left">
-                        {{ wpz_icon('arrow-left') }}
-                        {{ _("Revenir à l'accueil") }}
-                    </a>
-                </div>
+                <h1 class="Page404--title" data-scroll-item>{{ WPZ().config.page404.title }}</h1>
+                <div class="Page404--content wysiwyg-text" data-scroll-item>{{ WPZ().config.page404.text }}</div>
+                {% if WPZ().config.page404.buttons|length %}
+                    <div class="Block--buttons Page404--buttons" data-scroll-item>
+                        {% for button in WPZ().config.page404.buttons %}
+                            {{ acf_button(button.data) }}
+                        {% endfor %}
+                    </div>
+                {% endif %}
             </div>
         </section>
     </article>

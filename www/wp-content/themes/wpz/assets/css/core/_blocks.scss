@@ -41,7 +41,7 @@
 		&_M { --block-spacing-top: #{spacing(2)}; }
 		&_L { --block-spacing-top: #{spacing(3)}; }
 		&_XL { --block-spacing-top: #{spacing(4)}; }
-		&_XXL { --block-spacing-top: #{spacing(5)}; }
+		&_XXL { --block-spacing-top: #{spacing(6)}; }
 	}
 
 	&_bottom {
@@ -50,7 +50,7 @@
 		&_M { --block-spacing-bottom: #{spacing(2)}; }
 		&_L { --block-spacing-bottom: #{spacing(3)}; }
 		&_XL { --block-spacing-bottom: #{spacing(4)}; }
-		&_XXL { --block-spacing-bottom: #{spacing(5)}; }
+		&_XXL { --block-spacing-bottom: #{spacing(6)}; }
 	}
 }
 

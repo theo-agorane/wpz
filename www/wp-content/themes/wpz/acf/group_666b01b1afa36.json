@@ -3,21 +3,6 @@
     "title": "WPZ – Configuration",
     "fields": [
         {
-            "key": "field_66b61a8172492",
-            "label": "Test",
-            "name": "test",
-            "aria-label": "",
-            "type": "wpz-acf-field-icon",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            }
-        },
-        {
             "key": "field_666b01b235d9c",
             "label": "Configuration",
             "name": "config",
@@ -299,6 +284,218 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "key": "field_66b69dae3a98e",
+                    "label": "404",
+                    "name": "",
+                    "aria-label": "",
+                    "type": "tab",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "placement": "top",
+                    "endpoint": 0,
+                    "selected": 0
+                },
+                {
+                    "key": "field_66b69db93a98f",
+                    "label": "Page 404",
+                    "name": "page404",
+                    "aria-label": "",
+                    "type": "group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "row",
+                    "acfe_seamless_style": 0,
+                    "acfe_group_modal": 0,
+                    "sub_fields": [
+                        {
+                            "key": "field_66b69dd93a992",
+                            "label": "Thème",
+                            "name": "wpz_theme",
+                            "aria-label": "",
+                            "type": "radio",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "default": "<div class=\"acf-wpz-color\" style=\"--acf-wpz-color: var(--wpz-color-background);\"><\/div> <span class=\"acf-wpz-color-text\">default<\/span>",
+                                "inverse": "<div class=\"acf-wpz-color\" style=\"--acf-wpz-color: var(--wpz-color-text);\"><\/div> <span class=\"acf-wpz-color-text\">inverse<\/span>"
+                            },
+                            "default_value": "",
+                            "return_format": "value",
+                            "allow_null": 0,
+                            "other_choice": 0,
+                            "layout": "vertical",
+                            "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_66b69e11b851e",
+                            "label": "Titre",
+                            "name": "title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_66b69e18b851f",
+                            "label": "Texte",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_66b69e2fb8520",
+                            "label": "Boutons",
+                            "name": "buttons",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_repeater_stylised_button": 1,
+                            "layout": "table",
+                            "pagination": 0,
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Ajouter un bouton",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_66b69e40b8521",
+                                    "label": "Bouton",
+                                    "name": "data",
+                                    "aria-label": "",
+                                    "type": "wpz-acf-field-button",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "layout": "table",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_wpz_button__link",
+                                            "ID": "field_wpz_button__link",
+                                            "name": "link",
+                                            "_name": "link",
+                                            "label": "Texte et Lien",
+                                            "type": "link",
+                                            "aria-label": "",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "return_format": "array"
+                                        },
+                                        {
+                                            "key": "field_wpz_button__type",
+                                            "ID": "field_wpz_button__type",
+                                            "name": "type",
+                                            "_name": "type",
+                                            "label": "Type",
+                                            "type": "radio",
+                                            "aria-label": "",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "choices": {
+                                                "primary": "Bouton primaire",
+                                                "secondary": "Bouton secondaire"
+                                            },
+                                            "return_format": "value",
+                                            "default_value": "primary",
+                                            "allow_null": 0,
+                                            "other_choice": 0,
+                                            "layout": "vertical",
+                                            "save_other_choice": 0
+                                        },
+                                        {
+                                            "key": "field_wpz_button__icon",
+                                            "ID": "field_wpz_button__icon",
+                                            "name": "icon",
+                                            "_name": "icon",
+                                            "label": "Icône",
+                                            "type": "wpz-acf-field-icon",
+                                            "aria-label": "",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            }
+                                        }
+                                    ],
+                                    "parent_repeater": "field_66b69e2fb8520"
+                                }
+                            ]
+                        }
+                    ],
+                    "acfe_group_modal_close": 0,
+                    "acfe_group_modal_button": "",
+                    "acfe_group_modal_size": "large"
                 }
             ]
         }
@@ -328,5 +525,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1723210384
+    "modified": 1723244998
 }

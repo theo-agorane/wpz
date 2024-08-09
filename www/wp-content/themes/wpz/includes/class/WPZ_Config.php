@@ -8,10 +8,9 @@ class WPZ_Config {
 	public function __construct() {
 		add_action('admin_menu', [$this, 'add_menu_page']);
 		add_action('init', [$this, 'add_custom_post_type']);
-
-		$this->get_current_lang();
-		$this->get_config_for_current_lang();
-		$this->get_menus_for_current_lang();
+		add_action('init', [$this, 'get_current_lang'], 999);
+		add_action('init', [$this, 'get_config_for_current_lang'], 999);
+		add_action('init', [$this, 'get_menus_for_current_lang'], 999);
 	}
 
 	/**
