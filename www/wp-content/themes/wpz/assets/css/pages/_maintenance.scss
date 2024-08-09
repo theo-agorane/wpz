@@ -1,0 +1,22 @@
+.Maintenance {
+	text-align: center;
+
+	.Block {
+		min-height: 100vh;
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	&--title {
+	}
+
+	&--content {
+		margin-top: spacing();
+	}
+
+	&--buttons {
+		justify-content: center;
+	}
+}

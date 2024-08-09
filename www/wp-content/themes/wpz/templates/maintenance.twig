@@ -1,0 +1,26 @@
+{% extends "layout/Html.twig" %}
+
+{% block header %}
+    {# No Header #}
+{% endblock %}
+{% block footer %}
+    {# No Footer #}
+{% endblock %}
+
+{% block content %}
+    <article class="Maintenance">
+        <section class="Block __theme_{{ WPZ().config.maintenance.wpz_theme }} __spacing_top_XXL __spacing_bottom_XXL" data-scroll-section>
+            <div class="container-little">
+                <h1 class="Maintenance--title" data-scroll-item>{{ WPZ().config.maintenance.title }}</h1>
+                <div class="Maintenance--content wysiwyg-text" data-scroll-item>{{ WPZ().config.maintenance.text }}</div>
+                {% if WPZ().config.maintenance.buttons|length %}
+                    <div class="Block--buttons Maintenance--buttons" data-scroll-item>
+                        {% for button in WPZ().config.maintenance.buttons %}
+                            {{ acf_button(button.data) }}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        </section>
+    </article>
+{% endblock %}

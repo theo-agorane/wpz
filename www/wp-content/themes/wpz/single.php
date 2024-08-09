@@ -3,4 +3,4 @@
 $context = Timber::context();
 $context['post'] = WPZ_Block_Post::get_post($post);
 
-Timber::render(['single.twig'], $context);
+WPZ()->render_template('single.twig', $context);
