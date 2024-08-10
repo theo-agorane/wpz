@@ -39,6 +39,24 @@
             "return_format": "string"
         },
         {
+            "key": "field_66b6a90aa50de",
+            "label": "Couleur d'accentuation",
+            "name": "wpz_color_highlight",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#eeee22",
+            "enable_opacity": 0,
+            "return_format": "string"
+        },
+        {
             "key": "field_66ad8b2bff9e6",
             "label": "Couleurs supplémentaires",
             "name": "wpz_colors_custom",
@@ -129,5 +147,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1722653254
+    "modified": 1723246894
 }

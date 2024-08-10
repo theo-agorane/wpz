@@ -19,25 +19,24 @@
 		z-index: 10;
 		bottom: 0;
 		left: 0;
-		padding: 1rem;
+		padding: 2rem 1rem 1rem;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		width: 100%;
 		pointer-events: none;
+		background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6));
 
 		&-left {
 			display: flex;
 			align-items: center;
 			justify-content: flex-start;
-			margin: -0.25rem;
 		}
 
 		&-right {
 			display: flex;
 			align-items: center;
 			justify-content: flex-end;
-			margin: -0.25rem;
 		}
 	}
 
@@ -59,45 +58,23 @@
 	}
 
 	&--button {
-		--button-color: #{color(green)};
-		--button-background: #{color(background)};
-		--button-background-hover: #{color(light)};
 		pointer-events: all;
-		margin: 0.25rem;
 		cursor: pointer;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		width: 2rem;
 		height: 2rem;
-		border-radius: 5px;
-		background: var(--button-background);
-		color: var(--button-color);
-		transition: ts(background, short);
+		color: #FFFFFF;
 
 		svg {
-			width: 1rem;
-			height: 1rem;
-
-			&[data-icon*="arrow"] {
-				width: 0.75rem;
-				height: 0.75rem;
-			}
+			width: 1.5rem;
+			height: 1.5rem;
 		}
 
 		&.__disabled {
 			pointer-events: none;
-			opacity: 0.5;
-		}
-
-		&.__green {
-			--button-color: #{color(background)};
-			--button-background: #{color(green)};
-			--button-background-hover: #{color(green-dark)};
-		}
-
-		&:hover {
-			background: var(--button-background-hover);
+			opacity: 0.4;
 		}
 
 		&[data-action="lightbox"] {
@@ -172,24 +149,19 @@
 			position: absolute;
 			top: 0;
 			right: 0;
-			width: 1.25rem;
-			height: 1.25rem;
+			width: 2rem;
+			height: 2rem;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			z-index: 20;
 			cursor: pointer;
 			color: color(text);
-			transition: ts(color, short);
 			background: color(background);
 
 			svg {
-				width: 0.625rem;
-				height: 0.625rem;
-			}
-
-			&:hover {
-				color: color(green);
+				width: 1.5rem;
+				height: 1.5rem;
 			}
 		}
 
@@ -210,6 +182,7 @@
 			padding: 1rem;
 			margin: 0;
 			pointer-events: all;
+			background: none;
 
 			&-left {
 				display: none;
@@ -225,20 +198,17 @@
 		.Slider_Images--button {
 			flex-shrink: 0;
 			margin: 0;
-			--button-color: #{color(background)};
-			--button-background: #{color(green)};
-			--button-background-hover: #{color(green-dark)};
+			color: color(text);
 		}
 
 		.Slider_Images--thumbs {
 			display: block;
-			margin: 0 1rem;
+			margin: 0 0.5rem;
 			max-width: calc(100% - 6rem);
 
 			.swiper {
 				&-slide {
 					width: 5rem;
-					transition: ts(opacity, short);
 					opacity: 0.5;
 					cursor: pointer;
 
@@ -251,7 +221,6 @@
 			&-item {
 				width: 5rem;
 				height: 3rem;
-				border-radius: 2px;
 			}
 		}
 	}

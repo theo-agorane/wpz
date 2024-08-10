@@ -149,11 +149,12 @@ class WPZ_Class {
 
 	    return '';
 	}
+
 	/**
 	 * @function render_template 
 	 */
 	public function render_template($template, $context = []) {
-		if ($this->config->maintenance['active']) {
+		if (!empty($this->config->maintenance['active'])) {
 			Timber::render('maintenance.twig', $context);
 		}
 		else {

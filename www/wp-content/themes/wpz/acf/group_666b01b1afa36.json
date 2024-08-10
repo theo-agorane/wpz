@@ -790,7 +790,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "all"
+                "value": "config"
             }
         ]
     ],
@@ -810,5 +810,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1723245923
+    "modified": 1723247151
 }

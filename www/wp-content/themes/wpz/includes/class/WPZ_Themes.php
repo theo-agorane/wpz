@@ -99,11 +99,13 @@ class WPZ_Themes {
 	public static function get_options_colors() {
 		$color_background = get_field('wpz_color_background', 'option');
 		$color_text = get_field('wpz_color_text', 'option');
+		$color_highlight = get_field('wpz_color_highlight', 'option');
 		$colors_custom = get_field('wpz_colors_custom', 'option');
 
 		$colors = [
 			'background' => $color_background,
 			'text' => $color_text,
+			'highlight' => $color_highlight,
 			'overlay' => $color_text . 'AA',
 			'shadow' => $color_text . '33',
 			'transparent' => $color_text . '00',
@@ -131,6 +133,7 @@ class WPZ_Themes {
 
 		$themes['default']['background'] = 'background';
 		$themes['default']['text'] = 'text';
+		$themes['default']['highlight'] = 'highlight';
 
 		if (is_array($themes_custom)) {
 			foreach ($themes_custom as $theme) {

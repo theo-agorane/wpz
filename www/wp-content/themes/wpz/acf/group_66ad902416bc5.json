@@ -21,33 +21,6 @@
             "acfe_group_modal": 0,
             "sub_fields": [
                 {
-                    "key": "field_66ad9abd215d3",
-                    "label": "Couleur d'accentuation",
-                    "name": "highlight",
-                    "aria-label": "",
-                    "type": "wpz-acf-field-color",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "background": "#FFFFFF",
-                        "text": "#000000",
-                        "yellow": "#eeee22",
-                        "red": "#dd3333"
-                    },
-                    "default_value": "text",
-                    "return_format": "value",
-                    "allow_null": 0,
-                    "other_choice": 0,
-                    "layout": "vertical",
-                    "save_other_choice": 0
-                },
-                {
                     "key": "field_66ad9b35819fd",
                     "label": "Bouton primaire",
                     "name": "button_primary",
@@ -80,10 +53,11 @@
                                 "id": ""
                             },
                             "choices": {
-                                "background": "#FFFFFF",
-                                "text": "#000000",
-                                "yellow": "#eeee22",
-                                "red": "#dd3333"
+                                "background": "#ffffff",
+                                "text": "#0a0a0a",
+                                "highlight": "#eeee22",
+                                "red": "#dd3333",
+                                "green": "#81d742"
                             },
                             "default_value": "text",
                             "return_format": "value",
@@ -107,10 +81,11 @@
                                 "id": ""
                             },
                             "choices": {
-                                "background": "#FFFFFF",
-                                "text": "#000000",
-                                "yellow": "#eeee22",
-                                "red": "#dd3333"
+                                "background": "#ffffff",
+                                "text": "#0a0a0a",
+                                "highlight": "#eeee22",
+                                "red": "#dd3333",
+                                "green": "#81d742"
                             },
                             "default_value": "background",
                             "return_format": "value",
@@ -134,10 +109,11 @@
                                 "id": ""
                             },
                             "choices": {
-                                "background": "#FFFFFF",
-                                "text": "#000000",
-                                "yellow": "#eeee22",
-                                "red": "#dd3333"
+                                "background": "#ffffff",
+                                "text": "#0a0a0a",
+                                "highlight": "#eeee22",
+                                "red": "#dd3333",
+                                "green": "#81d742"
                             },
                             "default_value": "text",
                             "return_format": "value",
@@ -161,10 +137,11 @@
                                 "id": ""
                             },
                             "choices": {
-                                "background": "#FFFFFF",
-                                "text": "#000000",
-                                "yellow": "#eeee22",
-                                "red": "#dd3333"
+                                "background": "#ffffff",
+                                "text": "#0a0a0a",
+                                "highlight": "#eeee22",
+                                "red": "#dd3333",
+                                "green": "#81d742"
                             },
                             "default_value": "text",
                             "return_format": "value",
@@ -188,10 +165,11 @@
                                 "id": ""
                             },
                             "choices": {
-                                "background": "#FFFFFF",
-                                "text": "#000000",
-                                "yellow": "#eeee22",
-                                "red": "#dd3333"
+                                "background": "#ffffff",
+                                "text": "#0a0a0a",
+                                "highlight": "#eeee22",
+                                "red": "#dd3333",
+                                "green": "#81d742"
                             },
                             "default_value": "background",
                             "return_format": "value",
@@ -215,10 +193,11 @@
                                 "id": ""
                             },
                             "choices": {
-                                "background": "#FFFFFF",
-                                "text": "#000000",
-                                "yellow": "#eeee22",
-                                "red": "#dd3333"
+                                "background": "#ffffff",
+                                "text": "#0a0a0a",
+                                "highlight": "#eeee22",
+                                "red": "#dd3333",
+                                "green": "#81d742"
                             },
                             "default_value": "text",
                             "return_format": "value",
@@ -265,10 +244,11 @@
                                 "id": ""
                             },
                             "choices": {
-                                "background": "#FFFFFF",
-                                "text": "#000000",
-                                "yellow": "#eeee22",
-                                "red": "#dd3333"
+                                "background": "#ffffff",
+                                "text": "#0a0a0a",
+                                "highlight": "#eeee22",
+                                "red": "#dd3333",
+                                "green": "#81d742"
                             },
                             "default_value": "background",
                             "return_format": "value",
@@ -292,10 +272,11 @@
                                 "id": ""
                             },
                             "choices": {
-                                "background": "#FFFFFF",
-                                "text": "#000000",
-                                "yellow": "#eeee22",
-                                "red": "#dd3333"
+                                "background": "#ffffff",
+                                "text": "#0a0a0a",
+                                "highlight": "#eeee22",
+                                "red": "#dd3333",
+                                "green": "#81d742"
                             },
                             "default_value": "text",
                             "return_format": "value",
@@ -319,10 +300,11 @@
                                 "id": ""
                             },
                             "choices": {
-                                "background": "#FFFFFF",
-                                "text": "#000000",
-                                "yellow": "#eeee22",
-                                "red": "#dd3333"
+                                "background": "#ffffff",
+                                "text": "#0a0a0a",
+                                "highlight": "#eeee22",
+                                "red": "#dd3333",
+                                "green": "#81d742"
                             },
                             "default_value": "text",
                             "return_format": "value",
@@ -346,10 +328,11 @@
                                 "id": ""
                             },
                             "choices": {
-                                "background": "#FFFFFF",
-                                "text": "#000000",
-                                "yellow": "#eeee22",
-                                "red": "#dd3333"
+                                "background": "#ffffff",
+                                "text": "#0a0a0a",
+                                "highlight": "#eeee22",
+                                "red": "#dd3333",
+                                "green": "#81d742"
                             },
                             "default_value": "text",
                             "return_format": "value",
@@ -373,10 +356,11 @@
                                 "id": ""
                             },
                             "choices": {
-                                "background": "#FFFFFF",
-                                "text": "#000000",
-                                "yellow": "#eeee22",
-                                "red": "#dd3333"
+                                "background": "#ffffff",
+                                "text": "#0a0a0a",
+                                "highlight": "#eeee22",
+                                "red": "#dd3333",
+                                "green": "#81d742"
                             },
                             "default_value": "background",
                             "return_format": "value",
@@ -400,10 +384,11 @@
                                 "id": ""
                             },
                             "choices": {
-                                "background": "#FFFFFF",
-                                "text": "#000000",
-                                "yellow": "#eeee22",
-                                "red": "#dd3333"
+                                "background": "#ffffff",
+                                "text": "#0a0a0a",
+                                "highlight": "#eeee22",
+                                "red": "#dd3333",
+                                "green": "#81d742"
                             },
                             "default_value": "text",
                             "return_format": "value",
@@ -499,10 +484,11 @@
                                 "id": ""
                             },
                             "choices": {
-                                "background": "#FFFFFF",
-                                "text": "#000000",
-                                "yellow": "#eeee22",
-                                "red": "#dd3333"
+                                "background": "#ffffff",
+                                "text": "#0a0a0a",
+                                "highlight": "#eeee22",
+                                "red": "#dd3333",
+                                "green": "#81d742"
                             },
                             "default_value": "background",
                             "return_format": "value",
@@ -526,10 +512,11 @@
                                 "id": ""
                             },
                             "choices": {
-                                "background": "#FFFFFF",
-                                "text": "#000000",
-                                "yellow": "#eeee22",
-                                "red": "#dd3333"
+                                "background": "#ffffff",
+                                "text": "#0a0a0a",
+                                "highlight": "#eeee22",
+                                "red": "#dd3333",
+                                "green": "#81d742"
                             },
                             "default_value": "text",
                             "return_format": "value",
@@ -553,10 +540,11 @@
                                 "id": ""
                             },
                             "choices": {
-                                "background": "#FFFFFF",
-                                "text": "#000000",
-                                "yellow": "#eeee22",
-                                "red": "#dd3333"
+                                "background": "#ffffff",
+                                "text": "#0a0a0a",
+                                "highlight": "#eeee22",
+                                "red": "#dd3333",
+                                "green": "#81d742"
                             },
                             "default_value": "text",
                             "return_format": "value",
@@ -598,10 +586,11 @@
                                         "id": ""
                                     },
                                     "choices": {
-                                        "background": "#FFFFFF",
-                                        "text": "#000000",
-                                        "yellow": "#eeee22",
-                                        "red": "#dd3333"
+                                        "background": "#ffffff",
+                                        "text": "#0a0a0a",
+                                        "highlight": "#eeee22",
+                                        "red": "#dd3333",
+                                        "green": "#81d742"
                                     },
                                     "default_value": "text",
                                     "return_format": "value",
@@ -625,10 +614,11 @@
                                         "id": ""
                                     },
                                     "choices": {
-                                        "background": "#FFFFFF",
-                                        "text": "#000000",
-                                        "yellow": "#eeee22",
-                                        "red": "#dd3333"
+                                        "background": "#ffffff",
+                                        "text": "#0a0a0a",
+                                        "highlight": "#eeee22",
+                                        "red": "#dd3333",
+                                        "green": "#81d742"
                                     },
                                     "default_value": "background",
                                     "return_format": "value",
@@ -652,10 +642,11 @@
                                         "id": ""
                                     },
                                     "choices": {
-                                        "background": "#FFFFFF",
-                                        "text": "#000000",
-                                        "yellow": "#eeee22",
-                                        "red": "#dd3333"
+                                        "background": "#ffffff",
+                                        "text": "#0a0a0a",
+                                        "highlight": "#eeee22",
+                                        "red": "#dd3333",
+                                        "green": "#81d742"
                                     },
                                     "default_value": "text",
                                     "return_format": "value",
@@ -679,10 +670,11 @@
                                         "id": ""
                                     },
                                     "choices": {
-                                        "background": "#FFFFFF",
-                                        "text": "#000000",
-                                        "yellow": "#eeee22",
-                                        "red": "#dd3333"
+                                        "background": "#ffffff",
+                                        "text": "#0a0a0a",
+                                        "highlight": "#eeee22",
+                                        "red": "#dd3333",
+                                        "green": "#81d742"
                                     },
                                     "default_value": "text",
                                     "return_format": "value",
@@ -706,10 +698,11 @@
                                         "id": ""
                                     },
                                     "choices": {
-                                        "background": "#FFFFFF",
-                                        "text": "#000000",
-                                        "yellow": "#eeee22",
-                                        "red": "#dd3333"
+                                        "background": "#ffffff",
+                                        "text": "#0a0a0a",
+                                        "highlight": "#eeee22",
+                                        "red": "#dd3333",
+                                        "green": "#81d742"
                                     },
                                     "default_value": "background",
                                     "return_format": "value",
@@ -733,10 +726,11 @@
                                         "id": ""
                                     },
                                     "choices": {
-                                        "background": "#FFFFFF",
-                                        "text": "#000000",
-                                        "yellow": "#eeee22",
-                                        "red": "#dd3333"
+                                        "background": "#ffffff",
+                                        "text": "#0a0a0a",
+                                        "highlight": "#eeee22",
+                                        "red": "#dd3333",
+                                        "green": "#81d742"
                                     },
                                     "default_value": "text",
                                     "return_format": "value",
@@ -783,10 +777,11 @@
                                         "id": ""
                                     },
                                     "choices": {
-                                        "background": "#FFFFFF",
-                                        "text": "#000000",
-                                        "yellow": "#eeee22",
-                                        "red": "#dd3333"
+                                        "background": "#ffffff",
+                                        "text": "#0a0a0a",
+                                        "highlight": "#eeee22",
+                                        "red": "#dd3333",
+                                        "green": "#81d742"
                                     },
                                     "default_value": "background",
                                     "return_format": "value",
@@ -810,10 +805,11 @@
                                         "id": ""
                                     },
                                     "choices": {
-                                        "background": "#FFFFFF",
-                                        "text": "#000000",
-                                        "yellow": "#eeee22",
-                                        "red": "#dd3333"
+                                        "background": "#ffffff",
+                                        "text": "#0a0a0a",
+                                        "highlight": "#eeee22",
+                                        "red": "#dd3333",
+                                        "green": "#81d742"
                                     },
                                     "default_value": "text",
                                     "return_format": "value",
@@ -837,10 +833,11 @@
                                         "id": ""
                                     },
                                     "choices": {
-                                        "background": "#FFFFFF",
-                                        "text": "#000000",
-                                        "yellow": "#eeee22",
-                                        "red": "#dd3333"
+                                        "background": "#ffffff",
+                                        "text": "#0a0a0a",
+                                        "highlight": "#eeee22",
+                                        "red": "#dd3333",
+                                        "green": "#81d742"
                                     },
                                     "default_value": "text",
                                     "return_format": "value",
@@ -864,10 +861,11 @@
                                         "id": ""
                                     },
                                     "choices": {
-                                        "background": "#FFFFFF",
-                                        "text": "#000000",
-                                        "yellow": "#eeee22",
-                                        "red": "#dd3333"
+                                        "background": "#ffffff",
+                                        "text": "#0a0a0a",
+                                        "highlight": "#eeee22",
+                                        "red": "#dd3333",
+                                        "green": "#81d742"
                                     },
                                     "default_value": "text",
                                     "return_format": "value",
@@ -891,10 +889,11 @@
                                         "id": ""
                                     },
                                     "choices": {
-                                        "background": "#FFFFFF",
-                                        "text": "#000000",
-                                        "yellow": "#eeee22",
-                                        "red": "#dd3333"
+                                        "background": "#ffffff",
+                                        "text": "#0a0a0a",
+                                        "highlight": "#eeee22",
+                                        "red": "#dd3333",
+                                        "green": "#81d742"
                                     },
                                     "default_value": "background",
                                     "return_format": "value",
@@ -918,10 +917,11 @@
                                         "id": ""
                                     },
                                     "choices": {
-                                        "background": "#FFFFFF",
-                                        "text": "#000000",
-                                        "yellow": "#eeee22",
-                                        "red": "#dd3333"
+                                        "background": "#ffffff",
+                                        "text": "#0a0a0a",
+                                        "highlight": "#eeee22",
+                                        "red": "#dd3333",
+                                        "green": "#81d742"
                                     },
                                     "default_value": "text",
                                     "return_format": "value",
@@ -969,5 +969,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1722657243
+    "modified": 1723246927
 }

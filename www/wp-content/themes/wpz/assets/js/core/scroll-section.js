@@ -21,9 +21,18 @@ export default class Scroll_Section {
 	show() {
 		this.active = true;
 		this.container.classList.add('__scroll_active');
+		this.container.addEventListener('animationend', this.afterAnimation.bind(this));
 
 		[].forEach.call(this.items, (item, i) => {
 			item.classList.add('__scroll_active');
+			item.addEventListener('animationend', this.afterAnimation.bind(this));
 		});
+	}
+
+	afterAnimation(e) {
+		e.currentTarget.removeAttribute('data-scroll-item');
+		e.currentTarget.removeAttribute('data-scroll-section');
+		e.currentTarget.style.animationDelay = '';
+		e.currentTarget.classList.remove('__scroll_active');
 	}
 }
